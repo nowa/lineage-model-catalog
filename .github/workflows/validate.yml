@@ -1,0 +1,60 @@
+{
+  "name": "Validate public catalog",
+  "on": {
+    "pull_request": {},
+    "push": {
+      "branches": [
+        "main"
+      ]
+    },
+    "workflow_dispatch": {}
+  },
+  "permissions": {
+    "contents": "read"
+  },
+  "jobs": {
+    "validate": {
+      "runs-on": "ubuntu-24.04",
+      "timeout-minutes": 10,
+      "steps": [
+        {
+          "name": "Check out exact run commit",
+          "uses": "actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "with": {
+            "persist-credentials": false,
+            "fetch-depth": 2,
+            "ref": "${{ github.sha }}"
+          }
+        },
+        {
+          "name": "Inspect public files",
+          "run": "python3 -I - <<'PY'\nimport ipaddress, json, re, stat, subprocess, sys\nfrom pathlib import Path\nfrom urllib.parse import urlsplit\ntry:\n    required = {\"README.md\", \"CONTRIBUTING.md\", \"SECURITY.md\", \"LICENSE\", \"CODEOWNERS\",\n        \"schema/catalog.v1.schema.json\", \"schema/manifest.v1.schema.json\",\n        \"schema/signature.v1.schema.json\", \"catalog/catalog.v1.json\",\n        \".github/workflows/validate.yml\", \".github/workflows/pages.yml\"}\n    permitted = required | {\"v1/stable/manifest.json\", \"v1/stable/manifest.sig\"}\n    records = subprocess.check_output([\"git\", \"ls-files\", \"--stage\", \"-z\"], timeout=15)\n    assert len(records) <= 2000000\n    seen, total = set(), 0\n    def inspect(value, depth=0):\n        assert depth <= 64\n        if isinstance(value, dict):\n            for k, v in value.items():\n                assert k.lower() not in {\"api_key\", \"api_keys\", \"authorization\",\n                    \"credential\", \"credentials\", \"endpoint\", \"base_url\", \"headers\",\n                    \"access_token\", \"refresh_token\", \"private\" + \"_\" + \"key\"}\n                inspect(k, depth + 1)\n                inspect(v, depth + 1)\n        elif isinstance(value, list):\n            for v in value:\n                inspect(v, depth + 1)\n        elif isinstance(value, str):\n            assert not re.search(r\"\\b(?:sk-|gh[pousr]_)[A-Za-z0-9_-]{16,}\", value)\n            assert not re.search(r\"-----BEGIN [A-Z ]*PRIVATE KEY-----\", value)\n            assert all(ord(c) >= 32 or c in \"\\n\\r\\t\" for c in value)\n            for match in re.finditer(r\"(?:https?|file|ssh|ftp)://[^\\s<>\\\"'\\x60]+\", value):\n                url = urlsplit(match.group().rstrip(\".,);\"))\n                host = (url.hostname or \"\").rstrip(\".\").lower()\n                assert url.scheme == \"https\" and host and not url.username and not url.password\n                assert not url.query and not url.fragment and url.port in (None, 443)\n                try:\n                    assert ipaddress.ip_address(host).is_global\n                except ValueError:\n                    assert \".\" in host and re.fullmatch(r\"[a-z0-9.-]+\", host)\n                    assert re.search(r\"[a-z]\", host.rsplit(\".\", 1)[-1])\n                    assert not host.endswith((\".local\", \".internal\", \".localhost\", \".test\", \".invalid\", \".onion\"))\n    for record in records.split(b\"\\0\"):\n        if not record:\n            continue\n        meta, raw = record.split(b\"\\t\", 1)\n        mode, oid, stage = meta.split()\n        name = raw.decode(\"utf-8\")\n        assert mode == b\"100644\" and stage == b\"0\"\n        assert name in permitted or re.fullmatch(r\"targets/sha256/[0-9a-f]{64}\\.catalog\\.json\", name)\n        path = Path(name)\n        assert not any(p.is_symlink() for p in (path, *path.parents))\n        info = path.lstat()\n        assert stat.S_ISREG(info.st_mode) and info.st_nlink == 1 and not info.st_mode & 0o111\n        assert 0 < info.st_size <= 5242880\n        total += info.st_size\n        assert total <= 209715200 and len(seen) < 10000\n        content = path.read_text(encoding=\"utf-8\")\n        value = json.loads(content) if path.suffix in (\".json\", \".sig\", \".yml\") else content\n        if name.startswith(\"schema/\") and isinstance(value, dict):\n            assert value.get(\"$schema\") == \"http\" + \"://json-schema.org/draft-07/schema#\"\n            value = {k: v for k, v in value.items() if k != \"$schema\"}\n        inspect(value)\n        seen.add(name)\n    assert required <= seen\n    assert not subprocess.check_output([\"git\", \"status\", \"--porcelain\", \"--untracked-files=all\", \"--ignored=matching\"], timeout=15)\n    print(\"Public file checks passed; independent sensitive-data review remains required.\")\nexcept Exception:\n    print(\"Public file check failed.\", file=sys.stderr)\n    sys.exit(1)\nPY",
+          "shell": "bash"
+        },
+        {
+          "name": "Set up validation interpreter",
+          "uses": "actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+          "with": {
+            "python-version": "3.12",
+            "architecture": "x64"
+          }
+        },
+        {
+          "name": "Install hash-pinned schema tooling",
+          "run": "python3 -I -m pip --isolated install --disable-pip-version-check --only-binary=:all: --require-hashes --no-deps -r /dev/stdin <<'REQUIREMENTS'\njsonschema==4.26.0 --hash=sha256:d489f15263b8d200f8387e64b4c3a75f06629559fb73deb8fdfb525f2dab50ce\nattrs==26.1.0 --hash=sha256:c647aa4a12dfbad9333ca4e71fe62ddc36f4e63b2d260a37a8b83d2f043ac309\njsonschema-specifications==2025.9.1 --hash=sha256:98802fee3a11ee76ecaca44429fda8a41bff98b00a0f2838151b113f210cc6fe\nreferencing==0.37.0 --hash=sha256:381329a9f99628c9069361716891d34ad94af76e461dcb0335825aecc7692231\nrpds-py==2026.6.3 --hash=sha256:ecabd69db66de867690f9797f2f8fa27ba501bbc24540cbdbdc649cd15888ba6\ntyping-extensions==4.16.0 --hash=sha256:481caa481374e813c1b176ada14e97f1f67a4539ce9cfeb3f350d78d6370c2e8\nREQUIREMENTS",
+          "shell": "bash"
+        },
+        {
+          "name": "Validate public schemas",
+          "run": "python3 -I - <<'PY'\nimport json, sys\nfrom pathlib import Path\nfrom jsonschema import Draft7Validator\ntry:\n    def pairs(items):\n        out = {}\n        for k, v in items:\n            assert k not in out\n            out[k] = v\n        return out\n    def invalid_constant(_):\n        raise ValueError()\n    def read(path):\n        raw = path.read_text(encoding=\"utf-8\")\n        return raw, json.loads(raw, object_pairs_hook=pairs, parse_constant=invalid_constant)\n    def local_refs(value):\n        if isinstance(value, dict):\n            for k, v in value.items():\n                if k == \"$ref\":\n                    assert isinstance(v, str) and v.startswith(\"#/\")\n                assert k not in (\"$id\", \"id\") or not isinstance(v, str) or \":\" not in v\n                local_refs(v)\n        elif isinstance(value, list):\n            for v in value:\n                local_refs(v)\n    validators = {}\n    for kind in (\"catalog\", \"manifest\", \"signature\"):\n        raw, doc = read(Path(f\"schema/{kind}.v1.schema.json\"))\n        local_refs(doc)\n        Draft7Validator.check_schema(doc)\n        validators[kind] = Draft7Validator(doc)\n    def catalog(doc):\n        validators[\"catalog\"].validate(doc)\n        indexes = {}\n        for group, key in ((\"models\", \"model_id\"), (\"offerings\", \"offering_id\"),\n                           (\"price_cards\", \"price_card_id\"), (\"evidence\", \"evidence_id\")):\n            ids = [row[key] for row in doc[group]]\n            assert len(ids) == len(set(ids))\n            indexes[group] = set(ids)\n        for row in doc[\"offerings\"]:\n            assert row[\"model_id\"] in indexes[\"models\"]\n        for row in doc[\"price_cards\"]:\n            assert row[\"offering_id\"] in indexes[\"offerings\"]\n        def refs(value):\n            if isinstance(value, dict):\n                for k, v in value.items():\n                    if k == \"evidence_refs\":\n                        assert set(v) <= indexes[\"evidence\"]\n                    refs(v)\n            elif isinstance(value, list):\n                for v in value:\n                    refs(v)\n        refs(doc)\n    raw, source = read(Path(\"catalog/catalog.v1.json\"))\n    assert raw == json.dumps(source, indent=2, ensure_ascii=False) + \"\\n\"\n    catalog(source)\n    for path in sorted(Path(\"targets/sha256\").glob(\"*.catalog.json\")):\n        catalog(read(path)[1])\n    release = Path(\"v1/stable/manifest.json\")\n    signature = Path(\"v1/stable/manifest.sig\")\n    assert release.exists() == signature.exists()\n    if release.exists():\n        validators[\"manifest\"].validate(read(release)[1])\n        validators[\"signature\"].validate(read(signature)[1])\n    print(\"Public schema/reference checks passed; signature and runtime semantics require independent approval.\")\nexcept Exception:\n    print(\"Public schema check failed.\", file=sys.stderr)\n    sys.exit(1)\nPY",
+          "shell": "bash"
+        },
+        {
+          "name": "Summarize public changes",
+          "run": "python3 -I - <<'PY'\nimport json, subprocess\nfrom pathlib import Path\ncurrent = json.loads(Path(\"catalog/catalog.v1.json\").read_text())\nresult = {k: len(current[k]) for k in (\"models\", \"offerings\", \"price_cards\", \"evidence\")}\nresult[\"source_commit\"] = subprocess.check_output([\"git\", \"rev-parse\", \"HEAD\"], text=True, timeout=10).strip()\nprevious = subprocess.run([\"git\", \"show\", \"HEAD^:catalog/catalog.v1.json\"], capture_output=True, text=True, timeout=10)\nif previous.returncode == 0:\n    try:\n        before = json.loads(previous.stdout)\n        result[\"parent_count_delta\"] = {k: result[k] - len(before[k]) for k in (\"models\", \"offerings\", \"price_cards\", \"evidence\")}\n    except (ValueError, KeyError, TypeError):\n        result[\"parent_comparison\"] = \"unavailable\"\nelse:\n    result[\"parent_comparison\"] = \"unavailable\"\nprint(json.dumps(result, sort_keys=True))\nPY",
+          "shell": "bash"
+        }
+      ]
+    }
+  }
+}

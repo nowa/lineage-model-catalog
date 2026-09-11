@@ -1,0 +1,1643 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "CatalogDocumentV1",
+  "type": "object",
+  "required": [
+    "evidence",
+    "generated_at",
+    "models",
+    "offerings",
+    "price_cards",
+    "revision",
+    "schema_version"
+  ],
+  "properties": {
+    "evidence": {
+      "$ref": "#/definitions/BoundedList_EvidenceRefV1_20000"
+    },
+    "generated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "models": {
+      "$ref": "#/definitions/BoundedList_ModelDefinitionV1_5000"
+    },
+    "offerings": {
+      "$ref": "#/definitions/BoundedList_ModelOfferingV1_10000"
+    },
+    "price_cards": {
+      "$ref": "#/definitions/BoundedList_PriceCardV1_20000"
+    },
+    "revision": {
+      "type": "integer",
+      "format": "uint64",
+      "minimum": 1.0
+    },
+    "schema_version": {
+      "type": "integer",
+      "format": "uint16",
+      "maximum": 1.0,
+      "minimum": 1.0
+    }
+  },
+  "additionalProperties": false,
+  "definitions": {
+    "BoundedList_ContextTierV1_32": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/ContextTierV1"
+      },
+      "maxItems": 32
+    },
+    "BoundedList_EvidenceRefV1_20000": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/EvidenceRefV1"
+      },
+      "maxItems": 20000
+    },
+    "BoundedList_MediaFormat_16": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/MediaFormat"
+      },
+      "maxItems": 16
+    },
+    "BoundedList_ModelDefinitionV1_5000": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/ModelDefinitionV1"
+      },
+      "maxItems": 5000
+    },
+    "BoundedList_ModelOfferingV1_10000": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/ModelOfferingV1"
+      },
+      "maxItems": 10000
+    },
+    "BoundedList_OperationProfileV1_7": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/OperationProfileV1"
+      },
+      "maxItems": 7
+    },
+    "BoundedList_PriceCardV1_20000": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/PriceCardV1"
+      },
+      "maxItems": 20000
+    },
+    "BoundedList_PriceRateV1_10": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/PriceRateV1"
+      },
+      "maxItems": 10
+    },
+    "BoundedList_PricingWeekdayV1_7": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/PricingWeekdayV1"
+      },
+      "maxItems": 7
+    },
+    "BoundedList_ReasoningEffortAliasV1_7": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/ReasoningEffortAliasV1"
+      },
+      "maxItems": 7
+    },
+    "BoundedList_ReasoningEffort_7": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/ReasoningEffort"
+      },
+      "maxItems": 7
+    },
+    "BoundedList_String_256": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 256
+    },
+    "BoundedList_String_64": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 64
+    },
+    "BoundedList_ToolChoiceMode_4": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/ToolChoiceMode"
+      },
+      "maxItems": 4
+    },
+    "BoundedList_UtcDailyPricingWindowV1_32": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/UtcDailyPricingWindowV1"
+      },
+      "maxItems": 32
+    },
+    "BoundedList_uint32_64": {
+      "type": "array",
+      "items": {
+        "type": "integer",
+        "format": "uint32",
+        "minimum": 0.0
+      },
+      "maxItems": 64
+    },
+    "ChatAdapterKind": {
+      "type": "string",
+      "enum": [
+        "anthropic_messages",
+        "openai_responses",
+        "openai_chat_completions"
+      ]
+    },
+    "ChatProfileV1": {
+      "type": "object",
+      "properties": {
+        "context_tokens": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "format": "uint64",
+          "minimum": 0.0
+        },
+        "input_modalities": {
+          "default": {},
+          "allOf": [
+            {
+              "$ref": "#/definitions/FactMap_InputModality"
+            }
+          ]
+        },
+        "max_output_tokens": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "format": "uint64",
+          "minimum": 0.0
+        },
+        "native_tools": {
+          "default": {},
+          "allOf": [
+            {
+              "$ref": "#/definitions/FactMap_NativeToolKind"
+            }
+          ]
+        },
+        "output_modalities": {
+          "default": {},
+          "allOf": [
+            {
+              "$ref": "#/definitions/FactMap_OutputModality"
+            }
+          ]
+        },
+        "parallel_tool_calls": {
+          "default": "unknown",
+          "allOf": [
+            {
+              "$ref": "#/definitions/SupportLevel"
+            }
+          ]
+        },
+        "prompt_caching": {
+          "default": "unknown",
+          "allOf": [
+            {
+              "$ref": "#/definitions/SupportLevel"
+            }
+          ]
+        },
+        "reasoning": {
+          "default": {
+            "accepted_aliases": [],
+            "default": null,
+            "efforts": []
+          },
+          "allOf": [
+            {
+              "$ref": "#/definitions/ReasoningProfileV1"
+            }
+          ]
+        },
+        "streaming": {
+          "default": "unknown",
+          "allOf": [
+            {
+              "$ref": "#/definitions/SupportLevel"
+            }
+          ]
+        },
+        "structured_output": {
+          "default": {
+            "json_object": "unknown",
+            "json_schema": "unknown"
+          },
+          "allOf": [
+            {
+              "$ref": "#/definitions/StructuredOutputProfileV1"
+            }
+          ]
+        },
+        "system_messages": {
+          "default": "unknown",
+          "allOf": [
+            {
+              "$ref": "#/definitions/SupportLevel"
+            }
+          ]
+        },
+        "tool_calling": {
+          "default": "unknown",
+          "allOf": [
+            {
+              "$ref": "#/definitions/SupportLevel"
+            }
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "ChatWireContractV1": {
+      "type": "object",
+      "required": [
+        "max_output_field",
+        "reasoning",
+        "structured_output",
+        "temperature",
+        "thinking_roundtrip",
+        "tool_choice"
+      ],
+      "properties": {
+        "max_output_field": {
+          "$ref": "#/definitions/MaxOutputField"
+        },
+        "reasoning": {
+          "$ref": "#/definitions/ReasoningWirePolicy"
+        },
+        "structured_output": {
+          "$ref": "#/definitions/StructuredOutputWirePolicy"
+        },
+        "temperature": {
+          "$ref": "#/definitions/TemperatureWirePolicy"
+        },
+        "thinking_control": {
+          "default": "unknown",
+          "allOf": [
+            {
+              "$ref": "#/definitions/ThinkingControlPolicyV1"
+            }
+          ]
+        },
+        "thinking_roundtrip": {
+          "$ref": "#/definitions/ThinkingRoundtripPolicyV1"
+        },
+        "tool_choice": {
+          "$ref": "#/definitions/BoundedList_ToolChoiceMode_4"
+        }
+      },
+      "additionalProperties": false
+    },
+    "ContextTierV1": {
+      "type": "object",
+      "required": [
+        "min_input_tokens",
+        "rates"
+      ],
+      "properties": {
+        "min_input_tokens": {
+          "type": "integer",
+          "format": "uint64",
+          "minimum": 0.0
+        },
+        "rates": {
+          "$ref": "#/definitions/BoundedList_PriceRateV1_10"
+        }
+      },
+      "additionalProperties": false
+    },
+    "DataPolicyClaimV1": {
+      "type": "object",
+      "required": [
+        "retention",
+        "training"
+      ],
+      "properties": {
+        "required_workspace_retention_days": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "format": "uint16",
+          "minimum": 0.0
+        },
+        "retention": {
+          "$ref": "#/definitions/RetentionClaimV1"
+        },
+        "training": {
+          "$ref": "#/definitions/TrainingClaim"
+        }
+      },
+      "additionalProperties": false
+    },
+    "DecimalAmount": {
+      "type": "string",
+      "maxLength": 25,
+      "pattern": "^(0|[1-9][0-9]{0,11})(\\.[0-9]{1,12})?$"
+    },
+    "EmbeddingProfileV1": {
+      "type": "object",
+      "properties": {
+        "dimensions": {
+          "default": [],
+          "allOf": [
+            {
+              "$ref": "#/definitions/BoundedList_uint32_64"
+            }
+          ]
+        },
+        "input_modalities": {
+          "default": {},
+          "allOf": [
+            {
+              "$ref": "#/definitions/FactMap_InputModality"
+            }
+          ]
+        },
+        "max_input_tokens": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "format": "uint64",
+          "minimum": 0.0
+        }
+      },
+      "additionalProperties": false
+    },
+    "EvidenceKind": {
+      "type": "string",
+      "enum": [
+        "provider_docs",
+        "provider_api",
+        "public_benchmark",
+        "lineage_curation"
+      ]
+    },
+    "EvidenceRefV1": {
+      "type": "object",
+      "required": [
+        "evidence_id",
+        "kind",
+        "observed_at",
+        "publisher",
+        "title",
+        "url"
+      ],
+      "properties": {
+        "evidence_id": {
+          "type": "string"
+        },
+        "kind": {
+          "$ref": "#/definitions/EvidenceKind"
+        },
+        "observed_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "publisher": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "FactMap_InputModality": {
+      "type": "object",
+      "properties": {
+        "audio": {
+          "$ref": "#/definitions/SupportLevel"
+        },
+        "document": {
+          "$ref": "#/definitions/SupportLevel"
+        },
+        "image": {
+          "$ref": "#/definitions/SupportLevel"
+        },
+        "text": {
+          "$ref": "#/definitions/SupportLevel"
+        },
+        "video": {
+          "$ref": "#/definitions/SupportLevel"
+        }
+      },
+      "additionalProperties": false
+    },
+    "FactMap_NativeToolKind": {
+      "type": "object",
+      "properties": {
+        "code_execution": {
+          "$ref": "#/definitions/SupportLevel"
+        },
+        "web_search": {
+          "$ref": "#/definitions/SupportLevel"
+        }
+      },
+      "additionalProperties": false
+    },
+    "FactMap_OutputModality": {
+      "type": "object",
+      "properties": {
+        "audio": {
+          "$ref": "#/definitions/SupportLevel"
+        },
+        "embedding": {
+          "$ref": "#/definitions/SupportLevel"
+        },
+        "image": {
+          "$ref": "#/definitions/SupportLevel"
+        },
+        "text": {
+          "$ref": "#/definitions/SupportLevel"
+        },
+        "video": {
+          "$ref": "#/definitions/SupportLevel"
+        }
+      },
+      "additionalProperties": false
+    },
+    "ImageGenerationProfileV1": {
+      "type": "object",
+      "properties": {
+        "formats": {
+          "default": [],
+          "allOf": [
+            {
+              "$ref": "#/definitions/BoundedList_MediaFormat_16"
+            }
+          ]
+        },
+        "input_modalities": {
+          "default": {},
+          "allOf": [
+            {
+              "$ref": "#/definitions/FactMap_InputModality"
+            }
+          ]
+        },
+        "max_height": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "format": "uint32",
+          "minimum": 0.0
+        },
+        "max_images": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "format": "uint32",
+          "minimum": 0.0
+        },
+        "max_width": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "format": "uint32",
+          "minimum": 0.0
+        }
+      },
+      "additionalProperties": false
+    },
+    "LifecycleStage": {
+      "type": "string",
+      "enum": [
+        "preview",
+        "stable",
+        "deprecated",
+        "sunset"
+      ]
+    },
+    "LifecycleV1": {
+      "type": "object",
+      "required": [
+        "stage"
+      ],
+      "properties": {
+        "effective_at": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "replacement_model_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "stage": {
+          "$ref": "#/definitions/LifecycleStage"
+        }
+      },
+      "additionalProperties": false
+    },
+    "MaxOutputField": {
+      "type": "string",
+      "enum": [
+        "max_tokens",
+        "max_completion_tokens",
+        "max_output_tokens",
+        "omit"
+      ]
+    },
+    "MediaFormat": {
+      "type": "string",
+      "enum": [
+        "png",
+        "jpeg",
+        "webp",
+        "gif",
+        "mp3",
+        "mp4",
+        "mpeg",
+        "mpga",
+        "m4a",
+        "wav",
+        "webm",
+        "flac",
+        "ogg",
+        "pcm",
+        "opus"
+      ]
+    },
+    "MeterUnit": {
+      "type": "string",
+      "enum": [
+        "one",
+        "thousand",
+        "million"
+      ]
+    },
+    "ModalityClaimsV1": {
+      "type": "object",
+      "properties": {
+        "input": {
+          "default": {},
+          "allOf": [
+            {
+              "$ref": "#/definitions/FactMap_InputModality"
+            }
+          ]
+        },
+        "output": {
+          "default": {},
+          "allOf": [
+            {
+              "$ref": "#/definitions/FactMap_OutputModality"
+            }
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "ModelDefinitionV1": {
+      "type": "object",
+      "required": [
+        "developer",
+        "display_name",
+        "family",
+        "intrinsic_modalities",
+        "lifecycle",
+        "model_id"
+      ],
+      "properties": {
+        "developer": {
+          "type": "string"
+        },
+        "display_name": {
+          "type": "string"
+        },
+        "evidence_refs": {
+          "default": [],
+          "allOf": [
+            {
+              "$ref": "#/definitions/BoundedList_String_64"
+            }
+          ]
+        },
+        "family": {
+          "type": "string"
+        },
+        "intrinsic_modalities": {
+          "$ref": "#/definitions/ModalityClaimsV1"
+        },
+        "knowledge_cutoff": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date"
+        },
+        "lifecycle": {
+          "$ref": "#/definitions/LifecycleV1"
+        },
+        "model_id": {
+          "type": "string"
+        },
+        "released_at": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date"
+        }
+      },
+      "additionalProperties": false
+    },
+    "ModelOfferingV1": {
+      "type": "object",
+      "required": [
+        "data_policy",
+        "lifecycle",
+        "model_id",
+        "offering_id",
+        "operations",
+        "provider_id",
+        "wire_model"
+      ],
+      "properties": {
+        "data_policy": {
+          "$ref": "#/definitions/DataPolicyClaimV1"
+        },
+        "evidence_refs": {
+          "default": [],
+          "allOf": [
+            {
+              "$ref": "#/definitions/BoundedList_String_64"
+            }
+          ]
+        },
+        "lifecycle": {
+          "$ref": "#/definitions/LifecycleV1"
+        },
+        "model_id": {
+          "type": "string"
+        },
+        "offering_id": {
+          "type": "string"
+        },
+        "operations": {
+          "$ref": "#/definitions/BoundedList_OperationProfileV1_7"
+        },
+        "price_card_refs": {
+          "default": [],
+          "allOf": [
+            {
+              "$ref": "#/definitions/BoundedList_String_64"
+            }
+          ]
+        },
+        "provider_id": {
+          "type": "string"
+        },
+        "regions": {
+          "default": [],
+          "allOf": [
+            {
+              "$ref": "#/definitions/BoundedList_String_64"
+            }
+          ]
+        },
+        "wire_model": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "OperationProfileV1": {
+      "oneOf": [
+        {
+          "type": "object",
+          "required": [
+            "adapter",
+            "capabilities",
+            "operation",
+            "wire_contract"
+          ],
+          "properties": {
+            "adapter": {
+              "$ref": "#/definitions/ChatAdapterKind"
+            },
+            "capabilities": {
+              "$ref": "#/definitions/ChatProfileV1"
+            },
+            "operation": {
+              "type": "string",
+              "enum": [
+                "chat"
+              ]
+            },
+            "wire_contract": {
+              "$ref": "#/definitions/ChatWireContractV1"
+            }
+          },
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "required": [
+            "capabilities",
+            "operation"
+          ],
+          "properties": {
+            "capabilities": {
+              "$ref": "#/definitions/EmbeddingProfileV1"
+            },
+            "operation": {
+              "type": "string",
+              "enum": [
+                "embedding"
+              ]
+            }
+          },
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "required": [
+            "capabilities",
+            "operation"
+          ],
+          "properties": {
+            "capabilities": {
+              "$ref": "#/definitions/RerankProfileV1"
+            },
+            "operation": {
+              "type": "string",
+              "enum": [
+                "rerank"
+              ]
+            }
+          },
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "required": [
+            "adapter",
+            "capabilities",
+            "operation"
+          ],
+          "properties": {
+            "adapter": {
+              "$ref": "#/definitions/RegisteredTranscriptionAdapter"
+            },
+            "capabilities": {
+              "$ref": "#/definitions/TranscriptionProfileV1"
+            },
+            "operation": {
+              "type": "string",
+              "enum": [
+                "transcription"
+              ]
+            }
+          },
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "required": [
+            "capabilities",
+            "operation"
+          ],
+          "properties": {
+            "capabilities": {
+              "$ref": "#/definitions/SpeechSynthesisProfileV1"
+            },
+            "operation": {
+              "type": "string",
+              "enum": [
+                "speech_synthesis"
+              ]
+            }
+          },
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "required": [
+            "capabilities",
+            "operation"
+          ],
+          "properties": {
+            "capabilities": {
+              "$ref": "#/definitions/ImageGenerationProfileV1"
+            },
+            "operation": {
+              "type": "string",
+              "enum": [
+                "image_generation"
+              ]
+            }
+          },
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "required": [
+            "capabilities",
+            "operation"
+          ],
+          "properties": {
+            "capabilities": {
+              "$ref": "#/definitions/VideoGenerationProfileV1"
+            },
+            "operation": {
+              "type": "string",
+              "enum": [
+                "video_generation"
+              ]
+            }
+          },
+          "additionalProperties": false
+        }
+      ]
+    },
+    "PriceCardV1": {
+      "type": "object",
+      "required": [
+        "currency",
+        "effective_from",
+        "offering_id",
+        "price_card_id",
+        "rates"
+      ],
+      "properties": {
+        "calendar": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/RecurringPricingCalendarV1"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "context_tiers": {
+          "default": [],
+          "allOf": [
+            {
+              "$ref": "#/definitions/BoundedList_ContextTierV1_32"
+            }
+          ]
+        },
+        "currency": {
+          "type": "string"
+        },
+        "daily_utc_windows": {
+          "default": [],
+          "allOf": [
+            {
+              "$ref": "#/definitions/BoundedList_UtcDailyPricingWindowV1_32"
+            }
+          ]
+        },
+        "effective_from": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "effective_until": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "evidence_refs": {
+          "default": [],
+          "allOf": [
+            {
+              "$ref": "#/definitions/BoundedList_String_64"
+            }
+          ]
+        },
+        "offering_id": {
+          "type": "string"
+        },
+        "price_card_id": {
+          "type": "string"
+        },
+        "rates": {
+          "$ref": "#/definitions/BoundedList_PriceRateV1_10"
+        },
+        "region": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "service_tier": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "PriceMeter": {
+      "type": "string",
+      "enum": [
+        "input_text_token",
+        "output_text_token",
+        "cache_read_text_token",
+        "cache_write_text_token",
+        "input_audio_second",
+        "output_audio_second",
+        "output_character",
+        "image",
+        "video_second",
+        "request"
+      ]
+    },
+    "PriceRateV1": {
+      "type": "object",
+      "required": [
+        "amount",
+        "meter",
+        "per"
+      ],
+      "properties": {
+        "amount": {
+          "$ref": "#/definitions/DecimalAmount"
+        },
+        "cache_ttl_seconds": {
+          "description": "Billing evidence only; never an outgoing cache-control instruction.",
+          "type": [
+            "integer",
+            "null"
+          ],
+          "format": "uint32",
+          "minimum": 0.0
+        },
+        "meter": {
+          "$ref": "#/definitions/PriceMeter"
+        },
+        "per": {
+          "$ref": "#/definitions/MeterUnit"
+        }
+      },
+      "additionalProperties": false
+    },
+    "PricingWeekdayV1": {
+      "type": "string",
+      "enum": [
+        "mon",
+        "tue",
+        "wed",
+        "thu",
+        "fri",
+        "sat",
+        "sun"
+      ]
+    },
+    "ReasoningEffort": {
+      "description": "Provider wire-level reasoning effort.",
+      "type": "string",
+      "enum": [
+        "none",
+        "minimal",
+        "low",
+        "medium",
+        "high",
+        "x_high",
+        "max"
+      ]
+    },
+    "ReasoningEffortAliasV1": {
+      "type": "object",
+      "required": [
+        "accepted",
+        "canonical"
+      ],
+      "properties": {
+        "accepted": {
+          "$ref": "#/definitions/ReasoningEffort"
+        },
+        "canonical": {
+          "$ref": "#/definitions/ReasoningEffort"
+        }
+      },
+      "additionalProperties": false
+    },
+    "ReasoningProfileV1": {
+      "type": "object",
+      "properties": {
+        "accepted_aliases": {
+          "default": [],
+          "allOf": [
+            {
+              "$ref": "#/definitions/BoundedList_ReasoningEffortAliasV1_7"
+            }
+          ]
+        },
+        "default": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/ReasoningEffort"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "efforts": {
+          "default": [],
+          "allOf": [
+            {
+              "$ref": "#/definitions/BoundedList_ReasoningEffort_7"
+            }
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "ReasoningWirePolicy": {
+      "oneOf": [
+        {
+          "type": "object",
+          "required": [
+            "encoding"
+          ],
+          "properties": {
+            "encoding": {
+              "type": "string",
+              "enum": [
+                "none"
+              ]
+            }
+          },
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "required": [
+            "efforts",
+            "encoding"
+          ],
+          "properties": {
+            "efforts": {
+              "$ref": "#/definitions/BoundedList_ReasoningEffort_7"
+            },
+            "encoding": {
+              "type": "string",
+              "enum": [
+                "anthropic_effort"
+              ]
+            }
+          },
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "required": [
+            "efforts",
+            "encoding"
+          ],
+          "properties": {
+            "efforts": {
+              "$ref": "#/definitions/BoundedList_ReasoningEffort_7"
+            },
+            "encoding": {
+              "type": "string",
+              "enum": [
+                "anthropic_adaptive"
+              ]
+            }
+          },
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "required": [
+            "efforts",
+            "encoding"
+          ],
+          "properties": {
+            "efforts": {
+              "$ref": "#/definitions/BoundedList_ReasoningEffort_7"
+            },
+            "encoding": {
+              "type": "string",
+              "enum": [
+                "anthropic_adaptive_always_on"
+              ]
+            }
+          },
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "required": [
+            "encoding",
+            "max_budget_tokens"
+          ],
+          "properties": {
+            "encoding": {
+              "type": "string",
+              "enum": [
+                "anthropic_manual"
+              ]
+            },
+            "max_budget_tokens": {
+              "type": "integer",
+              "format": "uint64",
+              "minimum": 0.0
+            }
+          },
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "required": [
+            "efforts",
+            "encoding"
+          ],
+          "properties": {
+            "efforts": {
+              "$ref": "#/definitions/BoundedList_ReasoningEffort_7"
+            },
+            "encoding": {
+              "type": "string",
+              "enum": [
+                "responses_effort"
+              ]
+            }
+          },
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "required": [
+            "efforts",
+            "encoding"
+          ],
+          "properties": {
+            "efforts": {
+              "$ref": "#/definitions/BoundedList_ReasoningEffort_7"
+            },
+            "encoding": {
+              "type": "string",
+              "enum": [
+                "reasoning_effort"
+              ]
+            }
+          },
+          "additionalProperties": false
+        },
+        {
+          "description": "Graded reasoning_effort with the separate top-level enable_thinking switch. None is a semantic off selection, never a wire effort token.",
+          "type": "object",
+          "required": [
+            "efforts",
+            "encoding"
+          ],
+          "properties": {
+            "efforts": {
+              "$ref": "#/definitions/BoundedList_ReasoningEffort_7"
+            },
+            "encoding": {
+              "type": "string",
+              "enum": [
+                "reasoning_effort_with_enable_thinking"
+              ]
+            }
+          },
+          "additionalProperties": false
+        },
+        {
+          "description": "OpenAI-compatible effort with Google's tool-attached thought signatures. Requires exact same-model/conversation replay, not scalar reasoning text.",
+          "type": "object",
+          "required": [
+            "efforts",
+            "encoding"
+          ],
+          "properties": {
+            "efforts": {
+              "$ref": "#/definitions/BoundedList_ReasoningEffort_7"
+            },
+            "encoding": {
+              "type": "string",
+              "enum": [
+                "google_reasoning_effort"
+              ]
+            }
+          },
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "required": [
+            "efforts",
+            "encoding"
+          ],
+          "properties": {
+            "efforts": {
+              "$ref": "#/definitions/BoundedList_ReasoningEffort_7"
+            },
+            "encoding": {
+              "type": "string",
+              "enum": [
+                "thinking_effort"
+              ]
+            }
+          },
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "required": [
+            "encoding"
+          ],
+          "properties": {
+            "encoding": {
+              "type": "string",
+              "enum": [
+                "thinking_toggle"
+              ]
+            }
+          },
+          "additionalProperties": false
+        }
+      ]
+    },
+    "RecurringPricingCalendarV1": {
+      "type": "object",
+      "required": [
+        "active_weekdays",
+        "utc_offset_minutes"
+      ],
+      "properties": {
+        "active_weekdays": {
+          "$ref": "#/definitions/BoundedList_PricingWeekdayV1_7"
+        },
+        "utc_offset_minutes": {
+          "type": "integer",
+          "format": "int16"
+        }
+      },
+      "additionalProperties": false
+    },
+    "RegisteredTranscriptionAdapter": {
+      "type": "string",
+      "enum": [
+        "openai_multipart_v1"
+      ]
+    },
+    "RerankProfileV1": {
+      "type": "object",
+      "properties": {
+        "max_document_tokens": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "format": "uint64",
+          "minimum": 0.0
+        },
+        "max_documents": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "format": "uint32",
+          "minimum": 0.0
+        },
+        "max_query_tokens": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "format": "uint64",
+          "minimum": 0.0
+        }
+      },
+      "additionalProperties": false
+    },
+    "RetentionClaimV1": {
+      "oneOf": [
+        {
+          "type": "object",
+          "required": [
+            "kind"
+          ],
+          "properties": {
+            "kind": {
+              "type": "string",
+              "enum": [
+                "unknown"
+              ]
+            }
+          },
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "required": [
+            "kind"
+          ],
+          "properties": {
+            "kind": {
+              "type": "string",
+              "enum": [
+                "zero"
+              ]
+            }
+          },
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "required": [
+            "days",
+            "kind"
+          ],
+          "properties": {
+            "days": {
+              "type": "integer",
+              "format": "uint16",
+              "minimum": 0.0
+            },
+            "kind": {
+              "type": "string",
+              "enum": [
+                "days"
+              ]
+            }
+          },
+          "additionalProperties": false
+        }
+      ]
+    },
+    "SpeechSynthesisProfileV1": {
+      "type": "object",
+      "properties": {
+        "formats": {
+          "default": [],
+          "allOf": [
+            {
+              "$ref": "#/definitions/BoundedList_MediaFormat_16"
+            }
+          ]
+        },
+        "languages": {
+          "default": [],
+          "allOf": [
+            {
+              "$ref": "#/definitions/BoundedList_String_256"
+            }
+          ]
+        },
+        "max_input_characters": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "format": "uint64",
+          "minimum": 0.0
+        },
+        "streaming": {
+          "default": "unknown",
+          "allOf": [
+            {
+              "$ref": "#/definitions/SupportLevel"
+            }
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "StructuredOutputProfileV1": {
+      "type": "object",
+      "properties": {
+        "json_object": {
+          "default": "unknown",
+          "allOf": [
+            {
+              "$ref": "#/definitions/SupportLevel"
+            }
+          ]
+        },
+        "json_schema": {
+          "default": "unknown",
+          "allOf": [
+            {
+              "$ref": "#/definitions/SupportLevel"
+            }
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "StructuredOutputWirePolicy": {
+      "type": "string",
+      "enum": [
+        "none",
+        "native_json_schema",
+        "json_object"
+      ]
+    },
+    "SupportLevel": {
+      "type": "string",
+      "enum": [
+        "supported",
+        "unsupported",
+        "unknown"
+      ]
+    },
+    "TemperatureWirePolicy": {
+      "type": "string",
+      "enum": [
+        "send_clamped",
+        "omit"
+      ]
+    },
+    "ThinkingControlPolicyV1": {
+      "type": "string",
+      "enum": [
+        "unknown",
+        "switchable",
+        "always_on"
+      ]
+    },
+    "ThinkingRoundtripPolicyV1": {
+      "type": "string",
+      "enum": [
+        "unknown",
+        "not_emitted",
+        "same_model_conversation",
+        "same_model_conversation_prefix"
+      ]
+    },
+    "ToolChoiceMode": {
+      "type": "string",
+      "enum": [
+        "auto",
+        "none",
+        "required",
+        "named"
+      ]
+    },
+    "TrainingClaim": {
+      "type": "string",
+      "enum": [
+        "unknown",
+        "not_used",
+        "may_be_used"
+      ]
+    },
+    "TranscriptionProfileV1": {
+      "type": "object",
+      "properties": {
+        "formats": {
+          "default": [],
+          "allOf": [
+            {
+              "$ref": "#/definitions/BoundedList_MediaFormat_16"
+            }
+          ]
+        },
+        "languages": {
+          "default": [],
+          "allOf": [
+            {
+              "$ref": "#/definitions/BoundedList_String_256"
+            }
+          ]
+        },
+        "max_audio_seconds": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "format": "uint32",
+          "minimum": 0.0
+        },
+        "max_input_bytes": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "format": "uint64",
+          "minimum": 0.0
+        },
+        "streaming": {
+          "default": "unknown",
+          "allOf": [
+            {
+              "$ref": "#/definitions/SupportLevel"
+            }
+          ]
+        },
+        "timestamps": {
+          "default": "unknown",
+          "allOf": [
+            {
+              "$ref": "#/definitions/SupportLevel"
+            }
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "UtcDailyPricingWindowV1": {
+      "type": "object",
+      "required": [
+        "end_exclusive",
+        "start_inclusive"
+      ],
+      "properties": {
+        "end_exclusive": {
+          "type": "string",
+          "format": "partial-date-time"
+        },
+        "start_inclusive": {
+          "type": "string",
+          "format": "partial-date-time"
+        }
+      },
+      "additionalProperties": false
+    },
+    "VideoGenerationProfileV1": {
+      "type": "object",
+      "properties": {
+        "formats": {
+          "default": [],
+          "allOf": [
+            {
+              "$ref": "#/definitions/BoundedList_MediaFormat_16"
+            }
+          ]
+        },
+        "input_modalities": {
+          "default": {},
+          "allOf": [
+            {
+              "$ref": "#/definitions/FactMap_InputModality"
+            }
+          ]
+        },
+        "max_height": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "format": "uint32",
+          "minimum": 0.0
+        },
+        "max_seconds": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "format": "uint32",
+          "minimum": 0.0
+        },
+        "max_width": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "format": "uint32",
+          "minimum": 0.0
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

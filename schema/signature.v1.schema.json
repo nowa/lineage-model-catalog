@@ -1,0 +1,37 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "additionalProperties": false,
+  "title": "Lineage model catalog detached signature v1",
+  "$comment": "Shape validation is not authentication. The reviewed pinned key verifies the Ed25519 signature over the signing domain followed by exact manifest bytes.",
+  "required": [
+    "signature_schema",
+    "key_id",
+    "algorithm",
+    "signature"
+  ],
+  "properties": {
+    "signature_schema": {
+      "type": "integer",
+      "const": 1
+    },
+    "key_id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 128,
+      "not": {
+        "pattern": "[^A-Za-z0-9_-]"
+      }
+    },
+    "algorithm": {
+      "type": "string",
+      "const": "ed25519"
+    },
+    "signature": {
+      "type": "string",
+      "minLength": 88,
+      "maxLength": 88,
+      "pattern": "^[A-Za-z0-9+/]{85}[AQgw]==$"
+    }
+  }
+}

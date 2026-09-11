@@ -1,0 +1,78 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "additionalProperties": false,
+  "title": "Lineage model catalog manifest v1",
+  "$comment": "Shape validation only. The client authenticates exact bytes before checking metadata, target digest/path equality, current time, revision and catalog semantics.",
+  "required": [
+    "manifest_schema",
+    "catalog_schema",
+    "channel",
+    "revision",
+    "source_commit",
+    "issued_at",
+    "expires_at",
+    "target"
+  ],
+  "properties": {
+    "manifest_schema": {
+      "const": 1,
+      "type": "integer"
+    },
+    "catalog_schema": {
+      "const": 1,
+      "type": "integer"
+    },
+    "channel": {
+      "const": "stable",
+      "type": "string"
+    },
+    "revision": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 18446744073709551615
+    },
+    "source_commit": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{40}$",
+      "minLength": 40,
+      "maxLength": 40
+    },
+    "issued_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "expires_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "target": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "path",
+        "length",
+        "sha256"
+      ],
+      "properties": {
+        "path": {
+          "type": "string",
+          "pattern": "^targets/sha256/[0-9a-f]{64}\\.catalog\\.json$",
+          "minLength": 92,
+          "maxLength": 92
+        },
+        "length": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 5242880
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$",
+          "minLength": 64,
+          "maxLength": 64
+        }
+      }
+    }
+  }
+}

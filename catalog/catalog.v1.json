@@ -1,0 +1,4449 @@
+{
+  "schema_version": 1,
+  "revision": 7,
+  "generated_at": "2026-09-10T00:00:00Z",
+  "models": [
+    {
+      "model_id": "openai/gpt-6-astra",
+      "developer": "openai",
+      "family": "gpt-6",
+      "display_name": "GPT-6 Astra",
+      "lifecycle": {
+        "stage": "stable"
+      },
+      "intrinsic_modalities": {
+        "input": {
+          "text": "supported",
+          "image": "supported",
+          "audio": "unsupported",
+          "video": "unsupported"
+        },
+        "output": {
+          "text": "supported",
+          "image": "unsupported",
+          "audio": "unsupported",
+          "video": "unsupported"
+        }
+      },
+      "evidence_refs": [
+        "openai-gpt-6-astra-model"
+      ]
+    },
+    {
+      "model_id": "anthropic/claude-fable-5",
+      "developer": "anthropic",
+      "family": "claude",
+      "display_name": "claude-fable-5",
+      "lifecycle": {
+        "stage": "stable"
+      },
+      "intrinsic_modalities": {
+        "input": {
+          "text": "supported",
+          "image": "supported"
+        },
+        "output": {
+          "text": "supported"
+        }
+      },
+      "evidence_refs": [
+        "anthropic-api-legacy-contract"
+      ]
+    },
+    {
+      "model_id": "anthropic/claude-opus-4-8",
+      "developer": "anthropic",
+      "family": "claude",
+      "display_name": "claude-opus-4-8",
+      "lifecycle": {
+        "stage": "stable"
+      },
+      "intrinsic_modalities": {
+        "input": {
+          "text": "supported",
+          "image": "supported"
+        },
+        "output": {
+          "text": "supported"
+        }
+      },
+      "evidence_refs": [
+        "anthropic-api-legacy-contract"
+      ]
+    },
+    {
+      "model_id": "anthropic/claude-opus-5",
+      "developer": "anthropic",
+      "family": "claude",
+      "display_name": "claude-opus-5",
+      "lifecycle": {
+        "stage": "stable"
+      },
+      "intrinsic_modalities": {
+        "input": {
+          "text": "supported",
+          "image": "supported"
+        },
+        "output": {
+          "text": "supported"
+        }
+      },
+      "evidence_refs": [
+        "anthropic-api-legacy-contract"
+      ]
+    },
+    {
+      "model_id": "anthropic/claude-sonnet-4-5",
+      "developer": "anthropic",
+      "family": "claude",
+      "display_name": "claude-sonnet-4-5",
+      "lifecycle": {
+        "stage": "stable"
+      },
+      "intrinsic_modalities": {
+        "input": {
+          "text": "supported",
+          "image": "supported"
+        },
+        "output": {
+          "text": "supported"
+        }
+      },
+      "evidence_refs": [
+        "anthropic-api-legacy-contract"
+      ]
+    },
+    {
+      "model_id": "anthropic/claude-sonnet-4-6",
+      "developer": "anthropic",
+      "family": "claude",
+      "display_name": "claude-sonnet-4-6",
+      "lifecycle": {
+        "stage": "stable"
+      },
+      "intrinsic_modalities": {
+        "input": {
+          "text": "supported",
+          "image": "supported"
+        },
+        "output": {
+          "text": "supported"
+        }
+      },
+      "evidence_refs": [
+        "anthropic-api-legacy-contract"
+      ]
+    },
+    {
+      "model_id": "anthropic/claude-sonnet-5",
+      "developer": "anthropic",
+      "family": "claude",
+      "display_name": "claude-sonnet-5",
+      "lifecycle": {
+        "stage": "stable"
+      },
+      "intrinsic_modalities": {
+        "input": {
+          "text": "supported",
+          "image": "supported"
+        },
+        "output": {
+          "text": "supported"
+        }
+      },
+      "evidence_refs": [
+        "anthropic-api-legacy-contract"
+      ]
+    },
+    {
+      "model_id": "deepseek/deepseek-v4-flash",
+      "developer": "deepseek",
+      "family": "deepseek",
+      "display_name": "deepseek-v4-flash",
+      "lifecycle": {
+        "stage": "stable"
+      },
+      "intrinsic_modalities": {
+        "input": {
+          "text": "supported",
+          "image": "unsupported"
+        },
+        "output": {
+          "text": "supported"
+        }
+      },
+      "evidence_refs": [
+        "deepseek-api-legacy-contract"
+      ]
+    },
+    {
+      "model_id": "deepseek/deepseek-v4-pro",
+      "developer": "deepseek",
+      "family": "deepseek",
+      "display_name": "deepseek-v4-pro",
+      "lifecycle": {
+        "stage": "stable"
+      },
+      "intrinsic_modalities": {
+        "input": {
+          "text": "supported",
+          "image": "unsupported"
+        },
+        "output": {
+          "text": "supported"
+        }
+      },
+      "evidence_refs": [
+        "deepseek-api-legacy-contract"
+      ]
+    },
+    {
+      "model_id": "moonshot/kimi-k2.6",
+      "developer": "moonshot",
+      "family": "kimi",
+      "display_name": "kimi-k2.6",
+      "lifecycle": {
+        "stage": "stable"
+      },
+      "intrinsic_modalities": {
+        "input": {
+          "text": "supported",
+          "image": "supported"
+        },
+        "output": {
+          "text": "supported"
+        }
+      },
+      "evidence_refs": [
+        "moonshot-api-legacy-contract"
+      ]
+    },
+    {
+      "model_id": "moonshot/kimi-k2.7-code",
+      "developer": "moonshot",
+      "family": "kimi",
+      "display_name": "kimi-k2.7-code",
+      "lifecycle": {
+        "stage": "stable"
+      },
+      "intrinsic_modalities": {
+        "input": {
+          "text": "supported",
+          "image": "supported"
+        },
+        "output": {
+          "text": "supported"
+        }
+      },
+      "evidence_refs": [
+        "moonshot-api-legacy-contract"
+      ]
+    },
+    {
+      "model_id": "moonshot/kimi-k2.7-code-highspeed",
+      "developer": "moonshot",
+      "family": "kimi",
+      "display_name": "kimi-k2.7-code-highspeed",
+      "lifecycle": {
+        "stage": "stable"
+      },
+      "intrinsic_modalities": {
+        "input": {
+          "text": "supported",
+          "image": "supported"
+        },
+        "output": {
+          "text": "supported"
+        }
+      },
+      "evidence_refs": [
+        "moonshot-api-legacy-contract"
+      ]
+    },
+    {
+      "model_id": "moonshot/kimi-k3",
+      "developer": "moonshot",
+      "family": "kimi",
+      "display_name": "kimi-k3",
+      "lifecycle": {
+        "stage": "stable"
+      },
+      "intrinsic_modalities": {
+        "input": {
+          "text": "supported",
+          "image": "supported"
+        },
+        "output": {
+          "text": "supported"
+        }
+      },
+      "evidence_refs": [
+        "moonshot-api-legacy-contract"
+      ]
+    },
+    {
+      "model_id": "moonshot/moonshot-v1-128k",
+      "developer": "moonshot",
+      "family": "moonshot",
+      "display_name": "moonshot-v1-128k",
+      "lifecycle": {
+        "stage": "stable"
+      },
+      "intrinsic_modalities": {
+        "input": {
+          "text": "supported",
+          "image": "unsupported"
+        },
+        "output": {
+          "text": "supported"
+        }
+      },
+      "evidence_refs": [
+        "moonshot-api-legacy-contract"
+      ]
+    },
+    {
+      "model_id": "moonshot/moonshot-v1-128k-vision-preview",
+      "developer": "moonshot",
+      "family": "moonshot",
+      "display_name": "moonshot-v1-128k-vision-preview",
+      "lifecycle": {
+        "stage": "preview"
+      },
+      "intrinsic_modalities": {
+        "input": {
+          "text": "supported",
+          "image": "supported"
+        },
+        "output": {
+          "text": "supported"
+        }
+      },
+      "evidence_refs": [
+        "moonshot-api-legacy-contract"
+      ]
+    },
+    {
+      "model_id": "moonshot/moonshot-v1-32k",
+      "developer": "moonshot",
+      "family": "moonshot",
+      "display_name": "moonshot-v1-32k",
+      "lifecycle": {
+        "stage": "stable"
+      },
+      "intrinsic_modalities": {
+        "input": {
+          "text": "supported",
+          "image": "unsupported"
+        },
+        "output": {
+          "text": "supported"
+        }
+      },
+      "evidence_refs": [
+        "moonshot-api-legacy-contract"
+      ]
+    },
+    {
+      "model_id": "moonshot/moonshot-v1-32k-vision-preview",
+      "developer": "moonshot",
+      "family": "moonshot",
+      "display_name": "moonshot-v1-32k-vision-preview",
+      "lifecycle": {
+        "stage": "preview"
+      },
+      "intrinsic_modalities": {
+        "input": {
+          "text": "supported",
+          "image": "supported"
+        },
+        "output": {
+          "text": "supported"
+        }
+      },
+      "evidence_refs": [
+        "moonshot-api-legacy-contract"
+      ]
+    },
+    {
+      "model_id": "moonshot/moonshot-v1-8k",
+      "developer": "moonshot",
+      "family": "moonshot",
+      "display_name": "moonshot-v1-8k",
+      "lifecycle": {
+        "stage": "stable"
+      },
+      "intrinsic_modalities": {
+        "input": {
+          "text": "supported",
+          "image": "unsupported"
+        },
+        "output": {
+          "text": "supported"
+        }
+      },
+      "evidence_refs": [
+        "moonshot-api-legacy-contract"
+      ]
+    },
+    {
+      "model_id": "moonshot/moonshot-v1-8k-vision-preview",
+      "developer": "moonshot",
+      "family": "moonshot",
+      "display_name": "moonshot-v1-8k-vision-preview",
+      "lifecycle": {
+        "stage": "preview"
+      },
+      "intrinsic_modalities": {
+        "input": {
+          "text": "supported",
+          "image": "supported"
+        },
+        "output": {
+          "text": "supported"
+        }
+      },
+      "evidence_refs": [
+        "moonshot-api-legacy-contract"
+      ]
+    },
+    {
+      "model_id": "openai/gpt-5",
+      "developer": "openai",
+      "family": "gpt",
+      "display_name": "gpt-5",
+      "lifecycle": {
+        "stage": "stable"
+      },
+      "intrinsic_modalities": {
+        "input": {
+          "text": "supported",
+          "image": "supported"
+        },
+        "output": {
+          "text": "supported"
+        }
+      },
+      "evidence_refs": [
+        "openai-api-legacy-contract"
+      ]
+    },
+    {
+      "model_id": "openai/gpt-5-mini",
+      "developer": "openai",
+      "family": "gpt",
+      "display_name": "gpt-5-mini",
+      "lifecycle": {
+        "stage": "stable"
+      },
+      "intrinsic_modalities": {
+        "input": {
+          "text": "supported",
+          "image": "supported"
+        },
+        "output": {
+          "text": "supported"
+        }
+      },
+      "evidence_refs": [
+        "openai-api-legacy-contract"
+      ]
+    },
+    {
+      "model_id": "openai/gpt-5.4",
+      "developer": "openai",
+      "family": "gpt",
+      "display_name": "gpt-5.4",
+      "lifecycle": {
+        "stage": "stable"
+      },
+      "intrinsic_modalities": {
+        "input": {
+          "text": "supported",
+          "image": "supported"
+        },
+        "output": {
+          "text": "supported"
+        }
+      },
+      "evidence_refs": [
+        "openai-api-legacy-contract"
+      ]
+    },
+    {
+      "model_id": "openai/gpt-5.4-mini",
+      "developer": "openai",
+      "family": "gpt",
+      "display_name": "gpt-5.4-mini",
+      "lifecycle": {
+        "stage": "stable"
+      },
+      "intrinsic_modalities": {
+        "input": {
+          "text": "supported",
+          "image": "supported"
+        },
+        "output": {
+          "text": "supported"
+        }
+      },
+      "evidence_refs": [
+        "openai-api-legacy-contract"
+      ]
+    },
+    {
+      "model_id": "openai/gpt-5.4-nano",
+      "developer": "openai",
+      "family": "gpt",
+      "display_name": "gpt-5.4-nano",
+      "lifecycle": {
+        "stage": "stable"
+      },
+      "intrinsic_modalities": {
+        "input": {
+          "text": "supported",
+          "image": "supported"
+        },
+        "output": {
+          "text": "supported"
+        }
+      },
+      "evidence_refs": [
+        "openai-api-legacy-contract"
+      ]
+    },
+    {
+      "model_id": "openai/gpt-5.4-pro",
+      "developer": "openai",
+      "family": "gpt",
+      "display_name": "gpt-5.4-pro",
+      "lifecycle": {
+        "stage": "stable"
+      },
+      "intrinsic_modalities": {
+        "input": {
+          "text": "supported",
+          "image": "supported"
+        },
+        "output": {
+          "text": "supported"
+        }
+      },
+      "evidence_refs": [
+        "openai-api-legacy-contract"
+      ]
+    },
+    {
+      "model_id": "openai/gpt-5.5",
+      "developer": "openai",
+      "family": "gpt",
+      "display_name": "gpt-5.5",
+      "lifecycle": {
+        "stage": "stable"
+      },
+      "intrinsic_modalities": {
+        "input": {
+          "text": "supported",
+          "image": "supported"
+        },
+        "output": {
+          "text": "supported"
+        }
+      },
+      "evidence_refs": [
+        "openai-api-legacy-contract"
+      ]
+    },
+    {
+      "model_id": "openai/gpt-5.6",
+      "developer": "openai",
+      "family": "gpt",
+      "display_name": "gpt-5.6",
+      "lifecycle": {
+        "stage": "stable"
+      },
+      "intrinsic_modalities": {
+        "input": {
+          "text": "supported",
+          "image": "supported"
+        },
+        "output": {
+          "text": "supported"
+        }
+      },
+      "evidence_refs": [
+        "openai-api-legacy-contract"
+      ]
+    },
+    {
+      "model_id": "openai/gpt-5.6-luna",
+      "developer": "openai",
+      "family": "gpt",
+      "display_name": "gpt-5.6-luna",
+      "lifecycle": {
+        "stage": "stable"
+      },
+      "intrinsic_modalities": {
+        "input": {
+          "text": "supported",
+          "image": "supported"
+        },
+        "output": {
+          "text": "supported"
+        }
+      },
+      "evidence_refs": [
+        "openai-api-legacy-contract"
+      ]
+    },
+    {
+      "model_id": "openai/gpt-5.6-sol",
+      "developer": "openai",
+      "family": "gpt",
+      "display_name": "gpt-5.6-sol",
+      "lifecycle": {
+        "stage": "stable"
+      },
+      "intrinsic_modalities": {
+        "input": {
+          "text": "supported",
+          "image": "supported"
+        },
+        "output": {
+          "text": "supported"
+        }
+      },
+      "evidence_refs": [
+        "openai-api-legacy-contract"
+      ]
+    },
+    {
+      "model_id": "openai/gpt-5.6-terra",
+      "developer": "openai",
+      "family": "gpt",
+      "display_name": "gpt-5.6-terra",
+      "lifecycle": {
+        "stage": "stable"
+      },
+      "intrinsic_modalities": {
+        "input": {
+          "text": "supported",
+          "image": "supported"
+        },
+        "output": {
+          "text": "supported"
+        }
+      },
+      "evidence_refs": [
+        "openai-api-legacy-contract"
+      ]
+    },
+    {
+      "model_id": "qwen/qwen3.8-max",
+      "developer": "qwen",
+      "family": "qwen3.8",
+      "display_name": "qwen3.8-max",
+      "lifecycle": {
+        "stage": "stable"
+      },
+      "intrinsic_modalities": {
+        "input": {
+          "text": "supported",
+          "image": "supported"
+        },
+        "output": {
+          "text": "supported"
+        }
+      },
+      "evidence_refs": [
+        "dashscope-api-legacy-contract"
+      ]
+    },
+    {
+      "model_id": "xai/grok-4.5",
+      "developer": "xai",
+      "family": "grok",
+      "display_name": "grok-4.5",
+      "lifecycle": {
+        "stage": "stable"
+      },
+      "intrinsic_modalities": {
+        "input": {
+          "text": "supported",
+          "image": "supported"
+        },
+        "output": {
+          "text": "supported"
+        }
+      },
+      "evidence_refs": [
+        "xai-api-legacy-contract"
+      ]
+    },
+    {
+      "model_id": "xai/grok-4.6",
+      "developer": "xai",
+      "family": "grok",
+      "display_name": "grok-4.6",
+      "lifecycle": {
+        "stage": "stable"
+      },
+      "intrinsic_modalities": {
+        "input": {
+          "text": "supported",
+          "image": "supported"
+        },
+        "output": {
+          "text": "supported"
+        }
+      },
+      "evidence_refs": [
+        "xai-api-legacy-contract"
+      ]
+    },
+    {
+      "model_id": "zhipu/glm-5.2",
+      "developer": "zhipu",
+      "family": "glm",
+      "display_name": "glm-5.2",
+      "lifecycle": {
+        "stage": "stable"
+      },
+      "intrinsic_modalities": {
+        "input": {
+          "text": "supported",
+          "image": "unsupported"
+        },
+        "output": {
+          "text": "supported"
+        }
+      },
+      "evidence_refs": [
+        "zhipu-api-legacy-contract"
+      ]
+    },
+    {
+      "model_id": "zhipu/glm-5.3",
+      "developer": "zhipu",
+      "family": "glm",
+      "display_name": "glm-5.3",
+      "lifecycle": {
+        "stage": "stable"
+      },
+      "intrinsic_modalities": {
+        "input": {
+          "text": "supported",
+          "image": "unsupported"
+        },
+        "output": {
+          "text": "supported"
+        }
+      },
+      "evidence_refs": [
+        "zhipu-api-legacy-contract"
+      ]
+    },
+    {
+      "model_id": "qwen/qwen3.8-max-0902",
+      "developer": "qwen",
+      "family": "qwen3.8",
+      "display_name": "Qwen3.8 Max 0902",
+      "lifecycle": {
+        "stage": "stable"
+      },
+      "intrinsic_modalities": {
+        "input": {
+          "text": "supported",
+          "image": "supported",
+          "video": "supported"
+        },
+        "output": {
+          "text": "supported"
+        }
+      },
+      "evidence_refs": [
+        "qwen38-max-model"
+      ]
+    },
+    {
+      "model_id": "qwen/qwen3.8-flash",
+      "developer": "qwen",
+      "family": "qwen3.8",
+      "display_name": "Qwen3.8 Flash",
+      "lifecycle": {
+        "stage": "stable"
+      },
+      "intrinsic_modalities": {
+        "input": {
+          "text": "supported",
+          "image": "supported",
+          "video": "supported"
+        },
+        "output": {
+          "text": "supported"
+        }
+      },
+      "evidence_refs": [
+        "qwen38-flash-model"
+      ]
+    },
+    {
+      "model_id": "anthropic/claude-fable-5-1",
+      "developer": "anthropic",
+      "family": "claude",
+      "display_name": "Claude Fable 5.1",
+      "lifecycle": {
+        "stage": "stable"
+      },
+      "intrinsic_modalities": {
+        "input": {
+          "text": "supported",
+          "image": "supported"
+        },
+        "output": {
+          "text": "supported"
+        }
+      },
+      "evidence_refs": [
+        "anthropic-fable-5-1-model",
+        "anthropic-fable-preserved-thinking",
+        "anthropic-fable-5-1-migration"
+      ]
+    },
+    {
+      "model_id": "google/gemini-3.8-flash",
+      "developer": "google",
+      "family": "gemini",
+      "display_name": "Gemini 3.8 Flash",
+      "lifecycle": {
+        "stage": "stable"
+      },
+      "intrinsic_modalities": {
+        "input": {
+          "text": "supported",
+          "image": "supported",
+          "audio": "supported",
+          "video": "supported",
+          "document": "supported"
+        },
+        "output": {
+          "text": "supported",
+          "image": "unsupported",
+          "audio": "unsupported",
+          "video": "unsupported"
+        }
+      },
+      "evidence_refs": [
+        "google-gemini38-model"
+      ]
+    },
+    {
+      "model_id": "deepseek/deepseek-v4-flash-vision-exp",
+      "developer": "deepseek",
+      "family": "deepseek",
+      "display_name": "DeepSeek V4 Flash Vision (Experimental)",
+      "lifecycle": {
+        "stage": "preview"
+      },
+      "intrinsic_modalities": {
+        "input": {
+          "text": "supported",
+          "image": "supported",
+          "audio": "unsupported",
+          "video": "unsupported",
+          "document": "unsupported"
+        },
+        "output": {
+          "text": "supported"
+        }
+      },
+      "evidence_refs": [
+        "deepseek-vision",
+        "deepseek-messages",
+        "deepseek-vision-pricing"
+      ]
+    }
+  ],
+  "offerings": [
+    {
+      "offering_id": "openai-api/gpt-6-astra",
+      "model_id": "openai/gpt-6-astra",
+      "provider_id": "openai-api",
+      "wire_model": "gpt-6-astra",
+      "operations": [
+        {
+          "operation": "chat",
+          "adapter": "openai_responses",
+          "wire_contract": {
+            "max_output_field": "max_output_tokens",
+            "temperature": "omit",
+            "reasoning": {
+              "encoding": "responses_effort",
+              "efforts": [
+                "low",
+                "medium",
+                "high",
+                "x_high",
+                "max"
+              ]
+            },
+            "thinking_control": "unknown",
+            "tool_choice": [
+              "auto",
+              "none"
+            ],
+            "thinking_roundtrip": "same_model_conversation",
+            "structured_output": "native_json_schema"
+          },
+          "capabilities": {
+            "input_modalities": {
+              "text": "supported",
+              "image": "supported",
+              "audio": "unsupported",
+              "video": "unsupported"
+            },
+            "output_modalities": {
+              "text": "supported"
+            },
+            "context_tokens": 1050000,
+            "max_output_tokens": 128000,
+            "system_messages": "supported",
+            "streaming": "supported",
+            "tool_calling": "supported",
+            "prompt_caching": "supported",
+            "structured_output": {
+              "json_schema": "supported"
+            },
+            "reasoning": {
+              "efforts": [
+                "low",
+                "medium",
+                "high",
+                "x_high",
+                "max"
+              ],
+              "default": null,
+              "accepted_aliases": []
+            }
+          }
+        }
+      ],
+      "price_card_refs": [
+        "openai-api/gpt-6-astra/standard-20260906"
+      ],
+      "regions": [],
+      "data_policy": {
+        "training": "unknown",
+        "retention": {
+          "kind": "unknown"
+        }
+      },
+      "lifecycle": {
+        "stage": "stable"
+      },
+      "evidence_refs": [
+        "openai-gpt-6-astra-model",
+        "openai-gpt-6-astra-protocol"
+      ]
+    },
+    {
+      "offering_id": "anthropic-api/claude-fable-5",
+      "model_id": "anthropic/claude-fable-5",
+      "provider_id": "anthropic-api",
+      "wire_model": "claude-fable-5",
+      "operations": [
+        {
+          "operation": "chat",
+          "adapter": "anthropic_messages",
+          "wire_contract": {
+            "max_output_field": "max_tokens",
+            "temperature": "omit",
+            "reasoning": {
+              "encoding": "anthropic_adaptive",
+              "efforts": [
+                "low",
+                "medium",
+                "high",
+                "x_high",
+                "max"
+              ]
+            },
+            "thinking_control": "unknown",
+            "tool_choice": [
+              "auto",
+              "none"
+            ],
+            "thinking_roundtrip": "same_model_conversation",
+            "structured_output": "none"
+          },
+          "capabilities": {
+            "input_modalities": {
+              "text": "supported",
+              "image": "supported"
+            },
+            "output_modalities": {
+              "text": "supported"
+            },
+            "context_tokens": 1000000,
+            "max_output_tokens": null,
+            "system_messages": "supported",
+            "streaming": "supported",
+            "tool_calling": "supported",
+            "reasoning": {
+              "efforts": [
+                "low",
+                "medium",
+                "high",
+                "x_high",
+                "max"
+              ],
+              "default": "high",
+              "accepted_aliases": []
+            }
+          }
+        }
+      ],
+      "price_card_refs": [],
+      "regions": [],
+      "data_policy": {
+        "training": "unknown",
+        "retention": {
+          "kind": "unknown"
+        }
+      },
+      "lifecycle": {
+        "stage": "stable"
+      },
+      "evidence_refs": [
+        "anthropic-api-legacy-contract"
+      ]
+    },
+    {
+      "offering_id": "anthropic-api/claude-opus-4-8",
+      "model_id": "anthropic/claude-opus-4-8",
+      "provider_id": "anthropic-api",
+      "wire_model": "claude-opus-4-8",
+      "operations": [
+        {
+          "operation": "chat",
+          "adapter": "anthropic_messages",
+          "wire_contract": {
+            "max_output_field": "max_tokens",
+            "temperature": "omit",
+            "reasoning": {
+              "encoding": "anthropic_adaptive",
+              "efforts": [
+                "low",
+                "medium",
+                "high",
+                "x_high",
+                "max"
+              ]
+            },
+            "thinking_control": "unknown",
+            "tool_choice": [
+              "auto",
+              "none"
+            ],
+            "thinking_roundtrip": "same_model_conversation",
+            "structured_output": "none"
+          },
+          "capabilities": {
+            "input_modalities": {
+              "text": "supported",
+              "image": "supported"
+            },
+            "output_modalities": {
+              "text": "supported"
+            },
+            "context_tokens": 1000000,
+            "max_output_tokens": null,
+            "system_messages": "supported",
+            "streaming": "supported",
+            "tool_calling": "supported",
+            "reasoning": {
+              "efforts": [
+                "low",
+                "medium",
+                "high",
+                "x_high",
+                "max"
+              ],
+              "default": "high",
+              "accepted_aliases": []
+            }
+          }
+        }
+      ],
+      "price_card_refs": [],
+      "regions": [],
+      "data_policy": {
+        "training": "unknown",
+        "retention": {
+          "kind": "unknown"
+        }
+      },
+      "lifecycle": {
+        "stage": "stable"
+      },
+      "evidence_refs": [
+        "anthropic-api-legacy-contract"
+      ]
+    },
+    {
+      "offering_id": "anthropic-api/claude-opus-5",
+      "model_id": "anthropic/claude-opus-5",
+      "provider_id": "anthropic-api",
+      "wire_model": "claude-opus-5",
+      "operations": [
+        {
+          "operation": "chat",
+          "adapter": "anthropic_messages",
+          "wire_contract": {
+            "max_output_field": "max_tokens",
+            "temperature": "omit",
+            "reasoning": {
+              "encoding": "anthropic_adaptive",
+              "efforts": [
+                "low",
+                "medium",
+                "high",
+                "x_high",
+                "max"
+              ]
+            },
+            "thinking_control": "unknown",
+            "tool_choice": [
+              "auto",
+              "none"
+            ],
+            "thinking_roundtrip": "same_model_conversation",
+            "structured_output": "none"
+          },
+          "capabilities": {
+            "input_modalities": {
+              "text": "supported",
+              "image": "supported"
+            },
+            "output_modalities": {
+              "text": "supported"
+            },
+            "context_tokens": 1000000,
+            "max_output_tokens": null,
+            "system_messages": "supported",
+            "streaming": "supported",
+            "tool_calling": "supported",
+            "reasoning": {
+              "efforts": [
+                "low",
+                "medium",
+                "high",
+                "x_high",
+                "max"
+              ],
+              "default": "high",
+              "accepted_aliases": []
+            }
+          }
+        }
+      ],
+      "price_card_refs": [],
+      "regions": [],
+      "data_policy": {
+        "training": "unknown",
+        "retention": {
+          "kind": "unknown"
+        }
+      },
+      "lifecycle": {
+        "stage": "stable"
+      },
+      "evidence_refs": [
+        "anthropic-api-legacy-contract"
+      ]
+    },
+    {
+      "offering_id": "anthropic-api/claude-sonnet-4-5",
+      "model_id": "anthropic/claude-sonnet-4-5",
+      "provider_id": "anthropic-api",
+      "wire_model": "claude-sonnet-4-5",
+      "operations": [
+        {
+          "operation": "chat",
+          "adapter": "anthropic_messages",
+          "wire_contract": {
+            "max_output_field": "max_tokens",
+            "temperature": "send_clamped",
+            "reasoning": {
+              "encoding": "none"
+            },
+            "thinking_control": "unknown",
+            "tool_choice": [
+              "auto",
+              "none"
+            ],
+            "thinking_roundtrip": "unknown",
+            "structured_output": "none"
+          },
+          "capabilities": {
+            "input_modalities": {
+              "text": "supported",
+              "image": "supported"
+            },
+            "output_modalities": {
+              "text": "supported"
+            },
+            "context_tokens": 200000,
+            "max_output_tokens": null,
+            "system_messages": "supported",
+            "streaming": "supported",
+            "tool_calling": "supported",
+            "reasoning": {
+              "efforts": [],
+              "default": null,
+              "accepted_aliases": []
+            }
+          }
+        }
+      ],
+      "price_card_refs": [],
+      "regions": [],
+      "data_policy": {
+        "training": "unknown",
+        "retention": {
+          "kind": "unknown"
+        }
+      },
+      "lifecycle": {
+        "stage": "stable"
+      },
+      "evidence_refs": [
+        "anthropic-api-legacy-contract"
+      ]
+    },
+    {
+      "offering_id": "anthropic-api/claude-sonnet-4-6",
+      "model_id": "anthropic/claude-sonnet-4-6",
+      "provider_id": "anthropic-api",
+      "wire_model": "claude-sonnet-4-6",
+      "operations": [
+        {
+          "operation": "chat",
+          "adapter": "anthropic_messages",
+          "wire_contract": {
+            "max_output_field": "max_tokens",
+            "temperature": "omit",
+            "reasoning": {
+              "encoding": "anthropic_adaptive",
+              "efforts": [
+                "low",
+                "medium",
+                "high",
+                "max"
+              ]
+            },
+            "thinking_control": "unknown",
+            "tool_choice": [
+              "auto",
+              "none"
+            ],
+            "thinking_roundtrip": "same_model_conversation",
+            "structured_output": "none"
+          },
+          "capabilities": {
+            "input_modalities": {
+              "text": "supported",
+              "image": "supported"
+            },
+            "output_modalities": {
+              "text": "supported"
+            },
+            "context_tokens": 1000000,
+            "max_output_tokens": null,
+            "system_messages": "supported",
+            "streaming": "supported",
+            "tool_calling": "supported",
+            "reasoning": {
+              "efforts": [
+                "low",
+                "medium",
+                "high",
+                "max"
+              ],
+              "default": "high",
+              "accepted_aliases": []
+            }
+          }
+        }
+      ],
+      "price_card_refs": [],
+      "regions": [],
+      "data_policy": {
+        "training": "unknown",
+        "retention": {
+          "kind": "unknown"
+        }
+      },
+      "lifecycle": {
+        "stage": "stable"
+      },
+      "evidence_refs": [
+        "anthropic-api-legacy-contract"
+      ]
+    },
+    {
+      "offering_id": "anthropic-api/claude-sonnet-5",
+      "model_id": "anthropic/claude-sonnet-5",
+      "provider_id": "anthropic-api",
+      "wire_model": "claude-sonnet-5",
+      "operations": [
+        {
+          "operation": "chat",
+          "adapter": "anthropic_messages",
+          "wire_contract": {
+            "max_output_field": "max_tokens",
+            "temperature": "omit",
+            "reasoning": {
+              "encoding": "anthropic_adaptive",
+              "efforts": [
+                "low",
+                "medium",
+                "high",
+                "x_high",
+                "max"
+              ]
+            },
+            "thinking_control": "unknown",
+            "tool_choice": [
+              "auto",
+              "none"
+            ],
+            "thinking_roundtrip": "same_model_conversation",
+            "structured_output": "none"
+          },
+          "capabilities": {
+            "input_modalities": {
+              "text": "supported",
+              "image": "supported"
+            },
+            "output_modalities": {
+              "text": "supported"
+            },
+            "context_tokens": 1000000,
+            "max_output_tokens": null,
+            "system_messages": "supported",
+            "streaming": "supported",
+            "tool_calling": "supported",
+            "reasoning": {
+              "efforts": [
+                "low",
+                "medium",
+                "high",
+                "x_high",
+                "max"
+              ],
+              "default": "high",
+              "accepted_aliases": []
+            }
+          }
+        }
+      ],
+      "price_card_refs": [],
+      "regions": [],
+      "data_policy": {
+        "training": "unknown",
+        "retention": {
+          "kind": "unknown"
+        }
+      },
+      "lifecycle": {
+        "stage": "stable"
+      },
+      "evidence_refs": [
+        "anthropic-api-legacy-contract"
+      ]
+    },
+    {
+      "offering_id": "dashscope-api/qwen3.8-max",
+      "model_id": "qwen/qwen3.8-max",
+      "provider_id": "dashscope-api",
+      "wire_model": "qwen3.8-max",
+      "operations": [
+        {
+          "operation": "chat",
+          "adapter": "openai_chat_completions",
+          "wire_contract": {
+            "max_output_field": "max_tokens",
+            "temperature": "send_clamped",
+            "reasoning": {
+              "encoding": "reasoning_effort",
+              "efforts": [
+                "none",
+                "minimal",
+                "low",
+                "medium",
+                "high",
+                "x_high",
+                "max"
+              ]
+            },
+            "thinking_control": "unknown",
+            "tool_choice": [
+              "auto",
+              "none"
+            ],
+            "thinking_roundtrip": "same_model_conversation",
+            "structured_output": "none"
+          },
+          "capabilities": {
+            "input_modalities": {
+              "text": "supported",
+              "image": "supported"
+            },
+            "output_modalities": {
+              "text": "supported"
+            },
+            "context_tokens": 1000000,
+            "max_output_tokens": null,
+            "system_messages": "supported",
+            "streaming": "supported",
+            "tool_calling": "supported",
+            "reasoning": {
+              "efforts": [
+                "none",
+                "minimal",
+                "low",
+                "medium",
+                "high",
+                "x_high",
+                "max"
+              ],
+              "default": "x_high",
+              "accepted_aliases": []
+            }
+          }
+        }
+      ],
+      "price_card_refs": [],
+      "regions": [],
+      "data_policy": {
+        "training": "unknown",
+        "retention": {
+          "kind": "unknown"
+        }
+      },
+      "lifecycle": {
+        "stage": "stable"
+      },
+      "evidence_refs": [
+        "dashscope-api-legacy-contract"
+      ]
+    },
+    {
+      "offering_id": "deepseek-api/deepseek-v4-flash",
+      "model_id": "deepseek/deepseek-v4-flash",
+      "provider_id": "deepseek-api",
+      "wire_model": "deepseek-v4-flash",
+      "operations": [
+        {
+          "operation": "chat",
+          "adapter": "anthropic_messages",
+          "wire_contract": {
+            "max_output_field": "max_tokens",
+            "temperature": "send_clamped",
+            "reasoning": {
+              "encoding": "anthropic_effort",
+              "efforts": [
+                "low",
+                "high",
+                "max"
+              ]
+            },
+            "thinking_control": "unknown",
+            "tool_choice": [
+              "auto",
+              "none"
+            ],
+            "thinking_roundtrip": "same_model_conversation",
+            "structured_output": "none"
+          },
+          "capabilities": {
+            "input_modalities": {
+              "text": "supported",
+              "image": "unsupported"
+            },
+            "output_modalities": {
+              "text": "supported"
+            },
+            "context_tokens": 1000000,
+            "max_output_tokens": null,
+            "system_messages": "supported",
+            "streaming": "supported",
+            "tool_calling": "supported",
+            "reasoning": {
+              "efforts": [
+                "low",
+                "high",
+                "max"
+              ],
+              "default": "high",
+              "accepted_aliases": []
+            }
+          }
+        }
+      ],
+      "price_card_refs": [],
+      "regions": [],
+      "data_policy": {
+        "training": "unknown",
+        "retention": {
+          "kind": "unknown"
+        }
+      },
+      "lifecycle": {
+        "stage": "stable"
+      },
+      "evidence_refs": [
+        "deepseek-api-legacy-contract"
+      ]
+    },
+    {
+      "offering_id": "deepseek-api/deepseek-v4-pro",
+      "model_id": "deepseek/deepseek-v4-pro",
+      "provider_id": "deepseek-api",
+      "wire_model": "deepseek-v4-pro",
+      "operations": [
+        {
+          "operation": "chat",
+          "adapter": "anthropic_messages",
+          "wire_contract": {
+            "max_output_field": "max_tokens",
+            "temperature": "send_clamped",
+            "reasoning": {
+              "encoding": "anthropic_effort",
+              "efforts": [
+                "low",
+                "high",
+                "max"
+              ]
+            },
+            "thinking_control": "unknown",
+            "tool_choice": [
+              "auto",
+              "none"
+            ],
+            "thinking_roundtrip": "same_model_conversation",
+            "structured_output": "none"
+          },
+          "capabilities": {
+            "input_modalities": {
+              "text": "supported",
+              "image": "unsupported"
+            },
+            "output_modalities": {
+              "text": "supported"
+            },
+            "context_tokens": 1000000,
+            "max_output_tokens": null,
+            "system_messages": "supported",
+            "streaming": "supported",
+            "tool_calling": "supported",
+            "reasoning": {
+              "efforts": [
+                "low",
+                "high",
+                "max"
+              ],
+              "default": "high",
+              "accepted_aliases": []
+            }
+          }
+        }
+      ],
+      "price_card_refs": [],
+      "regions": [],
+      "data_policy": {
+        "training": "unknown",
+        "retention": {
+          "kind": "unknown"
+        }
+      },
+      "lifecycle": {
+        "stage": "stable"
+      },
+      "evidence_refs": [
+        "deepseek-api-legacy-contract"
+      ]
+    },
+    {
+      "offering_id": "moonshot-api/kimi-k2.6",
+      "model_id": "moonshot/kimi-k2.6",
+      "provider_id": "moonshot-api",
+      "wire_model": "kimi-k2.6",
+      "operations": [
+        {
+          "operation": "chat",
+          "adapter": "openai_chat_completions",
+          "wire_contract": {
+            "max_output_field": "max_tokens",
+            "temperature": "omit",
+            "reasoning": {
+              "encoding": "thinking_toggle"
+            },
+            "thinking_control": "unknown",
+            "tool_choice": [
+              "auto",
+              "none"
+            ],
+            "thinking_roundtrip": "same_model_conversation",
+            "structured_output": "none"
+          },
+          "capabilities": {
+            "input_modalities": {
+              "text": "supported",
+              "image": "supported"
+            },
+            "output_modalities": {
+              "text": "supported"
+            },
+            "context_tokens": 262144,
+            "max_output_tokens": null,
+            "system_messages": "supported",
+            "streaming": "supported",
+            "tool_calling": "supported",
+            "reasoning": {
+              "efforts": [
+                "none"
+              ],
+              "default": null,
+              "accepted_aliases": []
+            }
+          }
+        }
+      ],
+      "price_card_refs": [],
+      "regions": [],
+      "data_policy": {
+        "training": "unknown",
+        "retention": {
+          "kind": "unknown"
+        }
+      },
+      "lifecycle": {
+        "stage": "stable"
+      },
+      "evidence_refs": [
+        "moonshot-api-legacy-contract"
+      ]
+    },
+    {
+      "offering_id": "moonshot-api/kimi-k2.7-code",
+      "model_id": "moonshot/kimi-k2.7-code",
+      "provider_id": "moonshot-api",
+      "wire_model": "kimi-k2.7-code",
+      "operations": [
+        {
+          "operation": "chat",
+          "adapter": "openai_chat_completions",
+          "wire_contract": {
+            "max_output_field": "max_tokens",
+            "temperature": "omit",
+            "reasoning": {
+              "encoding": "none"
+            },
+            "thinking_control": "always_on",
+            "tool_choice": [
+              "auto",
+              "none"
+            ],
+            "thinking_roundtrip": "same_model_conversation",
+            "structured_output": "none"
+          },
+          "capabilities": {
+            "input_modalities": {
+              "text": "supported",
+              "image": "supported"
+            },
+            "output_modalities": {
+              "text": "supported"
+            },
+            "context_tokens": 262144,
+            "max_output_tokens": null,
+            "system_messages": "supported",
+            "streaming": "supported",
+            "tool_calling": "supported",
+            "reasoning": {
+              "efforts": [],
+              "default": null,
+              "accepted_aliases": []
+            }
+          }
+        }
+      ],
+      "price_card_refs": [],
+      "regions": [],
+      "data_policy": {
+        "training": "unknown",
+        "retention": {
+          "kind": "unknown"
+        }
+      },
+      "lifecycle": {
+        "stage": "stable"
+      },
+      "evidence_refs": [
+        "moonshot-api-legacy-contract"
+      ]
+    },
+    {
+      "offering_id": "moonshot-api/kimi-k2.7-code-highspeed",
+      "model_id": "moonshot/kimi-k2.7-code-highspeed",
+      "provider_id": "moonshot-api",
+      "wire_model": "kimi-k2.7-code-highspeed",
+      "operations": [
+        {
+          "operation": "chat",
+          "adapter": "openai_chat_completions",
+          "wire_contract": {
+            "max_output_field": "max_tokens",
+            "temperature": "omit",
+            "reasoning": {
+              "encoding": "none"
+            },
+            "thinking_control": "always_on",
+            "tool_choice": [
+              "auto",
+              "none"
+            ],
+            "thinking_roundtrip": "same_model_conversation",
+            "structured_output": "none"
+          },
+          "capabilities": {
+            "input_modalities": {
+              "text": "supported",
+              "image": "supported"
+            },
+            "output_modalities": {
+              "text": "supported"
+            },
+            "context_tokens": 262144,
+            "max_output_tokens": null,
+            "system_messages": "supported",
+            "streaming": "supported",
+            "tool_calling": "supported",
+            "reasoning": {
+              "efforts": [],
+              "default": null,
+              "accepted_aliases": []
+            }
+          }
+        }
+      ],
+      "price_card_refs": [],
+      "regions": [],
+      "data_policy": {
+        "training": "unknown",
+        "retention": {
+          "kind": "unknown"
+        }
+      },
+      "lifecycle": {
+        "stage": "stable"
+      },
+      "evidence_refs": [
+        "moonshot-api-legacy-contract"
+      ]
+    },
+    {
+      "offering_id": "moonshot-api/kimi-k3",
+      "model_id": "moonshot/kimi-k3",
+      "provider_id": "moonshot-api",
+      "wire_model": "kimi-k3",
+      "operations": [
+        {
+          "operation": "chat",
+          "adapter": "openai_chat_completions",
+          "wire_contract": {
+            "max_output_field": "max_completion_tokens",
+            "temperature": "omit",
+            "reasoning": {
+              "encoding": "reasoning_effort",
+              "efforts": [
+                "low",
+                "high",
+                "max"
+              ]
+            },
+            "thinking_control": "always_on",
+            "tool_choice": [
+              "auto",
+              "none"
+            ],
+            "thinking_roundtrip": "same_model_conversation",
+            "structured_output": "none"
+          },
+          "capabilities": {
+            "input_modalities": {
+              "text": "supported",
+              "image": "supported"
+            },
+            "output_modalities": {
+              "text": "supported"
+            },
+            "context_tokens": 1048576,
+            "max_output_tokens": null,
+            "system_messages": "supported",
+            "streaming": "supported",
+            "tool_calling": "supported",
+            "reasoning": {
+              "efforts": [
+                "low",
+                "high",
+                "max"
+              ],
+              "default": "max",
+              "accepted_aliases": []
+            }
+          }
+        }
+      ],
+      "price_card_refs": [],
+      "regions": [],
+      "data_policy": {
+        "training": "unknown",
+        "retention": {
+          "kind": "unknown"
+        }
+      },
+      "lifecycle": {
+        "stage": "stable"
+      },
+      "evidence_refs": [
+        "moonshot-api-legacy-contract"
+      ]
+    },
+    {
+      "offering_id": "moonshot-api/moonshot-v1-128k",
+      "model_id": "moonshot/moonshot-v1-128k",
+      "provider_id": "moonshot-api",
+      "wire_model": "moonshot-v1-128k",
+      "operations": [
+        {
+          "operation": "chat",
+          "adapter": "openai_chat_completions",
+          "wire_contract": {
+            "max_output_field": "max_tokens",
+            "temperature": "send_clamped",
+            "reasoning": {
+              "encoding": "none"
+            },
+            "thinking_control": "unknown",
+            "tool_choice": [
+              "auto",
+              "none"
+            ],
+            "thinking_roundtrip": "unknown",
+            "structured_output": "none"
+          },
+          "capabilities": {
+            "input_modalities": {
+              "text": "supported",
+              "image": "unsupported"
+            },
+            "output_modalities": {
+              "text": "supported"
+            },
+            "context_tokens": 131072,
+            "max_output_tokens": null,
+            "system_messages": "supported",
+            "streaming": "supported",
+            "tool_calling": "supported",
+            "reasoning": {
+              "efforts": [],
+              "default": null,
+              "accepted_aliases": []
+            }
+          }
+        }
+      ],
+      "price_card_refs": [],
+      "regions": [],
+      "data_policy": {
+        "training": "unknown",
+        "retention": {
+          "kind": "unknown"
+        }
+      },
+      "lifecycle": {
+        "stage": "stable"
+      },
+      "evidence_refs": [
+        "moonshot-api-legacy-contract"
+      ]
+    },
+    {
+      "offering_id": "moonshot-api/moonshot-v1-128k-vision-preview",
+      "model_id": "moonshot/moonshot-v1-128k-vision-preview",
+      "provider_id": "moonshot-api",
+      "wire_model": "moonshot-v1-128k-vision-preview",
+      "operations": [
+        {
+          "operation": "chat",
+          "adapter": "openai_chat_completions",
+          "wire_contract": {
+            "max_output_field": "max_tokens",
+            "temperature": "send_clamped",
+            "reasoning": {
+              "encoding": "none"
+            },
+            "thinking_control": "unknown",
+            "tool_choice": [
+              "auto",
+              "none"
+            ],
+            "thinking_roundtrip": "unknown",
+            "structured_output": "none"
+          },
+          "capabilities": {
+            "input_modalities": {
+              "text": "supported",
+              "image": "supported"
+            },
+            "output_modalities": {
+              "text": "supported"
+            },
+            "context_tokens": 131072,
+            "max_output_tokens": null,
+            "system_messages": "supported",
+            "streaming": "supported",
+            "tool_calling": "supported",
+            "reasoning": {
+              "efforts": [],
+              "default": null,
+              "accepted_aliases": []
+            }
+          }
+        }
+      ],
+      "price_card_refs": [],
+      "regions": [],
+      "data_policy": {
+        "training": "unknown",
+        "retention": {
+          "kind": "unknown"
+        }
+      },
+      "lifecycle": {
+        "stage": "preview"
+      },
+      "evidence_refs": [
+        "moonshot-api-legacy-contract"
+      ]
+    },
+    {
+      "offering_id": "moonshot-api/moonshot-v1-32k",
+      "model_id": "moonshot/moonshot-v1-32k",
+      "provider_id": "moonshot-api",
+      "wire_model": "moonshot-v1-32k",
+      "operations": [
+        {
+          "operation": "chat",
+          "adapter": "openai_chat_completions",
+          "wire_contract": {
+            "max_output_field": "max_tokens",
+            "temperature": "send_clamped",
+            "reasoning": {
+              "encoding": "none"
+            },
+            "thinking_control": "unknown",
+            "tool_choice": [
+              "auto",
+              "none"
+            ],
+            "thinking_roundtrip": "unknown",
+            "structured_output": "none"
+          },
+          "capabilities": {
+            "input_modalities": {
+              "text": "supported",
+              "image": "unsupported"
+            },
+            "output_modalities": {
+              "text": "supported"
+            },
+            "context_tokens": 32768,
+            "max_output_tokens": null,
+            "system_messages": "supported",
+            "streaming": "supported",
+            "tool_calling": "supported",
+            "reasoning": {
+              "efforts": [],
+              "default": null,
+              "accepted_aliases": []
+            }
+          }
+        }
+      ],
+      "price_card_refs": [],
+      "regions": [],
+      "data_policy": {
+        "training": "unknown",
+        "retention": {
+          "kind": "unknown"
+        }
+      },
+      "lifecycle": {
+        "stage": "stable"
+      },
+      "evidence_refs": [
+        "moonshot-api-legacy-contract"
+      ]
+    },
+    {
+      "offering_id": "moonshot-api/moonshot-v1-32k-vision-preview",
+      "model_id": "moonshot/moonshot-v1-32k-vision-preview",
+      "provider_id": "moonshot-api",
+      "wire_model": "moonshot-v1-32k-vision-preview",
+      "operations": [
+        {
+          "operation": "chat",
+          "adapter": "openai_chat_completions",
+          "wire_contract": {
+            "max_output_field": "max_tokens",
+            "temperature": "send_clamped",
+            "reasoning": {
+              "encoding": "none"
+            },
+            "thinking_control": "unknown",
+            "tool_choice": [
+              "auto",
+              "none"
+            ],
+            "thinking_roundtrip": "unknown",
+            "structured_output": "none"
+          },
+          "capabilities": {
+            "input_modalities": {
+              "text": "supported",
+              "image": "supported"
+            },
+            "output_modalities": {
+              "text": "supported"
+            },
+            "context_tokens": 32768,
+            "max_output_tokens": null,
+            "system_messages": "supported",
+            "streaming": "supported",
+            "tool_calling": "supported",
+            "reasoning": {
+              "efforts": [],
+              "default": null,
+              "accepted_aliases": []
+            }
+          }
+        }
+      ],
+      "price_card_refs": [],
+      "regions": [],
+      "data_policy": {
+        "training": "unknown",
+        "retention": {
+          "kind": "unknown"
+        }
+      },
+      "lifecycle": {
+        "stage": "preview"
+      },
+      "evidence_refs": [
+        "moonshot-api-legacy-contract"
+      ]
+    },
+    {
+      "offering_id": "moonshot-api/moonshot-v1-8k",
+      "model_id": "moonshot/moonshot-v1-8k",
+      "provider_id": "moonshot-api",
+      "wire_model": "moonshot-v1-8k",
+      "operations": [
+        {
+          "operation": "chat",
+          "adapter": "openai_chat_completions",
+          "wire_contract": {
+            "max_output_field": "max_tokens",
+            "temperature": "send_clamped",
+            "reasoning": {
+              "encoding": "none"
+            },
+            "thinking_control": "unknown",
+            "tool_choice": [
+              "auto",
+              "none"
+            ],
+            "thinking_roundtrip": "unknown",
+            "structured_output": "none"
+          },
+          "capabilities": {
+            "input_modalities": {
+              "text": "supported",
+              "image": "unsupported"
+            },
+            "output_modalities": {
+              "text": "supported"
+            },
+            "context_tokens": 8192,
+            "max_output_tokens": null,
+            "system_messages": "supported",
+            "streaming": "supported",
+            "tool_calling": "supported",
+            "reasoning": {
+              "efforts": [],
+              "default": null,
+              "accepted_aliases": []
+            }
+          }
+        }
+      ],
+      "price_card_refs": [],
+      "regions": [],
+      "data_policy": {
+        "training": "unknown",
+        "retention": {
+          "kind": "unknown"
+        }
+      },
+      "lifecycle": {
+        "stage": "stable"
+      },
+      "evidence_refs": [
+        "moonshot-api-legacy-contract"
+      ]
+    },
+    {
+      "offering_id": "moonshot-api/moonshot-v1-8k-vision-preview",
+      "model_id": "moonshot/moonshot-v1-8k-vision-preview",
+      "provider_id": "moonshot-api",
+      "wire_model": "moonshot-v1-8k-vision-preview",
+      "operations": [
+        {
+          "operation": "chat",
+          "adapter": "openai_chat_completions",
+          "wire_contract": {
+            "max_output_field": "max_tokens",
+            "temperature": "send_clamped",
+            "reasoning": {
+              "encoding": "none"
+            },
+            "thinking_control": "unknown",
+            "tool_choice": [
+              "auto",
+              "none"
+            ],
+            "thinking_roundtrip": "unknown",
+            "structured_output": "none"
+          },
+          "capabilities": {
+            "input_modalities": {
+              "text": "supported",
+              "image": "supported"
+            },
+            "output_modalities": {
+              "text": "supported"
+            },
+            "context_tokens": 8192,
+            "max_output_tokens": null,
+            "system_messages": "supported",
+            "streaming": "supported",
+            "tool_calling": "supported",
+            "reasoning": {
+              "efforts": [],
+              "default": null,
+              "accepted_aliases": []
+            }
+          }
+        }
+      ],
+      "price_card_refs": [],
+      "regions": [],
+      "data_policy": {
+        "training": "unknown",
+        "retention": {
+          "kind": "unknown"
+        }
+      },
+      "lifecycle": {
+        "stage": "preview"
+      },
+      "evidence_refs": [
+        "moonshot-api-legacy-contract"
+      ]
+    },
+    {
+      "offering_id": "openai-api/gpt-5",
+      "model_id": "openai/gpt-5",
+      "provider_id": "openai-api",
+      "wire_model": "gpt-5",
+      "operations": [
+        {
+          "operation": "chat",
+          "adapter": "openai_responses",
+          "wire_contract": {
+            "max_output_field": "max_output_tokens",
+            "temperature": "omit",
+            "reasoning": {
+              "encoding": "responses_effort",
+              "efforts": [
+                "minimal",
+                "low",
+                "medium",
+                "high"
+              ]
+            },
+            "thinking_control": "unknown",
+            "tool_choice": [
+              "auto",
+              "none"
+            ],
+            "thinking_roundtrip": "same_model_conversation",
+            "structured_output": "none"
+          },
+          "capabilities": {
+            "input_modalities": {
+              "text": "supported",
+              "image": "supported"
+            },
+            "output_modalities": {
+              "text": "supported"
+            },
+            "context_tokens": 400000,
+            "max_output_tokens": null,
+            "system_messages": "supported",
+            "streaming": "supported",
+            "tool_calling": "supported",
+            "reasoning": {
+              "efforts": [
+                "minimal",
+                "low",
+                "medium",
+                "high"
+              ],
+              "default": "medium",
+              "accepted_aliases": []
+            }
+          }
+        }
+      ],
+      "price_card_refs": [],
+      "regions": [],
+      "data_policy": {
+        "training": "unknown",
+        "retention": {
+          "kind": "unknown"
+        }
+      },
+      "lifecycle": {
+        "stage": "stable"
+      },
+      "evidence_refs": [
+        "openai-api-legacy-contract"
+      ]
+    },
+    {
+      "offering_id": "openai-api/gpt-5-mini",
+      "model_id": "openai/gpt-5-mini",
+      "provider_id": "openai-api",
+      "wire_model": "gpt-5-mini",
+      "operations": [
+        {
+          "operation": "chat",
+          "adapter": "openai_responses",
+          "wire_contract": {
+            "max_output_field": "max_output_tokens",
+            "temperature": "omit",
+            "reasoning": {
+              "encoding": "responses_effort",
+              "efforts": [
+                "minimal",
+                "low",
+                "medium",
+                "high"
+              ]
+            },
+            "thinking_control": "unknown",
+            "tool_choice": [
+              "auto",
+              "none"
+            ],
+            "thinking_roundtrip": "same_model_conversation",
+            "structured_output": "none"
+          },
+          "capabilities": {
+            "input_modalities": {
+              "text": "supported",
+              "image": "supported"
+            },
+            "output_modalities": {
+              "text": "supported"
+            },
+            "context_tokens": 400000,
+            "max_output_tokens": null,
+            "system_messages": "supported",
+            "streaming": "supported",
+            "tool_calling": "supported",
+            "reasoning": {
+              "efforts": [
+                "minimal",
+                "low",
+                "medium",
+                "high"
+              ],
+              "default": "medium",
+              "accepted_aliases": []
+            }
+          }
+        }
+      ],
+      "price_card_refs": [],
+      "regions": [],
+      "data_policy": {
+        "training": "unknown",
+        "retention": {
+          "kind": "unknown"
+        }
+      },
+      "lifecycle": {
+        "stage": "stable"
+      },
+      "evidence_refs": [
+        "openai-api-legacy-contract"
+      ]
+    },
+    {
+      "offering_id": "openai-api/gpt-5.4",
+      "model_id": "openai/gpt-5.4",
+      "provider_id": "openai-api",
+      "wire_model": "gpt-5.4",
+      "operations": [
+        {
+          "operation": "chat",
+          "adapter": "openai_responses",
+          "wire_contract": {
+            "max_output_field": "max_output_tokens",
+            "temperature": "omit",
+            "reasoning": {
+              "encoding": "responses_effort",
+              "efforts": [
+                "none",
+                "low",
+                "medium",
+                "high",
+                "x_high"
+              ]
+            },
+            "thinking_control": "unknown",
+            "tool_choice": [
+              "auto",
+              "none"
+            ],
+            "thinking_roundtrip": "same_model_conversation",
+            "structured_output": "none"
+          },
+          "capabilities": {
+            "input_modalities": {
+              "text": "supported",
+              "image": "supported"
+            },
+            "output_modalities": {
+              "text": "supported"
+            },
+            "context_tokens": 1050000,
+            "max_output_tokens": null,
+            "system_messages": "supported",
+            "streaming": "supported",
+            "tool_calling": "supported",
+            "reasoning": {
+              "efforts": [
+                "none",
+                "low",
+                "medium",
+                "high",
+                "x_high"
+              ],
+              "default": "none",
+              "accepted_aliases": []
+            }
+          }
+        }
+      ],
+      "price_card_refs": [],
+      "regions": [],
+      "data_policy": {
+        "training": "unknown",
+        "retention": {
+          "kind": "unknown"
+        }
+      },
+      "lifecycle": {
+        "stage": "stable"
+      },
+      "evidence_refs": [
+        "openai-api-legacy-contract"
+      ]
+    },
+    {
+      "offering_id": "openai-api/gpt-5.4-mini",
+      "model_id": "openai/gpt-5.4-mini",
+      "provider_id": "openai-api",
+      "wire_model": "gpt-5.4-mini",
+      "operations": [
+        {
+          "operation": "chat",
+          "adapter": "openai_responses",
+          "wire_contract": {
+            "max_output_field": "max_output_tokens",
+            "temperature": "omit",
+            "reasoning": {
+              "encoding": "responses_effort",
+              "efforts": [
+                "none",
+                "low",
+                "medium",
+                "high",
+                "x_high"
+              ]
+            },
+            "thinking_control": "unknown",
+            "tool_choice": [
+              "auto",
+              "none"
+            ],
+            "thinking_roundtrip": "same_model_conversation",
+            "structured_output": "none"
+          },
+          "capabilities": {
+            "input_modalities": {
+              "text": "supported",
+              "image": "supported"
+            },
+            "output_modalities": {
+              "text": "supported"
+            },
+            "context_tokens": 400000,
+            "max_output_tokens": null,
+            "system_messages": "supported",
+            "streaming": "supported",
+            "tool_calling": "supported",
+            "reasoning": {
+              "efforts": [
+                "none",
+                "low",
+                "medium",
+                "high",
+                "x_high"
+              ],
+              "default": "none",
+              "accepted_aliases": []
+            }
+          }
+        }
+      ],
+      "price_card_refs": [],
+      "regions": [],
+      "data_policy": {
+        "training": "unknown",
+        "retention": {
+          "kind": "unknown"
+        }
+      },
+      "lifecycle": {
+        "stage": "stable"
+      },
+      "evidence_refs": [
+        "openai-api-legacy-contract"
+      ]
+    },
+    {
+      "offering_id": "openai-api/gpt-5.4-nano",
+      "model_id": "openai/gpt-5.4-nano",
+      "provider_id": "openai-api",
+      "wire_model": "gpt-5.4-nano",
+      "operations": [
+        {
+          "operation": "chat",
+          "adapter": "openai_responses",
+          "wire_contract": {
+            "max_output_field": "max_output_tokens",
+            "temperature": "omit",
+            "reasoning": {
+              "encoding": "responses_effort",
+              "efforts": [
+                "none",
+                "low",
+                "medium",
+                "high",
+                "x_high"
+              ]
+            },
+            "thinking_control": "unknown",
+            "tool_choice": [
+              "auto",
+              "none"
+            ],
+            "thinking_roundtrip": "same_model_conversation",
+            "structured_output": "none"
+          },
+          "capabilities": {
+            "input_modalities": {
+              "text": "supported",
+              "image": "supported"
+            },
+            "output_modalities": {
+              "text": "supported"
+            },
+            "context_tokens": 400000,
+            "max_output_tokens": null,
+            "system_messages": "supported",
+            "streaming": "supported",
+            "tool_calling": "supported",
+            "reasoning": {
+              "efforts": [
+                "none",
+                "low",
+                "medium",
+                "high",
+                "x_high"
+              ],
+              "default": "none",
+              "accepted_aliases": []
+            }
+          }
+        }
+      ],
+      "price_card_refs": [],
+      "regions": [],
+      "data_policy": {
+        "training": "unknown",
+        "retention": {
+          "kind": "unknown"
+        }
+      },
+      "lifecycle": {
+        "stage": "stable"
+      },
+      "evidence_refs": [
+        "openai-api-legacy-contract"
+      ]
+    },
+    {
+      "offering_id": "openai-api/gpt-5.4-pro",
+      "model_id": "openai/gpt-5.4-pro",
+      "provider_id": "openai-api",
+      "wire_model": "gpt-5.4-pro",
+      "operations": [
+        {
+          "operation": "chat",
+          "adapter": "openai_responses",
+          "wire_contract": {
+            "max_output_field": "max_output_tokens",
+            "temperature": "omit",
+            "reasoning": {
+              "encoding": "responses_effort",
+              "efforts": [
+                "medium",
+                "high",
+                "x_high"
+              ]
+            },
+            "thinking_control": "unknown",
+            "tool_choice": [
+              "auto",
+              "none"
+            ],
+            "thinking_roundtrip": "same_model_conversation",
+            "structured_output": "none"
+          },
+          "capabilities": {
+            "input_modalities": {
+              "text": "supported",
+              "image": "supported"
+            },
+            "output_modalities": {
+              "text": "supported"
+            },
+            "context_tokens": 1050000,
+            "max_output_tokens": null,
+            "system_messages": "supported",
+            "streaming": "supported",
+            "tool_calling": "supported",
+            "reasoning": {
+              "efforts": [
+                "medium",
+                "high",
+                "x_high"
+              ],
+              "default": "medium",
+              "accepted_aliases": []
+            }
+          }
+        }
+      ],
+      "price_card_refs": [],
+      "regions": [],
+      "data_policy": {
+        "training": "unknown",
+        "retention": {
+          "kind": "unknown"
+        }
+      },
+      "lifecycle": {
+        "stage": "stable"
+      },
+      "evidence_refs": [
+        "openai-api-legacy-contract"
+      ]
+    },
+    {
+      "offering_id": "openai-api/gpt-5.5",
+      "model_id": "openai/gpt-5.5",
+      "provider_id": "openai-api",
+      "wire_model": "gpt-5.5",
+      "operations": [
+        {
+          "operation": "chat",
+          "adapter": "openai_responses",
+          "wire_contract": {
+            "max_output_field": "max_output_tokens",
+            "temperature": "omit",
+            "reasoning": {
+              "encoding": "responses_effort",
+              "efforts": [
+                "none",
+                "low",
+                "medium",
+                "high",
+                "x_high"
+              ]
+            },
+            "thinking_control": "unknown",
+            "tool_choice": [
+              "auto",
+              "none"
+            ],
+            "thinking_roundtrip": "same_model_conversation",
+            "structured_output": "none"
+          },
+          "capabilities": {
+            "input_modalities": {
+              "text": "supported",
+              "image": "supported"
+            },
+            "output_modalities": {
+              "text": "supported"
+            },
+            "context_tokens": 1050000,
+            "max_output_tokens": null,
+            "system_messages": "supported",
+            "streaming": "supported",
+            "tool_calling": "supported",
+            "reasoning": {
+              "efforts": [
+                "none",
+                "low",
+                "medium",
+                "high",
+                "x_high"
+              ],
+              "default": "medium",
+              "accepted_aliases": []
+            }
+          }
+        }
+      ],
+      "price_card_refs": [],
+      "regions": [],
+      "data_policy": {
+        "training": "unknown",
+        "retention": {
+          "kind": "unknown"
+        }
+      },
+      "lifecycle": {
+        "stage": "stable"
+      },
+      "evidence_refs": [
+        "openai-api-legacy-contract"
+      ]
+    },
+    {
+      "offering_id": "openai-api/gpt-5.6",
+      "model_id": "openai/gpt-5.6",
+      "provider_id": "openai-api",
+      "wire_model": "gpt-5.6",
+      "operations": [
+        {
+          "operation": "chat",
+          "adapter": "openai_responses",
+          "wire_contract": {
+            "max_output_field": "max_output_tokens",
+            "temperature": "omit",
+            "reasoning": {
+              "encoding": "responses_effort",
+              "efforts": [
+                "none",
+                "low",
+                "medium",
+                "high",
+                "x_high",
+                "max"
+              ]
+            },
+            "thinking_control": "unknown",
+            "tool_choice": [
+              "auto",
+              "none"
+            ],
+            "thinking_roundtrip": "same_model_conversation",
+            "structured_output": "none"
+          },
+          "capabilities": {
+            "input_modalities": {
+              "text": "supported",
+              "image": "supported"
+            },
+            "output_modalities": {
+              "text": "supported"
+            },
+            "context_tokens": 1050000,
+            "max_output_tokens": null,
+            "system_messages": "supported",
+            "streaming": "supported",
+            "tool_calling": "supported",
+            "reasoning": {
+              "efforts": [
+                "none",
+                "low",
+                "medium",
+                "high",
+                "x_high",
+                "max"
+              ],
+              "default": "medium",
+              "accepted_aliases": []
+            }
+          }
+        }
+      ],
+      "price_card_refs": [],
+      "regions": [],
+      "data_policy": {
+        "training": "unknown",
+        "retention": {
+          "kind": "unknown"
+        }
+      },
+      "lifecycle": {
+        "stage": "stable"
+      },
+      "evidence_refs": [
+        "openai-api-legacy-contract"
+      ]
+    },
+    {
+      "offering_id": "openai-api/gpt-5.6-luna",
+      "model_id": "openai/gpt-5.6-luna",
+      "provider_id": "openai-api",
+      "wire_model": "gpt-5.6-luna",
+      "operations": [
+        {
+          "operation": "chat",
+          "adapter": "openai_responses",
+          "wire_contract": {
+            "max_output_field": "max_output_tokens",
+            "temperature": "omit",
+            "reasoning": {
+              "encoding": "responses_effort",
+              "efforts": [
+                "none",
+                "low",
+                "medium",
+                "high",
+                "x_high",
+                "max"
+              ]
+            },
+            "thinking_control": "unknown",
+            "tool_choice": [
+              "auto",
+              "none"
+            ],
+            "thinking_roundtrip": "same_model_conversation",
+            "structured_output": "none"
+          },
+          "capabilities": {
+            "input_modalities": {
+              "text": "supported",
+              "image": "supported"
+            },
+            "output_modalities": {
+              "text": "supported"
+            },
+            "context_tokens": 1050000,
+            "max_output_tokens": null,
+            "system_messages": "supported",
+            "streaming": "supported",
+            "tool_calling": "supported",
+            "reasoning": {
+              "efforts": [
+                "none",
+                "low",
+                "medium",
+                "high",
+                "x_high",
+                "max"
+              ],
+              "default": "medium",
+              "accepted_aliases": []
+            }
+          }
+        }
+      ],
+      "price_card_refs": [],
+      "regions": [],
+      "data_policy": {
+        "training": "unknown",
+        "retention": {
+          "kind": "unknown"
+        }
+      },
+      "lifecycle": {
+        "stage": "stable"
+      },
+      "evidence_refs": [
+        "openai-api-legacy-contract"
+      ]
+    },
+    {
+      "offering_id": "openai-api/gpt-5.6-sol",
+      "model_id": "openai/gpt-5.6-sol",
+      "provider_id": "openai-api",
+      "wire_model": "gpt-5.6-sol",
+      "operations": [
+        {
+          "operation": "chat",
+          "adapter": "openai_responses",
+          "wire_contract": {
+            "max_output_field": "max_output_tokens",
+            "temperature": "omit",
+            "reasoning": {
+              "encoding": "responses_effort",
+              "efforts": [
+                "none",
+                "low",
+                "medium",
+                "high",
+                "x_high",
+                "max"
+              ]
+            },
+            "thinking_control": "unknown",
+            "tool_choice": [
+              "auto",
+              "none"
+            ],
+            "thinking_roundtrip": "same_model_conversation",
+            "structured_output": "none"
+          },
+          "capabilities": {
+            "input_modalities": {
+              "text": "supported",
+              "image": "supported"
+            },
+            "output_modalities": {
+              "text": "supported"
+            },
+            "context_tokens": 1050000,
+            "max_output_tokens": null,
+            "system_messages": "supported",
+            "streaming": "supported",
+            "tool_calling": "supported",
+            "reasoning": {
+              "efforts": [
+                "none",
+                "low",
+                "medium",
+                "high",
+                "x_high",
+                "max"
+              ],
+              "default": "medium",
+              "accepted_aliases": []
+            }
+          }
+        }
+      ],
+      "price_card_refs": [],
+      "regions": [],
+      "data_policy": {
+        "training": "unknown",
+        "retention": {
+          "kind": "unknown"
+        }
+      },
+      "lifecycle": {
+        "stage": "stable"
+      },
+      "evidence_refs": [
+        "openai-api-legacy-contract"
+      ]
+    },
+    {
+      "offering_id": "openai-api/gpt-5.6-terra",
+      "model_id": "openai/gpt-5.6-terra",
+      "provider_id": "openai-api",
+      "wire_model": "gpt-5.6-terra",
+      "operations": [
+        {
+          "operation": "chat",
+          "adapter": "openai_responses",
+          "wire_contract": {
+            "max_output_field": "max_output_tokens",
+            "temperature": "omit",
+            "reasoning": {
+              "encoding": "responses_effort",
+              "efforts": [
+                "none",
+                "low",
+                "medium",
+                "high",
+                "x_high",
+                "max"
+              ]
+            },
+            "thinking_control": "unknown",
+            "tool_choice": [
+              "auto",
+              "none"
+            ],
+            "thinking_roundtrip": "same_model_conversation",
+            "structured_output": "none"
+          },
+          "capabilities": {
+            "input_modalities": {
+              "text": "supported",
+              "image": "supported"
+            },
+            "output_modalities": {
+              "text": "supported"
+            },
+            "context_tokens": 1050000,
+            "max_output_tokens": null,
+            "system_messages": "supported",
+            "streaming": "supported",
+            "tool_calling": "supported",
+            "reasoning": {
+              "efforts": [
+                "none",
+                "low",
+                "medium",
+                "high",
+                "x_high",
+                "max"
+              ],
+              "default": "medium",
+              "accepted_aliases": []
+            }
+          }
+        }
+      ],
+      "price_card_refs": [],
+      "regions": [],
+      "data_policy": {
+        "training": "unknown",
+        "retention": {
+          "kind": "unknown"
+        }
+      },
+      "lifecycle": {
+        "stage": "stable"
+      },
+      "evidence_refs": [
+        "openai-api-legacy-contract"
+      ]
+    },
+    {
+      "offering_id": "xai-api/grok-4.5",
+      "model_id": "xai/grok-4.5",
+      "provider_id": "xai-api",
+      "wire_model": "grok-4.5",
+      "operations": [
+        {
+          "operation": "chat",
+          "adapter": "openai_responses",
+          "wire_contract": {
+            "max_output_field": "max_output_tokens",
+            "temperature": "omit",
+            "reasoning": {
+              "encoding": "responses_effort",
+              "efforts": [
+                "low",
+                "medium",
+                "high"
+              ]
+            },
+            "thinking_control": "unknown",
+            "tool_choice": [
+              "auto",
+              "none"
+            ],
+            "thinking_roundtrip": "same_model_conversation",
+            "structured_output": "none"
+          },
+          "capabilities": {
+            "input_modalities": {
+              "text": "supported",
+              "image": "supported"
+            },
+            "output_modalities": {
+              "text": "supported"
+            },
+            "context_tokens": 500000,
+            "max_output_tokens": null,
+            "system_messages": "supported",
+            "streaming": "supported",
+            "tool_calling": "supported",
+            "reasoning": {
+              "efforts": [
+                "low",
+                "medium",
+                "high"
+              ],
+              "default": "high",
+              "accepted_aliases": []
+            }
+          }
+        }
+      ],
+      "price_card_refs": [],
+      "regions": [],
+      "data_policy": {
+        "training": "unknown",
+        "retention": {
+          "kind": "unknown"
+        }
+      },
+      "lifecycle": {
+        "stage": "stable"
+      },
+      "evidence_refs": [
+        "xai-api-legacy-contract"
+      ]
+    },
+    {
+      "offering_id": "xai-api/grok-4.6",
+      "model_id": "xai/grok-4.6",
+      "provider_id": "xai-api",
+      "wire_model": "grok-4.6",
+      "operations": [
+        {
+          "operation": "chat",
+          "adapter": "openai_responses",
+          "wire_contract": {
+            "max_output_field": "max_output_tokens",
+            "temperature": "omit",
+            "reasoning": {
+              "encoding": "responses_effort",
+              "efforts": [
+                "low",
+                "medium",
+                "high",
+                "x_high"
+              ]
+            },
+            "thinking_control": "unknown",
+            "tool_choice": [
+              "auto",
+              "none"
+            ],
+            "thinking_roundtrip": "same_model_conversation",
+            "structured_output": "none"
+          },
+          "capabilities": {
+            "input_modalities": {
+              "text": "supported",
+              "image": "supported"
+            },
+            "output_modalities": {
+              "text": "supported"
+            },
+            "context_tokens": 500000,
+            "max_output_tokens": null,
+            "system_messages": "supported",
+            "streaming": "supported",
+            "tool_calling": "supported",
+            "reasoning": {
+              "efforts": [
+                "low",
+                "medium",
+                "high",
+                "x_high"
+              ],
+              "default": "high",
+              "accepted_aliases": []
+            }
+          }
+        }
+      ],
+      "price_card_refs": [],
+      "regions": [],
+      "data_policy": {
+        "training": "unknown",
+        "retention": {
+          "kind": "unknown"
+        }
+      },
+      "lifecycle": {
+        "stage": "stable"
+      },
+      "evidence_refs": [
+        "xai-api-legacy-contract"
+      ]
+    },
+    {
+      "offering_id": "zhipu-api/glm-5.2",
+      "model_id": "zhipu/glm-5.2",
+      "provider_id": "zhipu-api",
+      "wire_model": "glm-5.2",
+      "operations": [
+        {
+          "operation": "chat",
+          "adapter": "openai_chat_completions",
+          "wire_contract": {
+            "max_output_field": "max_tokens",
+            "temperature": "send_clamped",
+            "reasoning": {
+              "encoding": "reasoning_effort",
+              "efforts": [
+                "none",
+                "high",
+                "max"
+              ]
+            },
+            "thinking_control": "unknown",
+            "tool_choice": [
+              "auto",
+              "none"
+            ],
+            "thinking_roundtrip": "same_model_conversation",
+            "structured_output": "none"
+          },
+          "capabilities": {
+            "input_modalities": {
+              "text": "supported",
+              "image": "unsupported"
+            },
+            "output_modalities": {
+              "text": "supported"
+            },
+            "context_tokens": 1000000,
+            "max_output_tokens": null,
+            "system_messages": "supported",
+            "streaming": "supported",
+            "tool_calling": "supported",
+            "reasoning": {
+              "efforts": [
+                "none",
+                "high",
+                "max"
+              ],
+              "default": "max",
+              "accepted_aliases": [
+                {
+                  "accepted": "minimal",
+                  "canonical": "none"
+                },
+                {
+                  "accepted": "low",
+                  "canonical": "high"
+                },
+                {
+                  "accepted": "medium",
+                  "canonical": "high"
+                },
+                {
+                  "accepted": "x_high",
+                  "canonical": "max"
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "price_card_refs": [],
+      "regions": [],
+      "data_policy": {
+        "training": "unknown",
+        "retention": {
+          "kind": "unknown"
+        }
+      },
+      "lifecycle": {
+        "stage": "stable"
+      },
+      "evidence_refs": [
+        "zhipu-api-legacy-contract"
+      ]
+    },
+    {
+      "offering_id": "zhipu-api/glm-5.3",
+      "model_id": "zhipu/glm-5.3",
+      "provider_id": "zhipu-api",
+      "wire_model": "glm-5.3",
+      "operations": [
+        {
+          "operation": "chat",
+          "adapter": "openai_chat_completions",
+          "wire_contract": {
+            "max_output_field": "max_tokens",
+            "temperature": "send_clamped",
+            "reasoning": {
+              "encoding": "reasoning_effort",
+              "efforts": [
+                "low",
+                "high",
+                "max"
+              ]
+            },
+            "thinking_control": "unknown",
+            "tool_choice": [
+              "auto",
+              "none"
+            ],
+            "thinking_roundtrip": "same_model_conversation",
+            "structured_output": "none"
+          },
+          "capabilities": {
+            "input_modalities": {
+              "text": "supported",
+              "image": "unsupported"
+            },
+            "output_modalities": {
+              "text": "supported"
+            },
+            "context_tokens": 1000000,
+            "max_output_tokens": null,
+            "system_messages": "supported",
+            "streaming": "supported",
+            "tool_calling": "supported",
+            "reasoning": {
+              "efforts": [
+                "low",
+                "high",
+                "max"
+              ],
+              "default": "max",
+              "accepted_aliases": []
+            }
+          }
+        }
+      ],
+      "price_card_refs": [],
+      "regions": [],
+      "data_policy": {
+        "training": "unknown",
+        "retention": {
+          "kind": "unknown"
+        }
+      },
+      "lifecycle": {
+        "stage": "stable"
+      },
+      "evidence_refs": [
+        "zhipu-api-legacy-contract"
+      ]
+    },
+    {
+      "offering_id": "dashscope-api/qwen3.8-max-0902",
+      "model_id": "qwen/qwen3.8-max-0902",
+      "provider_id": "dashscope-api",
+      "wire_model": "qwen3.8-max-0902",
+      "operations": [
+        {
+          "operation": "chat",
+          "adapter": "openai_chat_completions",
+          "wire_contract": {
+            "max_output_field": "max_completion_tokens",
+            "temperature": "omit",
+            "reasoning": {
+              "encoding": "reasoning_effort_with_enable_thinking",
+              "efforts": [
+                "none",
+                "low",
+                "medium",
+                "x_high"
+              ]
+            },
+            "thinking_control": "switchable",
+            "tool_choice": [
+              "auto",
+              "none"
+            ],
+            "thinking_roundtrip": "same_model_conversation",
+            "structured_output": "native_json_schema"
+          },
+          "capabilities": {
+            "input_modalities": {
+              "text": "supported",
+              "image": "supported",
+              "video": "supported"
+            },
+            "output_modalities": {
+              "text": "supported"
+            },
+            "context_tokens": 1000000,
+            "max_output_tokens": 131072,
+            "system_messages": "supported",
+            "streaming": "supported",
+            "tool_calling": "supported",
+            "parallel_tool_calls": "unknown",
+            "prompt_caching": "supported",
+            "structured_output": {
+              "json_schema": "supported",
+              "json_object": "supported"
+            },
+            "reasoning": {
+              "efforts": [
+                "none",
+                "low",
+                "medium",
+                "x_high"
+              ],
+              "default": "x_high",
+              "accepted_aliases": [
+                {
+                  "accepted": "minimal",
+                  "canonical": "low"
+                },
+                {
+                  "accepted": "high",
+                  "canonical": "x_high"
+                },
+                {
+                  "accepted": "max",
+                  "canonical": "x_high"
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "price_card_refs": [
+        "dashscope-api/qwen3.8-max-0902/cn-beijing-20260907",
+        "dashscope-api/qwen3.8-max-0902/ap-southeast-1-20260907",
+        "dashscope-api/qwen3.8-max-0902/eu-central-1-20260907",
+        "dashscope-api/qwen3.8-max-0902/us-east-1-20260907",
+        "dashscope-api/qwen3.8-max-0902/ap-northeast-1-20260907",
+        "dashscope-api/qwen3.8-max-0902/cn-hongkong-20260907"
+      ],
+      "regions": [
+        "cn-beijing",
+        "ap-southeast-1",
+        "eu-central-1",
+        "us-east-1",
+        "ap-northeast-1",
+        "cn-hongkong"
+      ],
+      "data_policy": {
+        "training": "unknown",
+        "retention": {
+          "kind": "unknown"
+        }
+      },
+      "lifecycle": {
+        "stage": "stable"
+      },
+      "evidence_refs": [
+        "qwen38-max-model",
+        "qwen38-compatible-chat",
+        "qwen38-structured-output"
+      ]
+    },
+    {
+      "offering_id": "dashscope-api/qwen3.8-flash",
+      "model_id": "qwen/qwen3.8-flash",
+      "provider_id": "dashscope-api",
+      "wire_model": "qwen3.8-flash",
+      "operations": [
+        {
+          "operation": "chat",
+          "adapter": "openai_chat_completions",
+          "wire_contract": {
+            "max_output_field": "max_completion_tokens",
+            "temperature": "omit",
+            "reasoning": {
+              "encoding": "reasoning_effort_with_enable_thinking",
+              "efforts": [
+                "none",
+                "low",
+                "medium",
+                "x_high"
+              ]
+            },
+            "thinking_control": "switchable",
+            "tool_choice": [
+              "auto",
+              "none"
+            ],
+            "thinking_roundtrip": "same_model_conversation",
+            "structured_output": "native_json_schema"
+          },
+          "capabilities": {
+            "input_modalities": {
+              "text": "supported",
+              "image": "supported",
+              "video": "supported"
+            },
+            "output_modalities": {
+              "text": "supported"
+            },
+            "context_tokens": 1000000,
+            "max_output_tokens": 131072,
+            "system_messages": "supported",
+            "streaming": "supported",
+            "tool_calling": "supported",
+            "parallel_tool_calls": "unknown",
+            "prompt_caching": "supported",
+            "structured_output": {
+              "json_schema": "supported",
+              "json_object": "supported"
+            },
+            "reasoning": {
+              "efforts": [
+                "none",
+                "low",
+                "medium",
+                "x_high"
+              ],
+              "default": "x_high",
+              "accepted_aliases": [
+                {
+                  "accepted": "minimal",
+                  "canonical": "low"
+                },
+                {
+                  "accepted": "high",
+                  "canonical": "x_high"
+                },
+                {
+                  "accepted": "max",
+                  "canonical": "x_high"
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "price_card_refs": [
+        "dashscope-api/qwen3.8-flash/cn-beijing-20260907",
+        "dashscope-api/qwen3.8-flash/ap-southeast-1-20260907",
+        "dashscope-api/qwen3.8-flash/eu-central-1-20260907",
+        "dashscope-api/qwen3.8-flash/us-east-1-20260907",
+        "dashscope-api/qwen3.8-flash/ap-northeast-1-20260907"
+      ],
+      "regions": [
+        "cn-beijing",
+        "ap-southeast-1",
+        "eu-central-1",
+        "us-east-1",
+        "ap-northeast-1"
+      ],
+      "data_policy": {
+        "training": "unknown",
+        "retention": {
+          "kind": "unknown"
+        }
+      },
+      "lifecycle": {
+        "stage": "stable"
+      },
+      "evidence_refs": [
+        "qwen38-flash-model",
+        "qwen38-compatible-chat",
+        "qwen38-structured-output"
+      ]
+    },
+    {
+      "offering_id": "anthropic-api/claude-fable-5-1",
+      "model_id": "anthropic/claude-fable-5-1",
+      "provider_id": "anthropic-api",
+      "wire_model": "claude-fable-5-1",
+      "operations": [
+        {
+          "operation": "chat",
+          "adapter": "anthropic_messages",
+          "wire_contract": {
+            "max_output_field": "max_tokens",
+            "temperature": "omit",
+            "reasoning": {
+              "encoding": "anthropic_adaptive_always_on",
+              "efforts": [
+                "low",
+                "medium",
+                "high",
+                "x_high",
+                "max"
+              ]
+            },
+            "thinking_control": "always_on",
+            "tool_choice": [
+              "auto",
+              "none"
+            ],
+            "thinking_roundtrip": "same_model_conversation_prefix",
+            "structured_output": "native_json_schema"
+          },
+          "capabilities": {
+            "input_modalities": {
+              "text": "supported",
+              "image": "supported"
+            },
+            "output_modalities": {
+              "text": "supported"
+            },
+            "context_tokens": 1000000,
+            "max_output_tokens": 128000,
+            "system_messages": "supported",
+            "streaming": "supported",
+            "tool_calling": "supported",
+            "reasoning": {
+              "efforts": [
+                "low",
+                "medium",
+                "high",
+                "x_high",
+                "max"
+              ],
+              "default": "high",
+              "accepted_aliases": []
+            },
+            "prompt_caching": "supported",
+            "structured_output": {
+              "json_schema": "supported",
+              "json_object": "unknown"
+            }
+          }
+        }
+      ],
+      "price_card_refs": [
+        "anthropic-api/claude-fable-5-1/standard-20260907"
+      ],
+      "regions": [],
+      "data_policy": {
+        "training": "unknown",
+        "retention": {
+          "kind": "days",
+          "days": 30
+        },
+        "required_workspace_retention_days": 30
+      },
+      "lifecycle": {
+        "stage": "stable"
+      },
+      "evidence_refs": [
+        "anthropic-fable-5-1-model",
+        "anthropic-fable-preserved-thinking",
+        "anthropic-fable-5-1-migration"
+      ]
+    },
+    {
+      "offering_id": "google-api/gemini-3.8-flash",
+      "model_id": "google/gemini-3.8-flash",
+      "provider_id": "google-api",
+      "wire_model": "gemini-3.8-flash",
+      "operations": [
+        {
+          "operation": "chat",
+          "adapter": "openai_chat_completions",
+          "wire_contract": {
+            "max_output_field": "max_completion_tokens",
+            "temperature": "omit",
+            "reasoning": {
+              "encoding": "google_reasoning_effort",
+              "efforts": [
+                "low",
+                "medium",
+                "high"
+              ]
+            },
+            "thinking_control": "always_on",
+            "tool_choice": [
+              "auto",
+              "none"
+            ],
+            "thinking_roundtrip": "same_model_conversation",
+            "structured_output": "native_json_schema"
+          },
+          "capabilities": {
+            "input_modalities": {
+              "text": "supported",
+              "image": "supported",
+              "audio": "supported",
+              "video": "supported",
+              "document": "supported"
+            },
+            "output_modalities": {
+              "text": "supported",
+              "image": "unsupported",
+              "audio": "unsupported",
+              "video": "unsupported"
+            },
+            "context_tokens": 1048576,
+            "max_output_tokens": 65536,
+            "system_messages": "supported",
+            "streaming": "supported",
+            "tool_calling": "supported",
+            "parallel_tool_calls": "supported",
+            "prompt_caching": "supported",
+            "structured_output": {
+              "json_schema": "supported",
+              "json_object": "supported"
+            },
+            "reasoning": {
+              "efforts": [
+                "low",
+                "medium",
+                "high"
+              ],
+              "default": "medium"
+            }
+          }
+        }
+      ],
+      "price_card_refs": [
+        "google-api/gemini-3.8-flash/standard-20260907",
+        "google-api/gemini-3.8-flash/standard-20270101"
+      ],
+      "regions": [],
+      "data_policy": {
+        "training": "unknown",
+        "retention": {
+          "kind": "unknown"
+        }
+      },
+      "lifecycle": {
+        "stage": "stable"
+      },
+      "evidence_refs": [
+        "google-gemini38-model",
+        "google-compatible-chat",
+        "google-thought-signatures",
+        "google-latest-model",
+        "google-compatible-parameters"
+      ]
+    },
+    {
+      "offering_id": "deepseek-api/deepseek-v4-flash-vision-exp",
+      "model_id": "deepseek/deepseek-v4-flash-vision-exp",
+      "provider_id": "deepseek-api",
+      "wire_model": "deepseek-v4-flash-vision-exp",
+      "operations": [
+        {
+          "operation": "chat",
+          "adapter": "anthropic_messages",
+          "wire_contract": {
+            "max_output_field": "max_tokens",
+            "temperature": "send_clamped",
+            "reasoning": {
+              "encoding": "anthropic_effort",
+              "efforts": [
+                "none",
+                "low",
+                "high",
+                "max"
+              ]
+            },
+            "thinking_control": "switchable",
+            "tool_choice": [
+              "auto",
+              "none"
+            ],
+            "thinking_roundtrip": "same_model_conversation",
+            "structured_output": "none"
+          },
+          "capabilities": {
+            "input_modalities": {
+              "text": "supported",
+              "image": "supported",
+              "audio": "unsupported",
+              "video": "unsupported",
+              "document": "unsupported"
+            },
+            "output_modalities": {
+              "text": "supported"
+            },
+            "context_tokens": 1000000,
+            "max_output_tokens": 384000,
+            "system_messages": "supported",
+            "streaming": "supported",
+            "tool_calling": "supported",
+            "reasoning": {
+              "efforts": [
+                "none",
+                "low",
+                "high",
+                "max"
+              ],
+              "default": "high",
+              "accepted_aliases": []
+            },
+            "structured_output": {
+              "json_schema": "unsupported",
+              "json_object": "unsupported"
+            }
+          }
+        }
+      ],
+      "price_card_refs": [
+        "deepseek-api/deepseek-v4-flash-vision-exp/off-peak-20260910",
+        "deepseek-api/deepseek-v4-flash-vision-exp/peak-20260910"
+      ],
+      "regions": [],
+      "data_policy": {
+        "training": "unknown",
+        "retention": {
+          "kind": "unknown"
+        }
+      },
+      "lifecycle": {
+        "stage": "preview"
+      },
+      "evidence_refs": [
+        "deepseek-vision",
+        "deepseek-messages",
+        "deepseek-vision-pricing"
+      ]
+    }
+  ],
+  "price_cards": [
+    {
+      "price_card_id": "openai-api/gpt-6-astra/standard-20260906",
+      "offering_id": "openai-api/gpt-6-astra",
+      "currency": "USD",
+      "effective_from": "2026-09-06T00:00:00Z",
+      "rates": [
+        {
+          "meter": "input_text_token",
+          "amount": "10",
+          "per": "million"
+        },
+        {
+          "meter": "cache_read_text_token",
+          "amount": "1",
+          "per": "million"
+        },
+        {
+          "meter": "cache_write_text_token",
+          "amount": "12.50",
+          "per": "million"
+        },
+        {
+          "meter": "output_text_token",
+          "amount": "50",
+          "per": "million"
+        }
+      ],
+      "context_tiers": [
+        {
+          "min_input_tokens": 272001,
+          "rates": [
+            {
+              "meter": "input_text_token",
+              "amount": "20",
+              "per": "million"
+            },
+            {
+              "meter": "cache_read_text_token",
+              "amount": "2",
+              "per": "million"
+            },
+            {
+              "meter": "cache_write_text_token",
+              "amount": "25",
+              "per": "million"
+            },
+            {
+              "meter": "output_text_token",
+              "amount": "75",
+              "per": "million"
+            }
+          ]
+        }
+      ],
+      "evidence_refs": [
+        "openai-gpt-6-astra-model"
+      ]
+    },
+    {
+      "price_card_id": "dashscope-api/qwen3.8-max-0902/cn-beijing-20260907",
+      "offering_id": "dashscope-api/qwen3.8-max-0902",
+      "currency": "CNY",
+      "effective_from": "2026-09-07T00:00:00Z",
+      "region": "cn-beijing",
+      "rates": [
+        {
+          "meter": "input_text_token",
+          "amount": "12",
+          "per": "million"
+        },
+        {
+          "meter": "output_text_token",
+          "amount": "36",
+          "per": "million"
+        }
+      ],
+      "evidence_refs": [
+        "qwen38-pricing-cny"
+      ]
+    },
+    {
+      "price_card_id": "dashscope-api/qwen3.8-max-0902/ap-southeast-1-20260907",
+      "offering_id": "dashscope-api/qwen3.8-max-0902",
+      "currency": "CNY",
+      "effective_from": "2026-09-07T00:00:00Z",
+      "region": "ap-southeast-1",
+      "rates": [
+        {
+          "meter": "input_text_token",
+          "amount": "14.988",
+          "per": "million"
+        },
+        {
+          "meter": "output_text_token",
+          "amount": "44.965",
+          "per": "million"
+        }
+      ],
+      "evidence_refs": [
+        "qwen38-pricing-cny"
+      ]
+    },
+    {
+      "price_card_id": "dashscope-api/qwen3.8-max-0902/eu-central-1-20260907",
+      "offering_id": "dashscope-api/qwen3.8-max-0902",
+      "currency": "CNY",
+      "effective_from": "2026-09-07T00:00:00Z",
+      "region": "eu-central-1",
+      "rates": [
+        {
+          "meter": "input_text_token",
+          "amount": "12",
+          "per": "million"
+        },
+        {
+          "meter": "output_text_token",
+          "amount": "36",
+          "per": "million"
+        }
+      ],
+      "evidence_refs": [
+        "qwen38-pricing-cny"
+      ]
+    },
+    {
+      "price_card_id": "dashscope-api/qwen3.8-max-0902/us-east-1-20260907",
+      "offering_id": "dashscope-api/qwen3.8-max-0902",
+      "currency": "CNY",
+      "effective_from": "2026-09-07T00:00:00Z",
+      "region": "us-east-1",
+      "rates": [
+        {
+          "meter": "input_text_token",
+          "amount": "12",
+          "per": "million"
+        },
+        {
+          "meter": "output_text_token",
+          "amount": "36",
+          "per": "million"
+        }
+      ],
+      "evidence_refs": [
+        "qwen38-pricing-cny"
+      ]
+    },
+    {
+      "price_card_id": "dashscope-api/qwen3.8-max-0902/ap-northeast-1-20260907",
+      "offering_id": "dashscope-api/qwen3.8-max-0902",
+      "currency": "CNY",
+      "effective_from": "2026-09-07T00:00:00Z",
+      "region": "ap-northeast-1",
+      "rates": [
+        {
+          "meter": "input_text_token",
+          "amount": "12",
+          "per": "million"
+        },
+        {
+          "meter": "output_text_token",
+          "amount": "36",
+          "per": "million"
+        }
+      ],
+      "evidence_refs": [
+        "qwen38-pricing-cny"
+      ]
+    },
+    {
+      "price_card_id": "dashscope-api/qwen3.8-max-0902/cn-hongkong-20260907",
+      "offering_id": "dashscope-api/qwen3.8-max-0902",
+      "currency": "CNY",
+      "effective_from": "2026-09-07T00:00:00Z",
+      "region": "cn-hongkong",
+      "rates": [
+        {
+          "meter": "input_text_token",
+          "amount": "12",
+          "per": "million"
+        },
+        {
+          "meter": "output_text_token",
+          "amount": "36",
+          "per": "million"
+        }
+      ],
+      "evidence_refs": [
+        "qwen38-pricing-cny"
+      ]
+    },
+    {
+      "price_card_id": "dashscope-api/qwen3.8-flash/cn-beijing-20260907",
+      "offering_id": "dashscope-api/qwen3.8-flash",
+      "currency": "CNY",
+      "effective_from": "2026-09-07T00:00:00Z",
+      "region": "cn-beijing",
+      "rates": [
+        {
+          "meter": "input_text_token",
+          "amount": "0.8",
+          "per": "million"
+        },
+        {
+          "meter": "output_text_token",
+          "amount": "2.7",
+          "per": "million"
+        },
+        {
+          "meter": "cache_read_text_token",
+          "amount": "0.1",
+          "per": "million"
+        },
+        {
+          "meter": "cache_write_text_token",
+          "amount": "1.25",
+          "per": "million"
+        }
+      ],
+      "evidence_refs": [
+        "qwen38-flash-model"
+      ]
+    },
+    {
+      "price_card_id": "dashscope-api/qwen3.8-flash/ap-southeast-1-20260907",
+      "offering_id": "dashscope-api/qwen3.8-flash",
+      "currency": "CNY",
+      "effective_from": "2026-09-07T00:00:00Z",
+      "region": "ap-southeast-1",
+      "rates": [
+        {
+          "meter": "input_text_token",
+          "amount": "1.094",
+          "per": "million"
+        },
+        {
+          "meter": "output_text_token",
+          "amount": "3.427",
+          "per": "million"
+        },
+        {
+          "meter": "cache_read_text_token",
+          "amount": "0.117",
+          "per": "million"
+        },
+        {
+          "meter": "cache_write_text_token",
+          "amount": "1.458",
+          "per": "million"
+        }
+      ],
+      "evidence_refs": [
+        "qwen38-flash-model"
+      ]
+    },
+    {
+      "price_card_id": "dashscope-api/qwen3.8-flash/eu-central-1-20260907",
+      "offering_id": "dashscope-api/qwen3.8-flash",
+      "currency": "CNY",
+      "effective_from": "2026-09-07T00:00:00Z",
+      "region": "eu-central-1",
+      "rates": [
+        {
+          "meter": "input_text_token",
+          "amount": "0.8",
+          "per": "million"
+        },
+        {
+          "meter": "output_text_token",
+          "amount": "2.7",
+          "per": "million"
+        },
+        {
+          "meter": "cache_read_text_token",
+          "amount": "0.1",
+          "per": "million"
+        },
+        {
+          "meter": "cache_write_text_token",
+          "amount": "1.25",
+          "per": "million"
+        }
+      ],
+      "evidence_refs": [
+        "qwen38-flash-model"
+      ]
+    },
+    {
+      "price_card_id": "dashscope-api/qwen3.8-flash/us-east-1-20260907",
+      "offering_id": "dashscope-api/qwen3.8-flash",
+      "currency": "CNY",
+      "effective_from": "2026-09-07T00:00:00Z",
+      "region": "us-east-1",
+      "rates": [
+        {
+          "meter": "input_text_token",
+          "amount": "0.8",
+          "per": "million"
+        },
+        {
+          "meter": "output_text_token",
+          "amount": "2.7",
+          "per": "million"
+        },
+        {
+          "meter": "cache_read_text_token",
+          "amount": "0.1",
+          "per": "million"
+        },
+        {
+          "meter": "cache_write_text_token",
+          "amount": "1.25",
+          "per": "million"
+        }
+      ],
+      "evidence_refs": [
+        "qwen38-flash-model"
+      ]
+    },
+    {
+      "price_card_id": "dashscope-api/qwen3.8-flash/ap-northeast-1-20260907",
+      "offering_id": "dashscope-api/qwen3.8-flash",
+      "currency": "CNY",
+      "effective_from": "2026-09-07T00:00:00Z",
+      "region": "ap-northeast-1",
+      "rates": [
+        {
+          "meter": "input_text_token",
+          "amount": "0.8",
+          "per": "million"
+        },
+        {
+          "meter": "output_text_token",
+          "amount": "2.7",
+          "per": "million"
+        },
+        {
+          "meter": "cache_read_text_token",
+          "amount": "0.1",
+          "per": "million"
+        },
+        {
+          "meter": "cache_write_text_token",
+          "amount": "1.25",
+          "per": "million"
+        }
+      ],
+      "evidence_refs": [
+        "qwen38-flash-model"
+      ]
+    },
+    {
+      "price_card_id": "anthropic-api/claude-fable-5-1/standard-20260907",
+      "offering_id": "anthropic-api/claude-fable-5-1",
+      "currency": "USD",
+      "effective_from": "2026-09-07T00:00:00Z",
+      "rates": [
+        {
+          "meter": "input_text_token",
+          "amount": "10",
+          "per": "million"
+        },
+        {
+          "meter": "output_text_token",
+          "amount": "50",
+          "per": "million"
+        },
+        {
+          "meter": "cache_read_text_token",
+          "amount": "0.25",
+          "per": "million"
+        },
+        {
+          "meter": "cache_write_text_token",
+          "amount": "12.50",
+          "per": "million",
+          "cache_ttl_seconds": 300
+        },
+        {
+          "meter": "cache_write_text_token",
+          "amount": "20",
+          "per": "million",
+          "cache_ttl_seconds": 3600
+        }
+      ],
+      "evidence_refs": [
+        "anthropic-fable-5-1-model"
+      ]
+    },
+    {
+      "price_card_id": "google-api/gemini-3.8-flash/standard-20260907",
+      "offering_id": "google-api/gemini-3.8-flash",
+      "currency": "USD",
+      "effective_from": "2026-09-07T00:00:00Z",
+      "effective_until": "2027-01-01T00:00:00Z",
+      "rates": [
+        {
+          "meter": "input_text_token",
+          "amount": "0.75",
+          "per": "million"
+        },
+        {
+          "meter": "output_text_token",
+          "amount": "3.75",
+          "per": "million"
+        },
+        {
+          "meter": "cache_read_text_token",
+          "amount": "0.075",
+          "per": "million"
+        }
+      ],
+      "evidence_refs": [
+        "google-gemini38-pricing"
+      ]
+    },
+    {
+      "price_card_id": "google-api/gemini-3.8-flash/standard-20270101",
+      "offering_id": "google-api/gemini-3.8-flash",
+      "currency": "USD",
+      "effective_from": "2027-01-01T00:00:00Z",
+      "rates": [
+        {
+          "meter": "input_text_token",
+          "amount": "1.50",
+          "per": "million"
+        },
+        {
+          "meter": "output_text_token",
+          "amount": "7.50",
+          "per": "million"
+        },
+        {
+          "meter": "cache_read_text_token",
+          "amount": "0.15",
+          "per": "million"
+        }
+      ],
+      "evidence_refs": [
+        "google-gemini38-pricing"
+      ]
+    },
+    {
+      "price_card_id": "deepseek-api/deepseek-v4-flash-vision-exp/off-peak-20260910",
+      "offering_id": "deepseek-api/deepseek-v4-flash-vision-exp",
+      "currency": "USD",
+      "effective_from": "2026-09-10T00:00:00Z",
+      "rates": [
+        {
+          "meter": "input_text_token",
+          "amount": "0.22",
+          "per": "million"
+        },
+        {
+          "meter": "cache_read_text_token",
+          "amount": "0.007",
+          "per": "million"
+        },
+        {
+          "meter": "output_text_token",
+          "amount": "0.66",
+          "per": "million"
+        }
+      ],
+      "evidence_refs": [
+        "deepseek-vision-pricing"
+      ]
+    },
+    {
+      "price_card_id": "deepseek-api/deepseek-v4-flash-vision-exp/peak-20260910",
+      "offering_id": "deepseek-api/deepseek-v4-flash-vision-exp",
+      "currency": "USD",
+      "effective_from": "2026-09-10T00:00:00Z",
+      "rates": [
+        {
+          "meter": "input_text_token",
+          "amount": "0.44",
+          "per": "million"
+        },
+        {
+          "meter": "cache_read_text_token",
+          "amount": "0.014",
+          "per": "million"
+        },
+        {
+          "meter": "output_text_token",
+          "amount": "1.32",
+          "per": "million"
+        }
+      ],
+      "evidence_refs": [
+        "deepseek-vision-pricing"
+      ],
+      "daily_utc_windows": [
+        {
+          "start_inclusive": "01:00:00",
+          "end_exclusive": "04:00:00"
+        },
+        {
+          "start_inclusive": "06:00:00",
+          "end_exclusive": "10:00:00"
+        }
+      ],
+      "calendar": {
+        "utc_offset_minutes": 0,
+        "active_weekdays": [
+          "mon",
+          "tue",
+          "wed",
+          "thu",
+          "fri"
+        ]
+      }
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "openai-gpt-6-astra-model",
+      "kind": "provider_docs",
+      "publisher": "OpenAI",
+      "title": "GPT-6 Astra model and standard pricing",
+      "url": "https://developers.openai.com/api/docs/models/gpt-6-astra",
+      "observed_at": "2026-09-06T00:00:00Z"
+    },
+    {
+      "evidence_id": "openai-gpt-6-astra-protocol",
+      "kind": "provider_docs",
+      "publisher": "OpenAI",
+      "title": "GPT-6 Astra migration parameters",
+      "url": "https://developers.openai.com/api/docs/guides/latest-model",
+      "observed_at": "2026-09-06T00:00:00Z"
+    },
+    {
+      "evidence_id": "anthropic-api-legacy-contract",
+      "kind": "lineage_curation",
+      "publisher": "Lineage",
+      "title": "Pre-catalog 0.160.6 curated contract; migration provenance, not a fresh provider verification",
+      "url": "https://platform.claude.com/docs/en/about-claude/models/overview",
+      "observed_at": "2026-09-06T00:00:00Z"
+    },
+    {
+      "evidence_id": "dashscope-api-legacy-contract",
+      "kind": "lineage_curation",
+      "publisher": "Lineage",
+      "title": "Pre-catalog 0.160.6 curated contract; migration provenance, not a fresh provider verification",
+      "url": "https://www.alibabacloud.com/help/en/model-studio/text-generation-model/",
+      "observed_at": "2026-09-06T00:00:00Z"
+    },
+    {
+      "evidence_id": "deepseek-api-legacy-contract",
+      "kind": "lineage_curation",
+      "publisher": "Lineage",
+      "title": "Pre-catalog 0.160.6 curated contract; migration provenance, not a fresh provider verification",
+      "url": "https://api-docs.deepseek.com/",
+      "observed_at": "2026-09-06T00:00:00Z"
+    },
+    {
+      "evidence_id": "moonshot-api-legacy-contract",
+      "kind": "lineage_curation",
+      "publisher": "Lineage",
+      "title": "Pre-catalog 0.160.6 curated contract; migration provenance, not a fresh provider verification",
+      "url": "https://platform.kimi.ai/docs/guide/kimi-k3-quickstart",
+      "observed_at": "2026-09-06T00:00:00Z"
+    },
+    {
+      "evidence_id": "openai-api-legacy-contract",
+      "kind": "lineage_curation",
+      "publisher": "Lineage",
+      "title": "Pre-catalog 0.160.6 curated contract; migration provenance, not a fresh provider verification",
+      "url": "https://developers.openai.com/api/docs/models",
+      "observed_at": "2026-09-06T00:00:00Z"
+    },
+    {
+      "evidence_id": "xai-api-legacy-contract",
+      "kind": "lineage_curation",
+      "publisher": "Lineage",
+      "title": "Pre-catalog 0.160.6 curated contract; migration provenance, not a fresh provider verification",
+      "url": "https://docs.x.ai/developers/models",
+      "observed_at": "2026-09-06T00:00:00Z"
+    },
+    {
+      "evidence_id": "zhipu-api-legacy-contract",
+      "kind": "lineage_curation",
+      "publisher": "Lineage",
+      "title": "Pre-catalog 0.160.6 curated contract; migration provenance, not a fresh provider verification",
+      "url": "https://docs.z.ai/guides/overview",
+      "observed_at": "2026-09-06T00:00:00Z"
+    },
+    {
+      "evidence_id": "qwen38-compatible-chat",
+      "kind": "provider_docs",
+      "publisher": "Alibaba Cloud",
+      "title": "Qwen compatible Chat parameters",
+      "url": "https://www.alibabacloud.com/help/en/model-studio/qwen-api-via-openai-chat-completions",
+      "observed_at": "2026-09-07T00:00:00Z"
+    },
+    {
+      "evidence_id": "qwen38-structured-output",
+      "kind": "provider_docs",
+      "publisher": "Alibaba Cloud",
+      "title": "Qwen structured output",
+      "url": "https://www.alibabacloud.com/help/en/model-studio/qwen-structured-output",
+      "observed_at": "2026-09-07T00:00:00Z"
+    },
+    {
+      "evidence_id": "qwen38-flash-model",
+      "kind": "provider_docs",
+      "publisher": "Alibaba Cloud",
+      "title": "Qwen3.8 Flash model and regional CNY prices",
+      "url": "https://help.aliyun.com/en/model-studio/qwen3-8-flash",
+      "observed_at": "2026-09-07T00:00:00Z"
+    },
+    {
+      "evidence_id": "qwen38-max-model",
+      "kind": "provider_docs",
+      "publisher": "Alibaba Cloud",
+      "title": "Qwen3.8 Max exact snapshots",
+      "url": "https://www.alibabacloud.com/help/en/model-studio/qwen3-8-max",
+      "observed_at": "2026-09-07T00:00:00Z"
+    },
+    {
+      "evidence_id": "qwen38-pricing-cny",
+      "kind": "provider_docs",
+      "publisher": "Alibaba Cloud",
+      "title": "Model Studio native CNY prices",
+      "url": "https://help.aliyun.com/en/model-studio/model-pricing",
+      "observed_at": "2026-09-07T00:00:00Z"
+    },
+    {
+      "evidence_id": "anthropic-fable-5-1-model",
+      "kind": "provider_docs",
+      "url": "https://platform.claude.com/docs/en/models/fable-5-1/overview",
+      "publisher": "Anthropic",
+      "title": "anthropic-fable-5-1-model",
+      "observed_at": "2026-09-07T00:00:00Z"
+    },
+    {
+      "evidence_id": "anthropic-fable-preserved-thinking",
+      "kind": "provider_docs",
+      "url": "https://platform.claude.com/docs/en/build-with-claude/preserved-thinking",
+      "publisher": "Anthropic",
+      "title": "anthropic-fable-preserved-thinking",
+      "observed_at": "2026-09-07T00:00:00Z"
+    },
+    {
+      "evidence_id": "anthropic-fable-5-1-migration",
+      "kind": "provider_docs",
+      "url": "https://platform.claude.com/docs/en/models/fable-5-1/migration-guide",
+      "publisher": "Anthropic",
+      "title": "anthropic-fable-5-1-migration",
+      "observed_at": "2026-09-07T00:00:00Z"
+    },
+    {
+      "evidence_id": "google-gemini38-model",
+      "kind": "provider_docs",
+      "url": "https://ai.google.dev/gemini-api/docs/models/gemini-3.8-flash",
+      "publisher": "Google",
+      "title": "google-gemini38-model",
+      "observed_at": "2026-09-07T00:00:00Z"
+    },
+    {
+      "evidence_id": "google-compatible-chat",
+      "kind": "provider_docs",
+      "url": "https://ai.google.dev/gemini-api/docs/openai",
+      "publisher": "Google",
+      "title": "google-compatible-chat",
+      "observed_at": "2026-09-07T00:00:00Z"
+    },
+    {
+      "evidence_id": "google-thought-signatures",
+      "kind": "provider_docs",
+      "url": "https://ai.google.dev/gemini-api/docs/generate-content/thought-signatures",
+      "publisher": "Google",
+      "title": "google-thought-signatures",
+      "observed_at": "2026-09-07T00:00:00Z"
+    },
+    {
+      "evidence_id": "google-latest-model",
+      "kind": "provider_docs",
+      "url": "https://ai.google.dev/gemini-api/docs/latest-model",
+      "publisher": "Google",
+      "title": "google-latest-model",
+      "observed_at": "2026-09-07T00:00:00Z"
+    },
+    {
+      "evidence_id": "google-compatible-parameters",
+      "kind": "provider_docs",
+      "url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/migrate/openai/overview",
+      "publisher": "Google",
+      "title": "google-compatible-parameters",
+      "observed_at": "2026-09-07T00:00:00Z"
+    },
+    {
+      "evidence_id": "google-gemini38-pricing",
+      "kind": "provider_docs",
+      "url": "https://ai.google.dev/gemini-api/docs/pricing",
+      "publisher": "Google",
+      "title": "google-gemini38-pricing",
+      "observed_at": "2026-09-07T00:00:00Z"
+    },
+    {
+      "evidence_id": "deepseek-vision",
+      "kind": "provider_docs",
+      "publisher": "DeepSeek",
+      "title": "DeepSeek Vision",
+      "url": "https://api-docs.deepseek.com/guides/vision/",
+      "observed_at": "2026-09-10T00:00:00Z"
+    },
+    {
+      "evidence_id": "deepseek-messages",
+      "kind": "provider_docs",
+      "publisher": "DeepSeek",
+      "title": "DeepSeek Messages compatibility",
+      "url": "https://api-docs.deepseek.com/guides/anthropic_api/",
+      "observed_at": "2026-09-10T00:00:00Z"
+    },
+    {
+      "evidence_id": "deepseek-vision-pricing",
+      "kind": "provider_docs",
+      "publisher": "DeepSeek",
+      "title": "DeepSeek Vision UTC pricing",
+      "url": "https://api-docs.deepseek.com/quick_start/pricing/",
+      "observed_at": "2026-09-10T00:00:00Z"
+    }
+  ]
+}
