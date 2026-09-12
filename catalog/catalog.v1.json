@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "revision": 7,
-  "generated_at": "2026-09-10T00:00:00Z",
+  "generated_at": "2026-09-12T00:00:00Z",
   "models": [
     {
       "model_id": "openai/gpt-6-astra",
@@ -985,7 +985,7 @@
               "text": "supported"
             },
             "context_tokens": 1000000,
-            "max_output_tokens": null,
+            "max_output_tokens": 128000,
             "system_messages": "supported",
             "streaming": "supported",
             "tool_calling": "supported",
@@ -1015,7 +1015,8 @@
         "stage": "stable"
       },
       "evidence_refs": [
-        "anthropic-api-legacy-contract"
+        "anthropic-api-legacy-contract",
+        "anthropic-context-20260912"
       ]
     },
     {
@@ -1057,7 +1058,7 @@
               "text": "supported"
             },
             "context_tokens": 1000000,
-            "max_output_tokens": null,
+            "max_output_tokens": 128000,
             "system_messages": "supported",
             "streaming": "supported",
             "tool_calling": "supported",
@@ -1087,7 +1088,8 @@
         "stage": "stable"
       },
       "evidence_refs": [
-        "anthropic-api-legacy-contract"
+        "anthropic-api-legacy-contract",
+        "anthropic-context-20260912"
       ]
     },
     {
@@ -1129,7 +1131,7 @@
               "text": "supported"
             },
             "context_tokens": 1000000,
-            "max_output_tokens": null,
+            "max_output_tokens": 128000,
             "system_messages": "supported",
             "streaming": "supported",
             "tool_calling": "supported",
@@ -1159,7 +1161,8 @@
         "stage": "stable"
       },
       "evidence_refs": [
-        "anthropic-api-legacy-contract"
+        "anthropic-api-legacy-contract",
+        "anthropic-models-20260912"
       ]
     },
     {
@@ -1259,7 +1262,7 @@
               "text": "supported"
             },
             "context_tokens": 1000000,
-            "max_output_tokens": null,
+            "max_output_tokens": 128000,
             "system_messages": "supported",
             "streaming": "supported",
             "tool_calling": "supported",
@@ -1288,7 +1291,8 @@
         "stage": "stable"
       },
       "evidence_refs": [
-        "anthropic-api-legacy-contract"
+        "anthropic-api-legacy-contract",
+        "anthropic-context-20260912"
       ]
     },
     {
@@ -1330,7 +1334,7 @@
               "text": "supported"
             },
             "context_tokens": 1000000,
-            "max_output_tokens": null,
+            "max_output_tokens": 128000,
             "system_messages": "supported",
             "streaming": "supported",
             "tool_calling": "supported",
@@ -1360,7 +1364,8 @@
         "stage": "stable"
       },
       "evidence_refs": [
-        "anthropic-api-legacy-contract"
+        "anthropic-api-legacy-contract",
+        "anthropic-models-20260912"
       ]
     },
     {
@@ -2214,7 +2219,7 @@
               "text": "supported"
             },
             "context_tokens": 400000,
-            "max_output_tokens": null,
+            "max_output_tokens": 128000,
             "system_messages": "supported",
             "streaming": "supported",
             "tool_calling": "supported",
@@ -2231,7 +2236,9 @@
           }
         }
       ],
-      "price_card_refs": [],
+      "price_card_refs": [
+        "openai-api/gpt-5/standard-observed-20260912"
+      ],
       "regions": [],
       "data_policy": {
         "training": "unknown",
@@ -2243,7 +2250,8 @@
         "stage": "stable"
       },
       "evidence_refs": [
-        "openai-api-legacy-contract"
+        "openai-api-legacy-contract",
+        "openai-gpt-5-20260912"
       ]
     },
     {
@@ -2284,7 +2292,7 @@
               "text": "supported"
             },
             "context_tokens": 400000,
-            "max_output_tokens": null,
+            "max_output_tokens": 128000,
             "system_messages": "supported",
             "streaming": "supported",
             "tool_calling": "supported",
@@ -2301,7 +2309,9 @@
           }
         }
       ],
-      "price_card_refs": [],
+      "price_card_refs": [
+        "openai-api/gpt-5-mini/standard-observed-20260912"
+      ],
       "regions": [],
       "data_policy": {
         "training": "unknown",
@@ -2313,7 +2323,8 @@
         "stage": "stable"
       },
       "evidence_refs": [
-        "openai-api-legacy-contract"
+        "openai-api-legacy-contract",
+        "openai-gpt-5-mini-20260912"
       ]
     },
     {
@@ -2355,7 +2366,7 @@
               "text": "supported"
             },
             "context_tokens": 1050000,
-            "max_output_tokens": null,
+            "max_output_tokens": 128000,
             "system_messages": "supported",
             "streaming": "supported",
             "tool_calling": "supported",
@@ -2385,7 +2396,8 @@
         "stage": "stable"
       },
       "evidence_refs": [
-        "openai-api-legacy-contract"
+        "openai-api-legacy-contract",
+        "openai-gpt-5-4-20260912"
       ]
     },
     {
@@ -2427,7 +2439,7 @@
               "text": "supported"
             },
             "context_tokens": 400000,
-            "max_output_tokens": null,
+            "max_output_tokens": 128000,
             "system_messages": "supported",
             "streaming": "supported",
             "tool_calling": "supported",
@@ -2445,7 +2457,9 @@
           }
         }
       ],
-      "price_card_refs": [],
+      "price_card_refs": [
+        "openai-api/gpt-5.4-mini/standard-observed-20260912"
+      ],
       "regions": [],
       "data_policy": {
         "training": "unknown",
@@ -2457,7 +2471,8 @@
         "stage": "stable"
       },
       "evidence_refs": [
-        "openai-api-legacy-contract"
+        "openai-api-legacy-contract",
+        "openai-gpt-5-4-mini-20260912"
       ]
     },
     {
@@ -2499,7 +2514,7 @@
               "text": "supported"
             },
             "context_tokens": 400000,
-            "max_output_tokens": null,
+            "max_output_tokens": 128000,
             "system_messages": "supported",
             "streaming": "supported",
             "tool_calling": "supported",
@@ -2517,7 +2532,9 @@
           }
         }
       ],
-      "price_card_refs": [],
+      "price_card_refs": [
+        "openai-api/gpt-5.4-nano/standard-observed-20260912"
+      ],
       "regions": [],
       "data_policy": {
         "training": "unknown",
@@ -2529,7 +2546,8 @@
         "stage": "stable"
       },
       "evidence_refs": [
-        "openai-api-legacy-contract"
+        "openai-api-legacy-contract",
+        "openai-gpt-5-4-nano-20260912"
       ]
     },
     {
@@ -2569,7 +2587,7 @@
               "text": "supported"
             },
             "context_tokens": 1050000,
-            "max_output_tokens": null,
+            "max_output_tokens": 128000,
             "system_messages": "supported",
             "streaming": "supported",
             "tool_calling": "supported",
@@ -2597,7 +2615,8 @@
         "stage": "stable"
       },
       "evidence_refs": [
-        "openai-api-legacy-contract"
+        "openai-api-legacy-contract",
+        "openai-gpt-5-4-pro-20260912"
       ]
     },
     {
@@ -2639,7 +2658,7 @@
               "text": "supported"
             },
             "context_tokens": 1050000,
-            "max_output_tokens": null,
+            "max_output_tokens": 128000,
             "system_messages": "supported",
             "streaming": "supported",
             "tool_calling": "supported",
@@ -2669,7 +2688,8 @@
         "stage": "stable"
       },
       "evidence_refs": [
-        "openai-api-legacy-contract"
+        "openai-api-legacy-contract",
+        "openai-gpt-5-5-20260912"
       ]
     },
     {
@@ -2712,7 +2732,7 @@
               "text": "supported"
             },
             "context_tokens": 1050000,
-            "max_output_tokens": null,
+            "max_output_tokens": 128000,
             "system_messages": "supported",
             "streaming": "supported",
             "tool_calling": "supported",
@@ -2731,7 +2751,9 @@
           }
         }
       ],
-      "price_card_refs": [],
+      "price_card_refs": [
+        "openai-api/gpt-5.6/standard-observed-20260912"
+      ],
       "regions": [],
       "data_policy": {
         "training": "unknown",
@@ -2743,7 +2765,8 @@
         "stage": "stable"
       },
       "evidence_refs": [
-        "openai-api-legacy-contract"
+        "openai-api-legacy-contract",
+        "openai-sol-20260912"
       ]
     },
     {
@@ -2786,7 +2809,7 @@
               "text": "supported"
             },
             "context_tokens": 1050000,
-            "max_output_tokens": null,
+            "max_output_tokens": 128000,
             "system_messages": "supported",
             "streaming": "supported",
             "tool_calling": "supported",
@@ -2805,7 +2828,9 @@
           }
         }
       ],
-      "price_card_refs": [],
+      "price_card_refs": [
+        "openai-api/gpt-5.6-luna/standard-observed-20260912"
+      ],
       "regions": [],
       "data_policy": {
         "training": "unknown",
@@ -2817,7 +2842,8 @@
         "stage": "stable"
       },
       "evidence_refs": [
-        "openai-api-legacy-contract"
+        "openai-api-legacy-contract",
+        "openai-luna-20260912"
       ]
     },
     {
@@ -2860,7 +2886,7 @@
               "text": "supported"
             },
             "context_tokens": 1050000,
-            "max_output_tokens": null,
+            "max_output_tokens": 128000,
             "system_messages": "supported",
             "streaming": "supported",
             "tool_calling": "supported",
@@ -2879,7 +2905,9 @@
           }
         }
       ],
-      "price_card_refs": [],
+      "price_card_refs": [
+        "openai-api/gpt-5.6-sol/standard-observed-20260912"
+      ],
       "regions": [],
       "data_policy": {
         "training": "unknown",
@@ -2891,7 +2919,8 @@
         "stage": "stable"
       },
       "evidence_refs": [
-        "openai-api-legacy-contract"
+        "openai-api-legacy-contract",
+        "openai-sol-20260912"
       ]
     },
     {
@@ -2934,7 +2963,7 @@
               "text": "supported"
             },
             "context_tokens": 1050000,
-            "max_output_tokens": null,
+            "max_output_tokens": 128000,
             "system_messages": "supported",
             "streaming": "supported",
             "tool_calling": "supported",
@@ -2953,7 +2982,9 @@
           }
         }
       ],
-      "price_card_refs": [],
+      "price_card_refs": [
+        "openai-api/gpt-5.6-terra/standard-observed-20260912"
+      ],
       "regions": [],
       "data_policy": {
         "training": "unknown",
@@ -2965,7 +2996,8 @@
         "stage": "stable"
       },
       "evidence_refs": [
-        "openai-api-legacy-contract"
+        "openai-api-legacy-contract",
+        "openai-terra-20260912"
       ]
     },
     {
@@ -3021,7 +3053,9 @@
           }
         }
       ],
-      "price_card_refs": [],
+      "price_card_refs": [
+        "xai-api/grok-4.5/standard-observed-20260912"
+      ],
       "regions": [],
       "data_policy": {
         "training": "unknown",
@@ -3033,7 +3067,8 @@
         "stage": "stable"
       },
       "evidence_refs": [
-        "xai-api-legacy-contract"
+        "xai-api-legacy-contract",
+        "xai-pricing-20260912"
       ]
     },
     {
@@ -3091,7 +3126,9 @@
           }
         }
       ],
-      "price_card_refs": [],
+      "price_card_refs": [
+        "xai-api/grok-4.6/standard-observed-20260912"
+      ],
       "regions": [],
       "data_policy": {
         "training": "unknown",
@@ -3103,7 +3140,8 @@
         "stage": "stable"
       },
       "evidence_refs": [
-        "xai-api-legacy-contract"
+        "xai-api-legacy-contract",
+        "xai-pricing-20260912"
       ]
     },
     {
@@ -4234,6 +4272,448 @@
           "fri"
         ]
       }
+    },
+    {
+      "price_card_id": "openai-api/gpt-5/standard-observed-20260912",
+      "offering_id": "openai-api/gpt-5",
+      "currency": "USD",
+      "effective_from": "2026-09-12T00:00:00Z",
+      "rates": [
+        {
+          "meter": "input_text_token",
+          "amount": "1.25",
+          "per": "million"
+        },
+        {
+          "meter": "cache_read_text_token",
+          "amount": "0.125",
+          "per": "million"
+        },
+        {
+          "meter": "output_text_token",
+          "amount": "10",
+          "per": "million"
+        }
+      ],
+      "context_tiers": [],
+      "evidence_refs": [
+        "openai-gpt-5-20260912"
+      ]
+    },
+    {
+      "price_card_id": "openai-api/gpt-5-mini/standard-observed-20260912",
+      "offering_id": "openai-api/gpt-5-mini",
+      "currency": "USD",
+      "effective_from": "2026-09-12T00:00:00Z",
+      "rates": [
+        {
+          "meter": "input_text_token",
+          "amount": "0.25",
+          "per": "million"
+        },
+        {
+          "meter": "cache_read_text_token",
+          "amount": "0.025",
+          "per": "million"
+        },
+        {
+          "meter": "output_text_token",
+          "amount": "2",
+          "per": "million"
+        }
+      ],
+      "context_tiers": [],
+      "evidence_refs": [
+        "openai-gpt-5-mini-20260912"
+      ]
+    },
+    {
+      "price_card_id": "openai-api/gpt-5.4-mini/standard-observed-20260912",
+      "offering_id": "openai-api/gpt-5.4-mini",
+      "currency": "USD",
+      "effective_from": "2026-09-12T00:00:00Z",
+      "rates": [
+        {
+          "meter": "input_text_token",
+          "amount": "0.75",
+          "per": "million"
+        },
+        {
+          "meter": "cache_read_text_token",
+          "amount": "0.075",
+          "per": "million"
+        },
+        {
+          "meter": "output_text_token",
+          "amount": "4.5",
+          "per": "million"
+        }
+      ],
+      "context_tiers": [],
+      "evidence_refs": [
+        "openai-gpt-5-4-mini-20260912"
+      ]
+    },
+    {
+      "price_card_id": "openai-api/gpt-5.4-nano/standard-observed-20260912",
+      "offering_id": "openai-api/gpt-5.4-nano",
+      "currency": "USD",
+      "effective_from": "2026-09-12T00:00:00Z",
+      "rates": [
+        {
+          "meter": "input_text_token",
+          "amount": "0.2",
+          "per": "million"
+        },
+        {
+          "meter": "cache_read_text_token",
+          "amount": "0.02",
+          "per": "million"
+        },
+        {
+          "meter": "output_text_token",
+          "amount": "1.25",
+          "per": "million"
+        }
+      ],
+      "context_tiers": [],
+      "evidence_refs": [
+        "openai-gpt-5-4-nano-20260912"
+      ]
+    },
+    {
+      "price_card_id": "openai-api/gpt-5.6/standard-observed-20260912",
+      "offering_id": "openai-api/gpt-5.6",
+      "currency": "USD",
+      "effective_from": "2026-09-12T00:00:00Z",
+      "rates": [
+        {
+          "meter": "input_text_token",
+          "amount": "4",
+          "per": "million"
+        },
+        {
+          "meter": "cache_read_text_token",
+          "amount": "0.4",
+          "per": "million"
+        },
+        {
+          "meter": "cache_write_text_token",
+          "amount": "5",
+          "per": "million"
+        },
+        {
+          "meter": "output_text_token",
+          "amount": "20",
+          "per": "million"
+        }
+      ],
+      "context_tiers": [
+        {
+          "min_input_tokens": 272001,
+          "rates": [
+            {
+              "meter": "input_text_token",
+              "amount": "8",
+              "per": "million"
+            },
+            {
+              "meter": "cache_read_text_token",
+              "amount": "0.8",
+              "per": "million"
+            },
+            {
+              "meter": "cache_write_text_token",
+              "amount": "10",
+              "per": "million"
+            },
+            {
+              "meter": "output_text_token",
+              "amount": "30",
+              "per": "million"
+            }
+          ]
+        }
+      ],
+      "evidence_refs": [
+        "openai-sol-20260912",
+        "openai-pricing-20260912"
+      ],
+      "effective_until": "2026-11-22T00:00:00Z"
+    },
+    {
+      "price_card_id": "openai-api/gpt-5.6-sol/standard-observed-20260912",
+      "offering_id": "openai-api/gpt-5.6-sol",
+      "currency": "USD",
+      "effective_from": "2026-09-12T00:00:00Z",
+      "rates": [
+        {
+          "meter": "input_text_token",
+          "amount": "4",
+          "per": "million"
+        },
+        {
+          "meter": "cache_read_text_token",
+          "amount": "0.4",
+          "per": "million"
+        },
+        {
+          "meter": "cache_write_text_token",
+          "amount": "5",
+          "per": "million"
+        },
+        {
+          "meter": "output_text_token",
+          "amount": "20",
+          "per": "million"
+        }
+      ],
+      "context_tiers": [
+        {
+          "min_input_tokens": 272001,
+          "rates": [
+            {
+              "meter": "input_text_token",
+              "amount": "8",
+              "per": "million"
+            },
+            {
+              "meter": "cache_read_text_token",
+              "amount": "0.8",
+              "per": "million"
+            },
+            {
+              "meter": "cache_write_text_token",
+              "amount": "10",
+              "per": "million"
+            },
+            {
+              "meter": "output_text_token",
+              "amount": "30",
+              "per": "million"
+            }
+          ]
+        }
+      ],
+      "evidence_refs": [
+        "openai-sol-20260912",
+        "openai-pricing-20260912"
+      ],
+      "effective_until": "2026-11-22T00:00:00Z"
+    },
+    {
+      "price_card_id": "openai-api/gpt-5.6-terra/standard-observed-20260912",
+      "offering_id": "openai-api/gpt-5.6-terra",
+      "currency": "USD",
+      "effective_from": "2026-09-12T00:00:00Z",
+      "rates": [
+        {
+          "meter": "input_text_token",
+          "amount": "2",
+          "per": "million"
+        },
+        {
+          "meter": "cache_read_text_token",
+          "amount": "0.2",
+          "per": "million"
+        },
+        {
+          "meter": "cache_write_text_token",
+          "amount": "2.5",
+          "per": "million"
+        },
+        {
+          "meter": "output_text_token",
+          "amount": "12",
+          "per": "million"
+        }
+      ],
+      "context_tiers": [
+        {
+          "min_input_tokens": 272001,
+          "rates": [
+            {
+              "meter": "input_text_token",
+              "amount": "4",
+              "per": "million"
+            },
+            {
+              "meter": "cache_read_text_token",
+              "amount": "0.4",
+              "per": "million"
+            },
+            {
+              "meter": "cache_write_text_token",
+              "amount": "5",
+              "per": "million"
+            },
+            {
+              "meter": "output_text_token",
+              "amount": "18",
+              "per": "million"
+            }
+          ]
+        }
+      ],
+      "evidence_refs": [
+        "openai-terra-20260912",
+        "openai-pricing-20260912"
+      ]
+    },
+    {
+      "price_card_id": "openai-api/gpt-5.6-luna/standard-observed-20260912",
+      "offering_id": "openai-api/gpt-5.6-luna",
+      "currency": "USD",
+      "effective_from": "2026-09-12T00:00:00Z",
+      "rates": [
+        {
+          "meter": "input_text_token",
+          "amount": "0.2",
+          "per": "million"
+        },
+        {
+          "meter": "cache_read_text_token",
+          "amount": "0.02",
+          "per": "million"
+        },
+        {
+          "meter": "cache_write_text_token",
+          "amount": "0.25",
+          "per": "million"
+        },
+        {
+          "meter": "output_text_token",
+          "amount": "1.2",
+          "per": "million"
+        }
+      ],
+      "context_tiers": [
+        {
+          "min_input_tokens": 272001,
+          "rates": [
+            {
+              "meter": "input_text_token",
+              "amount": "0.4",
+              "per": "million"
+            },
+            {
+              "meter": "cache_read_text_token",
+              "amount": "0.04",
+              "per": "million"
+            },
+            {
+              "meter": "cache_write_text_token",
+              "amount": "0.5",
+              "per": "million"
+            },
+            {
+              "meter": "output_text_token",
+              "amount": "1.8",
+              "per": "million"
+            }
+          ]
+        }
+      ],
+      "evidence_refs": [
+        "openai-luna-20260912",
+        "openai-pricing-20260912"
+      ]
+    },
+    {
+      "price_card_id": "xai-api/grok-4.5/standard-observed-20260912",
+      "offering_id": "xai-api/grok-4.5",
+      "currency": "USD",
+      "effective_from": "2026-09-12T00:00:00Z",
+      "rates": [
+        {
+          "meter": "input_text_token",
+          "amount": "2",
+          "per": "million"
+        },
+        {
+          "meter": "cache_read_text_token",
+          "amount": "0.3",
+          "per": "million"
+        },
+        {
+          "meter": "output_text_token",
+          "amount": "6",
+          "per": "million"
+        }
+      ],
+      "context_tiers": [
+        {
+          "min_input_tokens": 200000,
+          "rates": [
+            {
+              "meter": "input_text_token",
+              "amount": "4",
+              "per": "million"
+            },
+            {
+              "meter": "cache_read_text_token",
+              "amount": "0.6",
+              "per": "million"
+            },
+            {
+              "meter": "output_text_token",
+              "amount": "12",
+              "per": "million"
+            }
+          ]
+        }
+      ],
+      "evidence_refs": [
+        "xai-pricing-20260912"
+      ]
+    },
+    {
+      "price_card_id": "xai-api/grok-4.6/standard-observed-20260912",
+      "offering_id": "xai-api/grok-4.6",
+      "currency": "USD",
+      "effective_from": "2026-09-12T00:00:00Z",
+      "rates": [
+        {
+          "meter": "input_text_token",
+          "amount": "2",
+          "per": "million"
+        },
+        {
+          "meter": "cache_read_text_token",
+          "amount": "0.5",
+          "per": "million"
+        },
+        {
+          "meter": "output_text_token",
+          "amount": "6",
+          "per": "million"
+        }
+      ],
+      "context_tiers": [
+        {
+          "min_input_tokens": 200000,
+          "rates": [
+            {
+              "meter": "input_text_token",
+              "amount": "4",
+              "per": "million"
+            },
+            {
+              "meter": "cache_read_text_token",
+              "amount": "1",
+              "per": "million"
+            },
+            {
+              "meter": "output_text_token",
+              "amount": "12",
+              "per": "million"
+            }
+          ]
+        }
+      ],
+      "evidence_refs": [
+        "xai-pricing-20260912"
+      ]
     }
   ],
   "evidence": [
@@ -4444,6 +4924,118 @@
       "title": "DeepSeek Vision UTC pricing",
       "url": "https://api-docs.deepseek.com/quick_start/pricing/",
       "observed_at": "2026-09-10T00:00:00Z"
+    },
+    {
+      "evidence_id": "openai-gpt-5-20260912",
+      "kind": "provider_docs",
+      "publisher": "OpenAI",
+      "title": "GPT-5 token limits and standard rates",
+      "url": "https://developers.openai.com/api/docs/models/gpt-5",
+      "observed_at": "2026-09-12T00:00:00Z"
+    },
+    {
+      "evidence_id": "openai-gpt-5-mini-20260912",
+      "kind": "provider_docs",
+      "publisher": "OpenAI",
+      "title": "GPT-5 Mini token limits and standard rates",
+      "url": "https://developers.openai.com/api/docs/models/gpt-5-mini",
+      "observed_at": "2026-09-12T00:00:00Z"
+    },
+    {
+      "evidence_id": "openai-gpt-5-4-20260912",
+      "kind": "provider_docs",
+      "publisher": "OpenAI",
+      "title": "GPT-5.4 context and output limits",
+      "url": "https://developers.openai.com/api/docs/models/gpt-5.4",
+      "observed_at": "2026-09-12T00:00:00Z"
+    },
+    {
+      "evidence_id": "openai-gpt-5-5-20260912",
+      "kind": "provider_docs",
+      "publisher": "OpenAI",
+      "title": "GPT-5.5 context and output limits",
+      "url": "https://developers.openai.com/api/docs/models/gpt-5.5",
+      "observed_at": "2026-09-12T00:00:00Z"
+    },
+    {
+      "evidence_id": "openai-gpt-5-4-mini-20260912",
+      "kind": "provider_docs",
+      "publisher": "OpenAI",
+      "title": "GPT-5.4 Mini token limits and standard rates",
+      "url": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+      "observed_at": "2026-09-12T00:00:00Z"
+    },
+    {
+      "evidence_id": "openai-gpt-5-4-nano-20260912",
+      "kind": "provider_docs",
+      "publisher": "OpenAI",
+      "title": "GPT-5.4 Nano token limits and standard rates",
+      "url": "https://developers.openai.com/api/docs/models/gpt-5.4-nano",
+      "observed_at": "2026-09-12T00:00:00Z"
+    },
+    {
+      "evidence_id": "openai-gpt-5-4-pro-20260912",
+      "kind": "provider_docs",
+      "publisher": "OpenAI",
+      "title": "GPT-5.4 Pro context and output limits",
+      "url": "https://developers.openai.com/api/docs/models/gpt-5.4-pro",
+      "observed_at": "2026-09-12T00:00:00Z"
+    },
+    {
+      "evidence_id": "anthropic-context-20260912",
+      "kind": "provider_docs",
+      "publisher": "Anthropic",
+      "title": "Default context and per-request output limits, excluding Batch beta output",
+      "url": "https://platform.claude.com/docs/en/build-with-claude/context-windows",
+      "observed_at": "2026-09-12T00:00:00Z"
+    },
+    {
+      "evidence_id": "openai-pricing-20260912",
+      "kind": "provider_docs",
+      "publisher": "OpenAI",
+      "title": "Standard token rates, cache writes and whole-request long-context tiers",
+      "url": "https://developers.openai.com/api/docs/pricing",
+      "observed_at": "2026-09-12T00:00:00Z"
+    },
+    {
+      "evidence_id": "openai-sol-20260912",
+      "kind": "provider_docs",
+      "publisher": "OpenAI",
+      "title": "GPT-5.6 Sol and gpt-5.6 alias: context/output limits and promotional pricing guaranteed at least through November 21",
+      "url": "https://developers.openai.com/api/docs/models/gpt-5.6-sol",
+      "observed_at": "2026-09-12T00:00:00Z"
+    },
+    {
+      "evidence_id": "openai-terra-20260912",
+      "kind": "provider_docs",
+      "publisher": "OpenAI",
+      "title": "GPT-5.6 Terra context/output limits and standard prices",
+      "url": "https://developers.openai.com/api/docs/models/gpt-5.6-terra",
+      "observed_at": "2026-09-12T00:00:00Z"
+    },
+    {
+      "evidence_id": "openai-luna-20260912",
+      "kind": "provider_docs",
+      "publisher": "OpenAI",
+      "title": "GPT-5.6 Luna context/output limits and standard prices",
+      "url": "https://developers.openai.com/api/docs/models/gpt-5.6-luna",
+      "observed_at": "2026-09-12T00:00:00Z"
+    },
+    {
+      "evidence_id": "anthropic-models-20260912",
+      "kind": "provider_docs",
+      "publisher": "Anthropic",
+      "title": "Claude Opus 5 and Sonnet 5 context and output limits",
+      "url": "https://platform.claude.com/docs/en/models/overview",
+      "observed_at": "2026-09-12T00:00:00Z"
+    },
+    {
+      "evidence_id": "xai-pricing-20260912",
+      "kind": "provider_docs",
+      "publisher": "xAI",
+      "title": "Standard Grok 4.5 and 4.6 token prices; whole-request tier starts at 200000 input tokens",
+      "url": "https://docs.x.ai/developers/pricing",
+      "observed_at": "2026-09-12T00:00:00Z"
     }
   ]
 }

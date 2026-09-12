@@ -36,6 +36,29 @@ Feed retirement requires an explicit support-policy review.
 
 ## Contributions and safety
 
+### Reading limits and prices
+
+Context-window and maximum-output limits belong to an offering's operation
+capabilities. An omitted or null limit is unknown, not unlimited. A shared model
+name does not establish the same limits on every service or deployment.
+
+Price cards retain currency, billing meters and units, cache rates, applicable
+regions/service tiers, validity intervals, context tiers and source evidence.
+Card presence does not establish eligibility for a particular account or make
+unsupported billing meters free. Missing prices are unknown, not zero. Compare
+only rates whose units and conditions match the intended use.
+
+Publicly documented enterprise offers can be included when their eligibility and
+pricing conditions fit the schema and have public evidence. Confidential quotes,
+private model definitions and negotiated account rates stay in the user's local
+configuration; they are not contributed to this repository.
+
+The manifest's freshness deadline and an individual price card's validity are
+independent. Renewing a manifest does not extend a promotion or certify that a
+provider's prices have remained unchanged.
+
+### Safe contributions
+
 Read [CONTRIBUTING.md](CONTRIBUTING.md) before submitting changes. Use
 [SECURITY.md](SECURITY.md) for security concerns. Do not submit application
 configuration, account details, conversations, logs, keys or private source.
