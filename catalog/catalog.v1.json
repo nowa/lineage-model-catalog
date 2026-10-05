@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "revision": 7,
-  "generated_at": "2026-09-12T00:00:00Z",
+  "revision": 8,
+  "generated_at": "2026-10-06T00:00:00Z",
   "models": [
     {
       "model_id": "openai/gpt-6-astra",
@@ -98,7 +98,9 @@
       "family": "claude",
       "display_name": "claude-sonnet-4-5",
       "lifecycle": {
-        "stage": "stable"
+        "stage": "sunset",
+        "effective_at": "2026-11-30T00:00:00Z",
+        "replacement_model_id": "anthropic/claude-sonnet-5-5"
       },
       "intrinsic_modalities": {
         "input": {
@@ -110,7 +112,8 @@
         }
       },
       "evidence_refs": [
-        "anthropic-api-legacy-contract"
+        "anthropic-api-legacy-contract",
+        "anthropic-deprecations-20261006"
       ]
     },
     {
@@ -413,7 +416,9 @@
       "family": "gpt",
       "display_name": "gpt-5",
       "lifecycle": {
-        "stage": "stable"
+        "stage": "sunset",
+        "effective_at": "2026-12-11T00:00:00Z",
+        "replacement_model_id": "openai/gpt-5.6-sol"
       },
       "intrinsic_modalities": {
         "input": {
@@ -425,7 +430,9 @@
         }
       },
       "evidence_refs": [
-        "openai-api-legacy-contract"
+        "openai-api-legacy-contract",
+        "openai-deprecations-20261006",
+        "openai-gpt-5-20261006"
       ]
     },
     {
@@ -434,7 +441,9 @@
       "family": "gpt",
       "display_name": "gpt-5-mini",
       "lifecycle": {
-        "stage": "stable"
+        "stage": "sunset",
+        "effective_at": "2026-12-11T00:00:00Z",
+        "replacement_model_id": "openai/gpt-5.6-terra"
       },
       "intrinsic_modalities": {
         "input": {
@@ -446,7 +455,9 @@
         }
       },
       "evidence_refs": [
-        "openai-api-legacy-contract"
+        "openai-api-legacy-contract",
+        "openai-deprecations-20261006",
+        "openai-gpt-5-mini-20261006"
       ]
     },
     {
@@ -497,7 +508,9 @@
       "family": "gpt",
       "display_name": "gpt-5.4-nano",
       "lifecycle": {
-        "stage": "stable"
+        "stage": "sunset",
+        "effective_at": "2027-04-01T00:00:00Z",
+        "replacement_model_id": "openai/gpt-6-luna"
       },
       "intrinsic_modalities": {
         "input": {
@@ -509,7 +522,8 @@
         }
       },
       "evidence_refs": [
-        "openai-api-legacy-contract"
+        "openai-api-legacy-contract",
+        "openai-deprecations-20261006"
       ]
     },
     {
@@ -862,6 +876,195 @@
         "deepseek-messages",
         "deepseek-vision-pricing"
       ]
+    },
+    {
+      "model_id": "anthropic/claude-opus-5-5",
+      "developer": "anthropic",
+      "family": "claude",
+      "display_name": "Claude Opus 5.5",
+      "lifecycle": {
+        "stage": "stable"
+      },
+      "intrinsic_modalities": {
+        "input": {
+          "text": "supported",
+          "image": "supported"
+        },
+        "output": {
+          "text": "supported"
+        }
+      },
+      "evidence_refs": [
+        "anthropic-opus-5-5-model",
+        "anthropic-opus-5-5-migration",
+        "anthropic-effort-20261006",
+        "anthropic-structured-outputs-20261006",
+        "anthropic-models-20261006"
+      ]
+    },
+    {
+      "model_id": "anthropic/claude-sonnet-5-5",
+      "developer": "anthropic",
+      "family": "claude",
+      "display_name": "Claude Sonnet 5.5",
+      "lifecycle": {
+        "stage": "stable"
+      },
+      "intrinsic_modalities": {
+        "input": {
+          "text": "supported",
+          "image": "supported"
+        },
+        "output": {
+          "text": "supported"
+        }
+      },
+      "evidence_refs": [
+        "anthropic-sonnet-5-5-model",
+        "anthropic-sonnet-5-5-migration",
+        "anthropic-effort-20261006",
+        "anthropic-structured-outputs-20261006",
+        "anthropic-models-20261006"
+      ]
+    },
+    {
+      "model_id": "anthropic/claude-haiku-4-5",
+      "developer": "anthropic",
+      "family": "claude",
+      "display_name": "Claude Haiku 4.5",
+      "lifecycle": {
+        "stage": "stable"
+      },
+      "intrinsic_modalities": {
+        "input": {
+          "text": "supported",
+          "image": "supported"
+        },
+        "output": {
+          "text": "supported"
+        }
+      },
+      "evidence_refs": [
+        "anthropic-haiku-4-5",
+        "anthropic-structured-outputs-20261006",
+        "anthropic-deprecations-20261006"
+      ]
+    },
+    {
+      "model_id": "anthropic/claude-opus-4-6",
+      "developer": "anthropic",
+      "family": "claude",
+      "display_name": "Claude Opus 4.6",
+      "lifecycle": {
+        "stage": "stable"
+      },
+      "intrinsic_modalities": {
+        "input": {
+          "text": "supported",
+          "image": "supported"
+        },
+        "output": {
+          "text": "supported"
+        }
+      },
+      "evidence_refs": [
+        "anthropic-opus-4-6",
+        "anthropic-effort",
+        "anthropic-deprecations-20261006"
+      ]
+    },
+    {
+      "model_id": "anthropic/claude-sonnet-4-5-20250929",
+      "developer": "anthropic",
+      "family": "claude",
+      "display_name": "Claude Sonnet 4.5 (20250929)",
+      "lifecycle": {
+        "stage": "sunset",
+        "effective_at": "2026-11-30T00:00:00Z",
+        "replacement_model_id": "anthropic/claude-sonnet-5-5"
+      },
+      "intrinsic_modalities": {
+        "input": {
+          "text": "supported",
+          "image": "supported"
+        },
+        "output": {
+          "text": "supported"
+        }
+      },
+      "evidence_refs": [
+        "anthropic-sonnet-4-5",
+        "anthropic-model-deprecations",
+        "anthropic-deprecations-20261006"
+      ]
+    },
+    {
+      "model_id": "openai/gpt-6.1-sol",
+      "developer": "openai",
+      "family": "gpt-6",
+      "display_name": "GPT-6.1 Sol",
+      "lifecycle": {
+        "stage": "stable"
+      },
+      "intrinsic_modalities": {
+        "input": {
+          "text": "supported",
+          "image": "supported",
+          "audio": "unsupported",
+          "video": "unsupported"
+        },
+        "output": {
+          "text": "supported",
+          "image": "unsupported",
+          "audio": "unsupported",
+          "video": "unsupported"
+        }
+      },
+      "evidence_refs": [
+        "openai-gpt-6.1-sol-20261006"
+      ]
+    },
+    {
+      "model_id": "openai/gpt-6-sol",
+      "developer": "openai",
+      "family": "gpt-6",
+      "display_name": "GPT-6 Sol",
+      "lifecycle": {
+        "stage": "stable"
+      },
+      "intrinsic_modalities": {
+        "input": {
+          "text": "supported",
+          "image": "supported"
+        },
+        "output": {
+          "text": "supported"
+        }
+      },
+      "evidence_refs": [
+        "openai-gpt-6-sol-20261006"
+      ]
+    },
+    {
+      "model_id": "openai/gpt-6-luna",
+      "developer": "openai",
+      "family": "gpt-6",
+      "display_name": "GPT-6 Luna",
+      "lifecycle": {
+        "stage": "stable"
+      },
+      "intrinsic_modalities": {
+        "input": {
+          "text": "supported",
+          "image": "supported"
+        },
+        "output": {
+          "text": "supported"
+        }
+      },
+      "evidence_refs": [
+        "openai-gpt-6-luna-20261006"
+      ]
     }
   ],
   "offerings": [
@@ -1003,20 +1206,25 @@
           }
         }
       ],
-      "price_card_refs": [],
+      "price_card_refs": [
+        "anthropic-api/claude-fable-5/standard-observed-20261006"
+      ],
       "regions": [],
       "data_policy": {
         "training": "unknown",
         "retention": {
-          "kind": "unknown"
-        }
+          "kind": "days",
+          "days": 30
+        },
+        "required_workspace_retention_days": 30
       },
       "lifecycle": {
         "stage": "stable"
       },
       "evidence_refs": [
         "anthropic-api-legacy-contract",
-        "anthropic-context-20260912"
+        "anthropic-context-20260912",
+        "anthropic-data-retention-20261006"
       ]
     },
     {
@@ -1076,7 +1284,9 @@
           }
         }
       ],
-      "price_card_refs": [],
+      "price_card_refs": [
+        "anthropic-api/claude-opus-4-8/standard-observed-20261006"
+      ],
       "regions": [],
       "data_policy": {
         "training": "unknown",
@@ -1149,7 +1359,9 @@
           }
         }
       ],
-      "price_card_refs": [],
+      "price_card_refs": [
+        "anthropic-api/claude-opus-5/standard-observed-20261006"
+      ],
       "regions": [],
       "data_policy": {
         "training": "unknown",
@@ -1209,7 +1421,9 @@
           }
         }
       ],
-      "price_card_refs": [],
+      "price_card_refs": [
+        "anthropic-api/claude-sonnet-4-5/standard-observed-20261006"
+      ],
       "regions": [],
       "data_policy": {
         "training": "unknown",
@@ -1218,10 +1432,12 @@
         }
       },
       "lifecycle": {
-        "stage": "stable"
+        "stage": "sunset",
+        "effective_at": "2026-11-30T00:00:00Z"
       },
       "evidence_refs": [
-        "anthropic-api-legacy-contract"
+        "anthropic-api-legacy-contract",
+        "anthropic-deprecations-20261006"
       ]
     },
     {
@@ -1279,7 +1495,9 @@
           }
         }
       ],
-      "price_card_refs": [],
+      "price_card_refs": [
+        "anthropic-api/claude-sonnet-4-6/standard-observed-20261006"
+      ],
       "regions": [],
       "data_policy": {
         "training": "unknown",
@@ -1352,7 +1570,9 @@
           }
         }
       ],
-      "price_card_refs": [],
+      "price_card_refs": [
+        "anthropic-api/claude-sonnet-5/standard-observed-20261006"
+      ],
       "regions": [],
       "data_policy": {
         "training": "unknown",
@@ -2247,11 +2467,14 @@
         }
       },
       "lifecycle": {
-        "stage": "stable"
+        "stage": "sunset",
+        "effective_at": "2026-12-11T00:00:00Z"
       },
       "evidence_refs": [
         "openai-api-legacy-contract",
-        "openai-gpt-5-20260912"
+        "openai-gpt-5-20260912",
+        "openai-deprecations-20261006",
+        "openai-gpt-5-20261006"
       ]
     },
     {
@@ -2320,11 +2543,14 @@
         }
       },
       "lifecycle": {
-        "stage": "stable"
+        "stage": "sunset",
+        "effective_at": "2026-12-11T00:00:00Z"
       },
       "evidence_refs": [
         "openai-api-legacy-contract",
-        "openai-gpt-5-mini-20260912"
+        "openai-gpt-5-mini-20260912",
+        "openai-deprecations-20261006",
+        "openai-gpt-5-mini-20261006"
       ]
     },
     {
@@ -2384,7 +2610,9 @@
           }
         }
       ],
-      "price_card_refs": [],
+      "price_card_refs": [
+        "openai-api/gpt-5.4/standard-observed-20261006"
+      ],
       "regions": [],
       "data_policy": {
         "training": "unknown",
@@ -2543,11 +2771,13 @@
         }
       },
       "lifecycle": {
-        "stage": "stable"
+        "stage": "sunset",
+        "effective_at": "2027-04-01T00:00:00Z"
       },
       "evidence_refs": [
         "openai-api-legacy-contract",
-        "openai-gpt-5-4-nano-20260912"
+        "openai-gpt-5-4-nano-20260912",
+        "openai-deprecations-20261006"
       ]
     },
     {
@@ -2603,7 +2833,9 @@
           }
         }
       ],
-      "price_card_refs": [],
+      "price_card_refs": [
+        "openai-api/gpt-5.4-pro/standard-observed-20261006"
+      ],
       "regions": [],
       "data_policy": {
         "training": "unknown",
@@ -2676,7 +2908,9 @@
           }
         }
       ],
-      "price_card_refs": [],
+      "price_card_refs": [
+        "openai-api/gpt-5.5/standard-observed-20261006"
+      ],
       "regions": [],
       "data_policy": {
         "training": "unknown",
@@ -3757,6 +3991,608 @@
         "deepseek-messages",
         "deepseek-vision-pricing"
       ]
+    },
+    {
+      "offering_id": "anthropic-api/claude-opus-5-5",
+      "model_id": "anthropic/claude-opus-5-5",
+      "provider_id": "anthropic-api",
+      "wire_model": "claude-opus-5-5",
+      "operations": [
+        {
+          "operation": "chat",
+          "adapter": "anthropic_messages",
+          "wire_contract": {
+            "max_output_field": "max_tokens",
+            "temperature": "omit",
+            "reasoning": {
+              "encoding": "anthropic_adaptive_always_on",
+              "efforts": [
+                "low",
+                "medium",
+                "high",
+                "x_high",
+                "max"
+              ]
+            },
+            "thinking_control": "always_on",
+            "tool_choice": [
+              "auto",
+              "none"
+            ],
+            "thinking_roundtrip": "same_model_conversation_prefix",
+            "structured_output": "native_json_schema"
+          },
+          "capabilities": {
+            "input_modalities": {
+              "text": "supported",
+              "image": "supported"
+            },
+            "output_modalities": {
+              "text": "supported"
+            },
+            "context_tokens": 1000000,
+            "max_output_tokens": 128000,
+            "system_messages": "supported",
+            "streaming": "supported",
+            "tool_calling": "supported",
+            "reasoning": {
+              "efforts": [
+                "low",
+                "medium",
+                "high",
+                "x_high",
+                "max"
+              ],
+              "default": "medium",
+              "accepted_aliases": []
+            },
+            "prompt_caching": "supported",
+            "structured_output": {
+              "json_schema": "supported",
+              "json_object": "unknown"
+            }
+          }
+        }
+      ],
+      "price_card_refs": [
+        "anthropic-api/claude-opus-5-5/standard-observed-20261006"
+      ],
+      "regions": [],
+      "data_policy": {
+        "training": "unknown",
+        "retention": {
+          "kind": "unknown"
+        }
+      },
+      "lifecycle": {
+        "stage": "stable"
+      },
+      "evidence_refs": [
+        "anthropic-opus-5-5-model",
+        "anthropic-opus-5-5-migration",
+        "anthropic-effort-20261006",
+        "anthropic-structured-outputs-20261006",
+        "anthropic-models-20261006"
+      ]
+    },
+    {
+      "offering_id": "anthropic-api/claude-sonnet-5-5",
+      "model_id": "anthropic/claude-sonnet-5-5",
+      "provider_id": "anthropic-api",
+      "wire_model": "claude-sonnet-5-5",
+      "operations": [
+        {
+          "operation": "chat",
+          "adapter": "anthropic_messages",
+          "wire_contract": {
+            "max_output_field": "max_tokens",
+            "temperature": "omit",
+            "reasoning": {
+              "encoding": "anthropic_adaptive",
+              "efforts": [
+                "low",
+                "medium",
+                "high",
+                "x_high",
+                "max"
+              ]
+            },
+            "thinking_control": "unknown",
+            "tool_choice": [
+              "auto",
+              "none"
+            ],
+            "thinking_roundtrip": "same_model_conversation_prefix",
+            "structured_output": "native_json_schema"
+          },
+          "capabilities": {
+            "input_modalities": {
+              "text": "supported",
+              "image": "supported"
+            },
+            "output_modalities": {
+              "text": "supported"
+            },
+            "context_tokens": 1000000,
+            "max_output_tokens": 128000,
+            "system_messages": "supported",
+            "streaming": "supported",
+            "tool_calling": "supported",
+            "reasoning": {
+              "efforts": [
+                "low",
+                "medium",
+                "high",
+                "x_high",
+                "max"
+              ],
+              "default": "high",
+              "accepted_aliases": []
+            },
+            "prompt_caching": "supported",
+            "structured_output": {
+              "json_schema": "supported",
+              "json_object": "unknown"
+            }
+          }
+        }
+      ],
+      "price_card_refs": [
+        "anthropic-api/claude-sonnet-5-5/standard-observed-20261006"
+      ],
+      "regions": [],
+      "data_policy": {
+        "training": "unknown",
+        "retention": {
+          "kind": "unknown"
+        }
+      },
+      "lifecycle": {
+        "stage": "stable"
+      },
+      "evidence_refs": [
+        "anthropic-sonnet-5-5-model",
+        "anthropic-sonnet-5-5-migration",
+        "anthropic-effort-20261006",
+        "anthropic-structured-outputs-20261006",
+        "anthropic-models-20261006"
+      ]
+    },
+    {
+      "offering_id": "anthropic-api/claude-haiku-4-5-20251001",
+      "model_id": "anthropic/claude-haiku-4-5",
+      "provider_id": "anthropic-api",
+      "wire_model": "claude-haiku-4-5-20251001",
+      "operations": [
+        {
+          "operation": "chat",
+          "adapter": "anthropic_messages",
+          "capabilities": {
+            "context_tokens": 200000,
+            "max_output_tokens": 64000,
+            "input_modalities": {
+              "text": "supported",
+              "image": "supported"
+            },
+            "output_modalities": {
+              "text": "supported"
+            },
+            "system_messages": "supported",
+            "streaming": "supported",
+            "tool_calling": "supported",
+            "reasoning": {
+              "efforts": [],
+              "accepted_aliases": []
+            }
+          },
+          "wire_contract": {
+            "max_output_field": "max_tokens",
+            "temperature": "send_clamped",
+            "reasoning": {
+              "encoding": "none"
+            },
+            "tool_choice": [
+              "auto",
+              "none"
+            ],
+            "thinking_roundtrip": "unknown",
+            "structured_output": "none"
+          }
+        }
+      ],
+      "price_card_refs": [
+        "anthropic-api/claude-haiku-4-5-20251001/standard-observed-20261006"
+      ],
+      "regions": [],
+      "data_policy": {
+        "training": "unknown",
+        "retention": {
+          "kind": "unknown"
+        }
+      },
+      "lifecycle": {
+        "stage": "stable"
+      },
+      "evidence_refs": [
+        "anthropic-haiku-4-5",
+        "anthropic-structured-outputs-20261006",
+        "anthropic-deprecations-20261006"
+      ]
+    },
+    {
+      "offering_id": "anthropic-api/claude-opus-4-6",
+      "model_id": "anthropic/claude-opus-4-6",
+      "provider_id": "anthropic-api",
+      "wire_model": "claude-opus-4-6",
+      "operations": [
+        {
+          "operation": "chat",
+          "adapter": "anthropic_messages",
+          "capabilities": {
+            "context_tokens": 1000000,
+            "max_output_tokens": 128000,
+            "input_modalities": {
+              "text": "supported",
+              "image": "supported"
+            },
+            "output_modalities": {
+              "text": "supported"
+            },
+            "system_messages": "supported",
+            "streaming": "supported",
+            "tool_calling": "supported",
+            "reasoning": {
+              "efforts": [
+                "low",
+                "medium",
+                "high",
+                "max"
+              ],
+              "accepted_aliases": [],
+              "default": "high"
+            }
+          },
+          "wire_contract": {
+            "max_output_field": "max_tokens",
+            "temperature": "omit",
+            "reasoning": {
+              "encoding": "anthropic_adaptive",
+              "efforts": [
+                "low",
+                "medium",
+                "high",
+                "max"
+              ]
+            },
+            "tool_choice": [
+              "auto",
+              "none"
+            ],
+            "thinking_roundtrip": "same_model_conversation",
+            "structured_output": "none"
+          }
+        }
+      ],
+      "price_card_refs": [
+        "anthropic-api/claude-opus-4-6/standard-observed-20261006"
+      ],
+      "regions": [],
+      "data_policy": {
+        "training": "unknown",
+        "retention": {
+          "kind": "unknown"
+        }
+      },
+      "lifecycle": {
+        "stage": "stable"
+      },
+      "evidence_refs": [
+        "anthropic-opus-4-6",
+        "anthropic-effort",
+        "anthropic-deprecations-20261006"
+      ]
+    },
+    {
+      "offering_id": "anthropic-api/claude-sonnet-4-5-20250929",
+      "model_id": "anthropic/claude-sonnet-4-5-20250929",
+      "provider_id": "anthropic-api",
+      "wire_model": "claude-sonnet-4-5-20250929",
+      "operations": [
+        {
+          "operation": "chat",
+          "adapter": "anthropic_messages",
+          "capabilities": {
+            "context_tokens": 200000,
+            "max_output_tokens": 64000,
+            "input_modalities": {
+              "text": "supported",
+              "image": "supported"
+            },
+            "output_modalities": {
+              "text": "supported"
+            },
+            "system_messages": "supported",
+            "streaming": "supported",
+            "tool_calling": "supported",
+            "reasoning": {
+              "efforts": [],
+              "accepted_aliases": []
+            }
+          },
+          "wire_contract": {
+            "max_output_field": "max_tokens",
+            "temperature": "send_clamped",
+            "reasoning": {
+              "encoding": "none"
+            },
+            "tool_choice": [
+              "auto",
+              "none"
+            ],
+            "thinking_roundtrip": "unknown",
+            "structured_output": "none"
+          }
+        }
+      ],
+      "price_card_refs": [
+        "anthropic-api/claude-sonnet-4-5-20250929/standard-observed-20261006"
+      ],
+      "regions": [],
+      "data_policy": {
+        "training": "unknown",
+        "retention": {
+          "kind": "unknown"
+        }
+      },
+      "lifecycle": {
+        "stage": "sunset",
+        "effective_at": "2026-11-30T00:00:00Z"
+      },
+      "evidence_refs": [
+        "anthropic-sonnet-4-5",
+        "anthropic-model-deprecations",
+        "anthropic-deprecations-20261006"
+      ]
+    },
+    {
+      "offering_id": "openai-api/gpt-6.1-sol",
+      "model_id": "openai/gpt-6.1-sol",
+      "provider_id": "openai-api",
+      "wire_model": "gpt-6.1-sol",
+      "operations": [
+        {
+          "operation": "chat",
+          "adapter": "openai_responses",
+          "wire_contract": {
+            "max_output_field": "max_output_tokens",
+            "temperature": "omit",
+            "reasoning": {
+              "encoding": "responses_effort",
+              "efforts": [
+                "low",
+                "medium",
+                "high",
+                "x_high",
+                "max"
+              ]
+            },
+            "thinking_control": "unknown",
+            "tool_choice": [
+              "auto",
+              "none"
+            ],
+            "thinking_roundtrip": "same_model_conversation",
+            "structured_output": "native_json_schema"
+          },
+          "capabilities": {
+            "input_modalities": {
+              "text": "supported",
+              "image": "supported",
+              "audio": "unsupported",
+              "video": "unsupported"
+            },
+            "output_modalities": {
+              "text": "supported"
+            },
+            "context_tokens": 1050000,
+            "max_output_tokens": 128000,
+            "system_messages": "supported",
+            "streaming": "supported",
+            "tool_calling": "supported",
+            "prompt_caching": "supported",
+            "structured_output": {
+              "json_schema": "supported"
+            },
+            "reasoning": {
+              "efforts": [
+                "low",
+                "medium",
+                "high",
+                "x_high",
+                "max"
+              ],
+              "default": "medium",
+              "accepted_aliases": []
+            }
+          }
+        }
+      ],
+      "price_card_refs": [
+        "openai-api/gpt-6.1-sol/standard-observed-20261006"
+      ],
+      "regions": [],
+      "data_policy": {
+        "training": "unknown",
+        "retention": {
+          "kind": "unknown"
+        }
+      },
+      "lifecycle": {
+        "stage": "stable"
+      },
+      "evidence_refs": [
+        "openai-gpt-6.1-sol-20261006"
+      ]
+    },
+    {
+      "offering_id": "openai-api/gpt-6-sol",
+      "model_id": "openai/gpt-6-sol",
+      "provider_id": "openai-api",
+      "wire_model": "gpt-6-sol",
+      "operations": [
+        {
+          "operation": "chat",
+          "adapter": "openai_responses",
+          "wire_contract": {
+            "max_output_field": "max_output_tokens",
+            "temperature": "omit",
+            "reasoning": {
+              "encoding": "responses_effort",
+              "efforts": [
+                "none",
+                "low",
+                "medium",
+                "high",
+                "x_high",
+                "max"
+              ]
+            },
+            "thinking_control": "unknown",
+            "tool_choice": [
+              "auto",
+              "none"
+            ],
+            "thinking_roundtrip": "same_model_conversation",
+            "structured_output": "native_json_schema"
+          },
+          "capabilities": {
+            "input_modalities": {
+              "text": "supported",
+              "image": "supported"
+            },
+            "output_modalities": {
+              "text": "supported"
+            },
+            "context_tokens": 1050000,
+            "max_output_tokens": 128000,
+            "system_messages": "supported",
+            "streaming": "supported",
+            "tool_calling": "supported",
+            "prompt_caching": "supported",
+            "structured_output": {
+              "json_schema": "supported"
+            },
+            "reasoning": {
+              "efforts": [
+                "none",
+                "low",
+                "medium",
+                "high",
+                "x_high",
+                "max"
+              ],
+              "default": "medium",
+              "accepted_aliases": []
+            }
+          }
+        }
+      ],
+      "price_card_refs": [
+        "openai-api/gpt-6-sol/standard-observed-20261006"
+      ],
+      "regions": [],
+      "data_policy": {
+        "training": "unknown",
+        "retention": {
+          "kind": "unknown"
+        }
+      },
+      "lifecycle": {
+        "stage": "stable"
+      },
+      "evidence_refs": [
+        "openai-gpt-6-sol-20261006"
+      ]
+    },
+    {
+      "offering_id": "openai-api/gpt-6-luna",
+      "model_id": "openai/gpt-6-luna",
+      "provider_id": "openai-api",
+      "wire_model": "gpt-6-luna",
+      "operations": [
+        {
+          "operation": "chat",
+          "adapter": "openai_responses",
+          "wire_contract": {
+            "max_output_field": "max_output_tokens",
+            "temperature": "omit",
+            "reasoning": {
+              "encoding": "responses_effort",
+              "efforts": [
+                "none",
+                "low",
+                "medium",
+                "high",
+                "x_high",
+                "max"
+              ]
+            },
+            "thinking_control": "unknown",
+            "tool_choice": [
+              "auto",
+              "none"
+            ],
+            "thinking_roundtrip": "same_model_conversation",
+            "structured_output": "native_json_schema"
+          },
+          "capabilities": {
+            "input_modalities": {
+              "text": "supported",
+              "image": "supported"
+            },
+            "output_modalities": {
+              "text": "supported"
+            },
+            "context_tokens": 1050000,
+            "max_output_tokens": 128000,
+            "system_messages": "supported",
+            "streaming": "supported",
+            "tool_calling": "supported",
+            "prompt_caching": "supported",
+            "structured_output": {
+              "json_schema": "supported"
+            },
+            "reasoning": {
+              "efforts": [
+                "none",
+                "low",
+                "medium",
+                "high",
+                "x_high",
+                "max"
+              ],
+              "default": "medium",
+              "accepted_aliases": []
+            }
+          }
+        }
+      ],
+      "price_card_refs": [
+        "openai-api/gpt-6-luna/standard-observed-20261006"
+      ],
+      "regions": [],
+      "data_policy": {
+        "training": "unknown",
+        "retention": {
+          "kind": "unknown"
+        }
+      },
+      "lifecycle": {
+        "stage": "stable"
+      },
+      "evidence_refs": [
+        "openai-gpt-6-luna-20261006"
+      ]
     }
   ],
   "price_cards": [
@@ -4714,6 +5550,751 @@
       "evidence_refs": [
         "xai-pricing-20260912"
       ]
+    },
+    {
+      "price_card_id": "anthropic-api/claude-haiku-4-5-20251001/standard-observed-20261006",
+      "offering_id": "anthropic-api/claude-haiku-4-5-20251001",
+      "currency": "USD",
+      "effective_from": "2026-10-06T00:00:00Z",
+      "rates": [
+        {
+          "meter": "input_text_token",
+          "amount": "1",
+          "per": "million"
+        },
+        {
+          "meter": "output_text_token",
+          "amount": "5",
+          "per": "million"
+        },
+        {
+          "meter": "cache_read_text_token",
+          "amount": "0.10",
+          "per": "million"
+        },
+        {
+          "meter": "cache_write_text_token",
+          "amount": "1.25",
+          "per": "million",
+          "cache_ttl_seconds": 300
+        },
+        {
+          "meter": "cache_write_text_token",
+          "amount": "2",
+          "per": "million",
+          "cache_ttl_seconds": 3600
+        }
+      ],
+      "context_tiers": [],
+      "evidence_refs": [
+        "anthropic-pricing-20261006"
+      ]
+    },
+    {
+      "price_card_id": "anthropic-api/claude-opus-4-6/standard-observed-20261006",
+      "offering_id": "anthropic-api/claude-opus-4-6",
+      "currency": "USD",
+      "effective_from": "2026-10-06T00:00:00Z",
+      "rates": [
+        {
+          "meter": "input_text_token",
+          "amount": "5",
+          "per": "million"
+        },
+        {
+          "meter": "output_text_token",
+          "amount": "25",
+          "per": "million"
+        },
+        {
+          "meter": "cache_read_text_token",
+          "amount": "0.50",
+          "per": "million"
+        },
+        {
+          "meter": "cache_write_text_token",
+          "amount": "6.25",
+          "per": "million",
+          "cache_ttl_seconds": 300
+        },
+        {
+          "meter": "cache_write_text_token",
+          "amount": "10",
+          "per": "million",
+          "cache_ttl_seconds": 3600
+        }
+      ],
+      "context_tiers": [],
+      "evidence_refs": [
+        "anthropic-pricing-20261006"
+      ]
+    },
+    {
+      "price_card_id": "anthropic-api/claude-sonnet-4-5-20250929/standard-observed-20261006",
+      "offering_id": "anthropic-api/claude-sonnet-4-5-20250929",
+      "currency": "USD",
+      "effective_from": "2026-10-06T00:00:00Z",
+      "rates": [
+        {
+          "meter": "input_text_token",
+          "amount": "3",
+          "per": "million"
+        },
+        {
+          "meter": "output_text_token",
+          "amount": "15",
+          "per": "million"
+        },
+        {
+          "meter": "cache_read_text_token",
+          "amount": "0.30",
+          "per": "million"
+        },
+        {
+          "meter": "cache_write_text_token",
+          "amount": "3.75",
+          "per": "million",
+          "cache_ttl_seconds": 300
+        },
+        {
+          "meter": "cache_write_text_token",
+          "amount": "6",
+          "per": "million",
+          "cache_ttl_seconds": 3600
+        }
+      ],
+      "context_tiers": [],
+      "evidence_refs": [
+        "anthropic-pricing-20261006"
+      ]
+    },
+    {
+      "price_card_id": "anthropic-api/claude-fable-5/standard-observed-20261006",
+      "offering_id": "anthropic-api/claude-fable-5",
+      "currency": "USD",
+      "effective_from": "2026-10-06T00:00:00Z",
+      "rates": [
+        {
+          "meter": "input_text_token",
+          "amount": "10",
+          "per": "million"
+        },
+        {
+          "meter": "output_text_token",
+          "amount": "50",
+          "per": "million"
+        },
+        {
+          "meter": "cache_read_text_token",
+          "amount": "1",
+          "per": "million"
+        },
+        {
+          "meter": "cache_write_text_token",
+          "amount": "12.50",
+          "per": "million",
+          "cache_ttl_seconds": 300
+        },
+        {
+          "meter": "cache_write_text_token",
+          "amount": "20",
+          "per": "million",
+          "cache_ttl_seconds": 3600
+        }
+      ],
+      "context_tiers": [],
+      "evidence_refs": [
+        "anthropic-pricing-20261006"
+      ]
+    },
+    {
+      "price_card_id": "anthropic-api/claude-opus-5-5/standard-observed-20261006",
+      "offering_id": "anthropic-api/claude-opus-5-5",
+      "currency": "USD",
+      "effective_from": "2026-10-06T00:00:00Z",
+      "rates": [
+        {
+          "meter": "input_text_token",
+          "amount": "4",
+          "per": "million"
+        },
+        {
+          "meter": "output_text_token",
+          "amount": "20",
+          "per": "million"
+        },
+        {
+          "meter": "cache_read_text_token",
+          "amount": "0.20",
+          "per": "million"
+        },
+        {
+          "meter": "cache_write_text_token",
+          "amount": "5",
+          "per": "million",
+          "cache_ttl_seconds": 300
+        },
+        {
+          "meter": "cache_write_text_token",
+          "amount": "8",
+          "per": "million",
+          "cache_ttl_seconds": 3600
+        }
+      ],
+      "context_tiers": [],
+      "evidence_refs": [
+        "anthropic-pricing-20261006",
+        "anthropic-opus-5-5-model"
+      ]
+    },
+    {
+      "price_card_id": "anthropic-api/claude-opus-5/standard-observed-20261006",
+      "offering_id": "anthropic-api/claude-opus-5",
+      "currency": "USD",
+      "effective_from": "2026-10-06T00:00:00Z",
+      "rates": [
+        {
+          "meter": "input_text_token",
+          "amount": "5",
+          "per": "million"
+        },
+        {
+          "meter": "output_text_token",
+          "amount": "25",
+          "per": "million"
+        },
+        {
+          "meter": "cache_read_text_token",
+          "amount": "0.50",
+          "per": "million"
+        },
+        {
+          "meter": "cache_write_text_token",
+          "amount": "6.25",
+          "per": "million",
+          "cache_ttl_seconds": 300
+        },
+        {
+          "meter": "cache_write_text_token",
+          "amount": "10",
+          "per": "million",
+          "cache_ttl_seconds": 3600
+        }
+      ],
+      "context_tiers": [],
+      "evidence_refs": [
+        "anthropic-pricing-20261006"
+      ]
+    },
+    {
+      "price_card_id": "anthropic-api/claude-opus-4-8/standard-observed-20261006",
+      "offering_id": "anthropic-api/claude-opus-4-8",
+      "currency": "USD",
+      "effective_from": "2026-10-06T00:00:00Z",
+      "rates": [
+        {
+          "meter": "input_text_token",
+          "amount": "5",
+          "per": "million"
+        },
+        {
+          "meter": "output_text_token",
+          "amount": "25",
+          "per": "million"
+        },
+        {
+          "meter": "cache_read_text_token",
+          "amount": "0.50",
+          "per": "million"
+        },
+        {
+          "meter": "cache_write_text_token",
+          "amount": "6.25",
+          "per": "million",
+          "cache_ttl_seconds": 300
+        },
+        {
+          "meter": "cache_write_text_token",
+          "amount": "10",
+          "per": "million",
+          "cache_ttl_seconds": 3600
+        }
+      ],
+      "context_tiers": [],
+      "evidence_refs": [
+        "anthropic-pricing-20261006"
+      ]
+    },
+    {
+      "price_card_id": "anthropic-api/claude-sonnet-5-5/standard-observed-20261006",
+      "offering_id": "anthropic-api/claude-sonnet-5-5",
+      "currency": "USD",
+      "effective_from": "2026-10-06T00:00:00Z",
+      "rates": [
+        {
+          "meter": "input_text_token",
+          "amount": "2",
+          "per": "million"
+        },
+        {
+          "meter": "output_text_token",
+          "amount": "10",
+          "per": "million"
+        },
+        {
+          "meter": "cache_read_text_token",
+          "amount": "0.20",
+          "per": "million"
+        },
+        {
+          "meter": "cache_write_text_token",
+          "amount": "2.50",
+          "per": "million",
+          "cache_ttl_seconds": 300
+        },
+        {
+          "meter": "cache_write_text_token",
+          "amount": "4",
+          "per": "million",
+          "cache_ttl_seconds": 3600
+        }
+      ],
+      "context_tiers": [],
+      "evidence_refs": [
+        "anthropic-pricing-20261006",
+        "anthropic-sonnet-5-5-model"
+      ]
+    },
+    {
+      "price_card_id": "anthropic-api/claude-sonnet-5/standard-observed-20261006",
+      "offering_id": "anthropic-api/claude-sonnet-5",
+      "currency": "USD",
+      "effective_from": "2026-10-06T00:00:00Z",
+      "rates": [
+        {
+          "meter": "input_text_token",
+          "amount": "2",
+          "per": "million"
+        },
+        {
+          "meter": "output_text_token",
+          "amount": "10",
+          "per": "million"
+        },
+        {
+          "meter": "cache_read_text_token",
+          "amount": "0.20",
+          "per": "million"
+        },
+        {
+          "meter": "cache_write_text_token",
+          "amount": "2.50",
+          "per": "million",
+          "cache_ttl_seconds": 300
+        },
+        {
+          "meter": "cache_write_text_token",
+          "amount": "4",
+          "per": "million",
+          "cache_ttl_seconds": 3600
+        }
+      ],
+      "context_tiers": [],
+      "evidence_refs": [
+        "anthropic-pricing-20261006"
+      ]
+    },
+    {
+      "price_card_id": "anthropic-api/claude-sonnet-4-6/standard-observed-20261006",
+      "offering_id": "anthropic-api/claude-sonnet-4-6",
+      "currency": "USD",
+      "effective_from": "2026-10-06T00:00:00Z",
+      "rates": [
+        {
+          "meter": "input_text_token",
+          "amount": "3",
+          "per": "million"
+        },
+        {
+          "meter": "output_text_token",
+          "amount": "15",
+          "per": "million"
+        },
+        {
+          "meter": "cache_read_text_token",
+          "amount": "0.30",
+          "per": "million"
+        },
+        {
+          "meter": "cache_write_text_token",
+          "amount": "3.75",
+          "per": "million",
+          "cache_ttl_seconds": 300
+        },
+        {
+          "meter": "cache_write_text_token",
+          "amount": "6",
+          "per": "million",
+          "cache_ttl_seconds": 3600
+        }
+      ],
+      "context_tiers": [],
+      "evidence_refs": [
+        "anthropic-pricing-20261006"
+      ]
+    },
+    {
+      "price_card_id": "anthropic-api/claude-sonnet-4-5/standard-observed-20261006",
+      "offering_id": "anthropic-api/claude-sonnet-4-5",
+      "currency": "USD",
+      "effective_from": "2026-10-06T00:00:00Z",
+      "rates": [
+        {
+          "meter": "input_text_token",
+          "amount": "3",
+          "per": "million"
+        },
+        {
+          "meter": "output_text_token",
+          "amount": "15",
+          "per": "million"
+        },
+        {
+          "meter": "cache_read_text_token",
+          "amount": "0.30",
+          "per": "million"
+        },
+        {
+          "meter": "cache_write_text_token",
+          "amount": "3.75",
+          "per": "million",
+          "cache_ttl_seconds": 300
+        },
+        {
+          "meter": "cache_write_text_token",
+          "amount": "6",
+          "per": "million",
+          "cache_ttl_seconds": 3600
+        }
+      ],
+      "context_tiers": [],
+      "evidence_refs": [
+        "anthropic-pricing-20261006"
+      ]
+    },
+    {
+      "price_card_id": "openai-api/gpt-6.1-sol/standard-observed-20261006",
+      "offering_id": "openai-api/gpt-6.1-sol",
+      "currency": "USD",
+      "effective_from": "2026-10-06T00:00:00Z",
+      "rates": [
+        {
+          "meter": "input_text_token",
+          "amount": "2",
+          "per": "million"
+        },
+        {
+          "meter": "cache_read_text_token",
+          "amount": "0.10",
+          "per": "million"
+        },
+        {
+          "meter": "cache_write_text_token",
+          "amount": "2.50",
+          "per": "million"
+        },
+        {
+          "meter": "output_text_token",
+          "amount": "10",
+          "per": "million"
+        }
+      ],
+      "context_tiers": [
+        {
+          "min_input_tokens": 272001,
+          "rates": [
+            {
+              "meter": "input_text_token",
+              "amount": "4",
+              "per": "million"
+            },
+            {
+              "meter": "cache_read_text_token",
+              "amount": "0.20",
+              "per": "million"
+            },
+            {
+              "meter": "cache_write_text_token",
+              "amount": "5",
+              "per": "million"
+            },
+            {
+              "meter": "output_text_token",
+              "amount": "15",
+              "per": "million"
+            }
+          ]
+        }
+      ],
+      "evidence_refs": [
+        "openai-pricing-20261006",
+        "openai-gpt-6.1-sol-20261006"
+      ]
+    },
+    {
+      "price_card_id": "openai-api/gpt-6-sol/standard-observed-20261006",
+      "offering_id": "openai-api/gpt-6-sol",
+      "currency": "USD",
+      "effective_from": "2026-10-06T00:00:00Z",
+      "rates": [
+        {
+          "meter": "input_text_token",
+          "amount": "2",
+          "per": "million"
+        },
+        {
+          "meter": "cache_read_text_token",
+          "amount": "0.20",
+          "per": "million"
+        },
+        {
+          "meter": "cache_write_text_token",
+          "amount": "2.50",
+          "per": "million"
+        },
+        {
+          "meter": "output_text_token",
+          "amount": "10",
+          "per": "million"
+        }
+      ],
+      "context_tiers": [
+        {
+          "min_input_tokens": 272001,
+          "rates": [
+            {
+              "meter": "input_text_token",
+              "amount": "4",
+              "per": "million"
+            },
+            {
+              "meter": "cache_read_text_token",
+              "amount": "0.40",
+              "per": "million"
+            },
+            {
+              "meter": "cache_write_text_token",
+              "amount": "5",
+              "per": "million"
+            },
+            {
+              "meter": "output_text_token",
+              "amount": "15",
+              "per": "million"
+            }
+          ]
+        }
+      ],
+      "evidence_refs": [
+        "openai-pricing-20261006",
+        "openai-gpt-6-sol-20261006"
+      ]
+    },
+    {
+      "price_card_id": "openai-api/gpt-6-luna/standard-observed-20261006",
+      "offering_id": "openai-api/gpt-6-luna",
+      "currency": "USD",
+      "effective_from": "2026-10-06T00:00:00Z",
+      "rates": [
+        {
+          "meter": "input_text_token",
+          "amount": "0.10",
+          "per": "million"
+        },
+        {
+          "meter": "cache_read_text_token",
+          "amount": "0.01",
+          "per": "million"
+        },
+        {
+          "meter": "cache_write_text_token",
+          "amount": "0.125",
+          "per": "million"
+        },
+        {
+          "meter": "output_text_token",
+          "amount": "0.50",
+          "per": "million"
+        }
+      ],
+      "context_tiers": [
+        {
+          "min_input_tokens": 272001,
+          "rates": [
+            {
+              "meter": "input_text_token",
+              "amount": "0.20",
+              "per": "million"
+            },
+            {
+              "meter": "cache_read_text_token",
+              "amount": "0.02",
+              "per": "million"
+            },
+            {
+              "meter": "cache_write_text_token",
+              "amount": "0.25",
+              "per": "million"
+            },
+            {
+              "meter": "output_text_token",
+              "amount": "0.75",
+              "per": "million"
+            }
+          ]
+        }
+      ],
+      "evidence_refs": [
+        "openai-pricing-20261006",
+        "openai-gpt-6-luna-20261006"
+      ]
+    },
+    {
+      "price_card_id": "openai-api/gpt-5.5/standard-observed-20261006",
+      "offering_id": "openai-api/gpt-5.5",
+      "currency": "USD",
+      "effective_from": "2026-10-06T00:00:00Z",
+      "rates": [
+        {
+          "meter": "input_text_token",
+          "amount": "5",
+          "per": "million"
+        },
+        {
+          "meter": "cache_read_text_token",
+          "amount": "0.50",
+          "per": "million"
+        },
+        {
+          "meter": "output_text_token",
+          "amount": "30",
+          "per": "million"
+        }
+      ],
+      "context_tiers": [
+        {
+          "min_input_tokens": 272001,
+          "rates": [
+            {
+              "meter": "input_text_token",
+              "amount": "10",
+              "per": "million"
+            },
+            {
+              "meter": "cache_read_text_token",
+              "amount": "1",
+              "per": "million"
+            },
+            {
+              "meter": "output_text_token",
+              "amount": "45",
+              "per": "million"
+            }
+          ]
+        }
+      ],
+      "evidence_refs": [
+        "openai-pricing-20261006",
+        "openai-gpt-5.5-20261006"
+      ]
+    },
+    {
+      "price_card_id": "openai-api/gpt-5.4/standard-observed-20261006",
+      "offering_id": "openai-api/gpt-5.4",
+      "currency": "USD",
+      "effective_from": "2026-10-06T00:00:00Z",
+      "rates": [
+        {
+          "meter": "input_text_token",
+          "amount": "2.50",
+          "per": "million"
+        },
+        {
+          "meter": "cache_read_text_token",
+          "amount": "0.25",
+          "per": "million"
+        },
+        {
+          "meter": "output_text_token",
+          "amount": "15",
+          "per": "million"
+        }
+      ],
+      "context_tiers": [
+        {
+          "min_input_tokens": 272001,
+          "rates": [
+            {
+              "meter": "input_text_token",
+              "amount": "5",
+              "per": "million"
+            },
+            {
+              "meter": "cache_read_text_token",
+              "amount": "0.50",
+              "per": "million"
+            },
+            {
+              "meter": "output_text_token",
+              "amount": "22.50",
+              "per": "million"
+            }
+          ]
+        }
+      ],
+      "evidence_refs": [
+        "openai-pricing-20261006",
+        "openai-gpt-5.4-20261006"
+      ]
+    },
+    {
+      "price_card_id": "openai-api/gpt-5.4-pro/standard-observed-20261006",
+      "offering_id": "openai-api/gpt-5.4-pro",
+      "currency": "USD",
+      "effective_from": "2026-10-06T00:00:00Z",
+      "rates": [
+        {
+          "meter": "input_text_token",
+          "amount": "30",
+          "per": "million"
+        },
+        {
+          "meter": "output_text_token",
+          "amount": "180",
+          "per": "million"
+        }
+      ],
+      "context_tiers": [
+        {
+          "min_input_tokens": 272001,
+          "rates": [
+            {
+              "meter": "input_text_token",
+              "amount": "60",
+              "per": "million"
+            },
+            {
+              "meter": "output_text_token",
+              "amount": "270",
+              "per": "million"
+            }
+          ]
+        }
+      ],
+      "evidence_refs": [
+        "openai-pricing-20261006",
+        "openai-gpt-5.4-pro-20261006"
+      ]
     }
   ],
   "evidence": [
@@ -5036,6 +6617,206 @@
       "title": "Standard Grok 4.5 and 4.6 token prices; whole-request tier starts at 200000 input tokens",
       "url": "https://docs.x.ai/developers/pricing",
       "observed_at": "2026-09-12T00:00:00Z"
+    },
+    {
+      "evidence_id": "anthropic-pricing-20261006",
+      "kind": "provider_docs",
+      "publisher": "Anthropic",
+      "title": "Claude API standard token prices: base input, 5-minute and 1-hour cache writes, cache hits and output; 1M context at standard pricing on Claude 4.6 and later",
+      "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "observed_at": "2026-10-06T00:00:00Z"
+    },
+    {
+      "evidence_id": "anthropic-models-20261006",
+      "kind": "provider_docs",
+      "publisher": "Anthropic",
+      "title": "Claude Fable 5.1, Opus 5.5, Sonnet 5.5 and Haiku 4.5: API ids, thinking mode, default effort, context window and max output",
+      "url": "https://platform.claude.com/docs/en/about-claude/models/overview",
+      "observed_at": "2026-10-06T00:00:00Z"
+    },
+    {
+      "evidence_id": "anthropic-opus-5-5-model",
+      "kind": "provider_docs",
+      "publisher": "Anthropic",
+      "title": "Claude Opus 5.5: claude-opus-5-5, 1M context, 128K max output, adaptive thinking always on, default effort medium, text and images in",
+      "url": "https://platform.claude.com/docs/en/models/opus-5-5/overview",
+      "observed_at": "2026-10-06T00:00:00Z"
+    },
+    {
+      "evidence_id": "anthropic-opus-5-5-migration",
+      "kind": "provider_docs",
+      "publisher": "Anthropic",
+      "title": "Claude Opus 5.5 breaking changes: thinking cannot be disabled, forced tool use returns an error, thinking blocks are tied to the model and the conversation",
+      "url": "https://platform.claude.com/docs/en/models/opus-5-5/migration-guide",
+      "observed_at": "2026-10-06T00:00:00Z"
+    },
+    {
+      "evidence_id": "anthropic-sonnet-5-5-model",
+      "kind": "provider_docs",
+      "publisher": "Anthropic",
+      "title": "Claude Sonnet 5.5: claude-sonnet-5-5, 1M context, 128K max output, adaptive thinking, default effort high, text and images in",
+      "url": "https://platform.claude.com/docs/en/models/sonnet-5-5/overview",
+      "observed_at": "2026-10-06T00:00:00Z"
+    },
+    {
+      "evidence_id": "anthropic-sonnet-5-5-migration",
+      "kind": "provider_docs",
+      "publisher": "Anthropic",
+      "title": "Claude Sonnet 5.5: thinking runs by default (adaptive or between_tools, not disabled), forced tool use rejected, thinking blocks tied to the model and the conversation",
+      "url": "https://platform.claude.com/docs/en/models/sonnet-5-5/migration-guide",
+      "observed_at": "2026-10-06T00:00:00Z"
+    },
+    {
+      "evidence_id": "anthropic-effort-20261006",
+      "kind": "provider_docs",
+      "publisher": "Anthropic",
+      "title": "Effort levels: low, medium, high, xhigh and max on Claude Opus 5.5 and Sonnet 5.5; Opus 5.5 defaults to medium",
+      "url": "https://platform.claude.com/docs/en/build-with-claude/effort",
+      "observed_at": "2026-10-06T00:00:00Z"
+    },
+    {
+      "evidence_id": "anthropic-structured-outputs-20261006",
+      "kind": "provider_docs",
+      "publisher": "Anthropic",
+      "title": "Structured outputs: supported models include claude-opus-5-5, claude-sonnet-5-5 and claude-haiku-4-5-20251001",
+      "url": "https://platform.claude.com/docs/en/build-with-claude/structured-outputs",
+      "observed_at": "2026-10-06T00:00:00Z"
+    },
+    {
+      "evidence_id": "anthropic-deprecations-20261006",
+      "kind": "provider_docs",
+      "publisher": "Anthropic",
+      "title": "Model status: claude-sonnet-4-5-20250929 deprecated September 30, 2026 and retires November 30, 2026 (replacement claude-sonnet-5-5); claude-opus-4-6 and claude-haiku-4-5-20251001 active",
+      "url": "https://platform.claude.com/docs/en/about-claude/model-deprecations",
+      "observed_at": "2026-10-06T00:00:00Z"
+    },
+    {
+      "evidence_id": "anthropic-data-retention-20261006",
+      "kind": "provider_docs",
+      "publisher": "Anthropic",
+      "title": "Covered Models: Claude Fable 5.1, Mythos 5.1, Fable 5 and Mythos 5 require 30-day data retention",
+      "url": "https://platform.claude.com/docs/en/manage-claude/api-and-data-retention",
+      "observed_at": "2026-10-06T00:00:00Z"
+    },
+    {
+      "evidence_id": "openai-pricing-20261006",
+      "kind": "provider_docs",
+      "publisher": "OpenAI",
+      "title": "Standard token rates, cache writes and whole-request long-context (>272K) tiers",
+      "url": "https://developers.openai.com/api/docs/pricing",
+      "observed_at": "2026-10-06T00:00:00Z"
+    },
+    {
+      "evidence_id": "openai-deprecations-20261006",
+      "kind": "provider_docs",
+      "publisher": "OpenAI",
+      "title": "Deprecations: gpt-5-2025-08-07 and gpt-5-mini-2025-08-07 shut down December 11, 2026; gpt-5.4-nano shuts down April 1, 2027 (replacement gpt-6-luna)",
+      "url": "https://developers.openai.com/api/docs/deprecations",
+      "observed_at": "2026-10-06T00:00:00Z"
+    },
+    {
+      "evidence_id": "openai-gpt-6.1-sol-20261006",
+      "kind": "provider_docs",
+      "publisher": "OpenAI",
+      "title": "GPT-6.1 Sol: 1.05M context, 128K max output, reasoning effort low to max (medium default; none not supported), text and images in, tool_search",
+      "url": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+      "observed_at": "2026-10-06T00:00:00Z"
+    },
+    {
+      "evidence_id": "openai-gpt-6-sol-20261006",
+      "kind": "provider_docs",
+      "publisher": "OpenAI",
+      "title": "GPT-6 Sol: 1.05M context, 128K max output, reasoning effort none to max (medium default), text and images in",
+      "url": "https://developers.openai.com/api/docs/models/gpt-6-sol",
+      "observed_at": "2026-10-06T00:00:00Z"
+    },
+    {
+      "evidence_id": "openai-gpt-6-luna-20261006",
+      "kind": "provider_docs",
+      "publisher": "OpenAI",
+      "title": "GPT-6 Luna: 1.05M context, 128K max output, reasoning effort none to max (medium default), text and images in, tool_search",
+      "url": "https://developers.openai.com/api/docs/models/gpt-6-luna",
+      "observed_at": "2026-10-06T00:00:00Z"
+    },
+    {
+      "evidence_id": "openai-gpt-5.5-20261006",
+      "kind": "provider_docs",
+      "publisher": "OpenAI",
+      "title": "GPT-5.5: reasoning effort, standard prices and >272K long-context rates",
+      "url": "https://developers.openai.com/api/docs/models/gpt-5.5",
+      "observed_at": "2026-10-06T00:00:00Z"
+    },
+    {
+      "evidence_id": "openai-gpt-5.4-20261006",
+      "kind": "provider_docs",
+      "publisher": "OpenAI",
+      "title": "GPT-5.4: reasoning effort, standard prices and >272K long-context rates",
+      "url": "https://developers.openai.com/api/docs/models/gpt-5.4",
+      "observed_at": "2026-10-06T00:00:00Z"
+    },
+    {
+      "evidence_id": "openai-gpt-5.4-pro-20261006",
+      "kind": "provider_docs",
+      "publisher": "OpenAI",
+      "title": "GPT-5.4 Pro: Responses only, no cached-input discount, standard prices and >272K long-context rates",
+      "url": "https://developers.openai.com/api/docs/models/gpt-5.4-pro",
+      "observed_at": "2026-10-06T00:00:00Z"
+    },
+    {
+      "evidence_id": "openai-gpt-5-20261006",
+      "kind": "provider_docs",
+      "publisher": "OpenAI",
+      "title": "GPT-5: default snapshot gpt-5-2025-08-07, the only listed snapshot",
+      "url": "https://developers.openai.com/api/docs/models/gpt-5",
+      "observed_at": "2026-10-06T00:00:00Z"
+    },
+    {
+      "evidence_id": "openai-gpt-5-mini-20261006",
+      "kind": "provider_docs",
+      "publisher": "OpenAI",
+      "title": "GPT-5 mini: default snapshot gpt-5-mini-2025-08-07, the only listed snapshot",
+      "url": "https://developers.openai.com/api/docs/models/gpt-5-mini",
+      "observed_at": "2026-10-06T00:00:00Z"
+    },
+    {
+      "evidence_id": "anthropic-haiku-4-5",
+      "kind": "provider_docs",
+      "observed_at": "2026-10-04T00:00:00Z",
+      "publisher": "Anthropic",
+      "title": "Claude Haiku 4.5: claude-haiku-4-5-20251001, 200K context, 64K max output, manual extended thinking, effort not supported, text and images in",
+      "url": "https://platform.claude.com/docs/en/models/haiku-4-5/overview"
+    },
+    {
+      "evidence_id": "anthropic-opus-4-6",
+      "kind": "provider_docs",
+      "observed_at": "2026-10-04T00:00:00Z",
+      "publisher": "Anthropic",
+      "title": "Claude Opus 4.6: claude-opus-4-6, 1M context, 128K max output, adaptive thinking, default effort high, text and images in",
+      "url": "https://platform.claude.com/docs/en/models/opus-4-6/overview"
+    },
+    {
+      "evidence_id": "anthropic-effort",
+      "kind": "provider_docs",
+      "observed_at": "2026-10-04T00:00:00Z",
+      "publisher": "Anthropic",
+      "title": "Effort: output_config.effort; max available on Claude Opus 4.6, xhigh not",
+      "url": "https://platform.claude.com/docs/en/build-with-claude/effort"
+    },
+    {
+      "evidence_id": "anthropic-sonnet-4-5",
+      "kind": "provider_docs",
+      "observed_at": "2026-10-04T00:00:00Z",
+      "publisher": "Anthropic",
+      "title": "Claude Sonnet 4.5: claude-sonnet-4-5-20250929, 200K context, 64K max output, extended thinking, effort not supported, text and images in, retires November 30, 2026",
+      "url": "https://platform.claude.com/docs/en/models/sonnet-4-5/overview"
+    },
+    {
+      "evidence_id": "anthropic-model-deprecations",
+      "kind": "provider_docs",
+      "observed_at": "2026-10-04T00:00:00Z",
+      "publisher": "Anthropic",
+      "title": "Model deprecations: claude-sonnet-4-5-20250929 deprecated September 30, 2026, retires November 30, 2026",
+      "url": "https://platform.claude.com/docs/en/about-claude/model-deprecations"
     }
   ]
 }

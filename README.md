@@ -46,7 +46,13 @@ Price cards retain currency, billing meters and units, cache rates, applicable
 regions/service tiers, validity intervals, context tiers and source evidence.
 Card presence does not establish eligibility for a particular account or make
 unsupported billing meters free. Missing prices are unknown, not zero. Compare
-only rates whose units and conditions match the intended use.
+only rates whose units and conditions match the intended use. A cache-write rate
+may name the cache duration it applies to (`cache_ttl_seconds`); a client prices
+its writes at the rate for the duration it requests.
+
+A `sunset` lifecycle with an effective time records a provider's announced
+shutdown date; the offering stays usable until then. A replacement model, when
+given, is the provider's own recommendation.
 
 Publicly documented enterprise offers can be included when their eligibility and
 pricing conditions fit the schema and have public evidence. Confidential quotes,
