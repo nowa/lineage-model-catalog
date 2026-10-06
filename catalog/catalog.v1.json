@@ -294,7 +294,8 @@
       "display_name": "moonshot-v1-128k",
       "lifecycle": {
         "stage": "sunset",
-        "effective_at": "2026-08-31T00:00:00Z"
+        "effective_at": "2026-08-31T00:00:00Z",
+        "replacement_model_id": "moonshot/kimi-k3"
       },
       "intrinsic_modalities": {
         "input": {
@@ -317,7 +318,8 @@
       "display_name": "moonshot-v1-128k-vision-preview",
       "lifecycle": {
         "stage": "sunset",
-        "effective_at": "2026-08-31T00:00:00Z"
+        "effective_at": "2026-08-31T00:00:00Z",
+        "replacement_model_id": "moonshot/kimi-k3"
       },
       "intrinsic_modalities": {
         "input": {
@@ -340,7 +342,8 @@
       "display_name": "moonshot-v1-32k",
       "lifecycle": {
         "stage": "sunset",
-        "effective_at": "2026-08-31T00:00:00Z"
+        "effective_at": "2026-08-31T00:00:00Z",
+        "replacement_model_id": "moonshot/kimi-k3"
       },
       "intrinsic_modalities": {
         "input": {
@@ -363,7 +366,8 @@
       "display_name": "moonshot-v1-32k-vision-preview",
       "lifecycle": {
         "stage": "sunset",
-        "effective_at": "2026-08-31T00:00:00Z"
+        "effective_at": "2026-08-31T00:00:00Z",
+        "replacement_model_id": "moonshot/kimi-k3"
       },
       "intrinsic_modalities": {
         "input": {
@@ -386,7 +390,8 @@
       "display_name": "moonshot-v1-8k",
       "lifecycle": {
         "stage": "sunset",
-        "effective_at": "2026-08-31T00:00:00Z"
+        "effective_at": "2026-08-31T00:00:00Z",
+        "replacement_model_id": "moonshot/kimi-k3"
       },
       "intrinsic_modalities": {
         "input": {
@@ -409,7 +414,8 @@
       "display_name": "moonshot-v1-8k-vision-preview",
       "lifecycle": {
         "stage": "sunset",
-        "effective_at": "2026-08-31T00:00:00Z"
+        "effective_at": "2026-08-31T00:00:00Z",
+        "replacement_model_id": "moonshot/kimi-k3"
       },
       "intrinsic_modalities": {
         "input": {
@@ -2285,7 +2291,8 @@
       },
       "lifecycle": {
         "stage": "sunset",
-        "effective_at": "2026-08-31T00:00:00Z"
+        "effective_at": "2026-08-31T00:00:00Z",
+        "replacement_model_id": "moonshot/kimi-k3"
       },
       "evidence_refs": [
         "moonshot-api-legacy-contract",
@@ -2346,7 +2353,8 @@
       },
       "lifecycle": {
         "stage": "sunset",
-        "effective_at": "2026-08-31T00:00:00Z"
+        "effective_at": "2026-08-31T00:00:00Z",
+        "replacement_model_id": "moonshot/kimi-k3"
       },
       "evidence_refs": [
         "moonshot-api-legacy-contract",
@@ -2407,7 +2415,8 @@
       },
       "lifecycle": {
         "stage": "sunset",
-        "effective_at": "2026-08-31T00:00:00Z"
+        "effective_at": "2026-08-31T00:00:00Z",
+        "replacement_model_id": "moonshot/kimi-k3"
       },
       "evidence_refs": [
         "moonshot-api-legacy-contract",
@@ -2468,7 +2477,8 @@
       },
       "lifecycle": {
         "stage": "sunset",
-        "effective_at": "2026-08-31T00:00:00Z"
+        "effective_at": "2026-08-31T00:00:00Z",
+        "replacement_model_id": "moonshot/kimi-k3"
       },
       "evidence_refs": [
         "moonshot-api-legacy-contract",
@@ -2529,7 +2539,8 @@
       },
       "lifecycle": {
         "stage": "sunset",
-        "effective_at": "2026-08-31T00:00:00Z"
+        "effective_at": "2026-08-31T00:00:00Z",
+        "replacement_model_id": "moonshot/kimi-k3"
       },
       "evidence_refs": [
         "moonshot-api-legacy-contract",
@@ -2590,7 +2601,8 @@
       },
       "lifecycle": {
         "stage": "sunset",
-        "effective_at": "2026-08-31T00:00:00Z"
+        "effective_at": "2026-08-31T00:00:00Z",
+        "replacement_model_id": "moonshot/kimi-k3"
       },
       "evidence_refs": [
         "moonshot-api-legacy-contract",
@@ -3824,7 +3836,8 @@
         "dashscope-api/qwen3.8-max-0902/eu-central-1-20260907",
         "dashscope-api/qwen3.8-max-0902/us-east-1-20260907",
         "dashscope-api/qwen3.8-max-0902/ap-northeast-1-20260907",
-        "dashscope-api/qwen3.8-max-0902/cn-hongkong-20260907"
+        "dashscope-api/qwen3.8-max-0902/cn-hongkong-20260907",
+        "dashscope-api/qwen3.8-max-0902/cn-hongkong-observed-20261006"
       ],
       "regions": [
         "cn-beijing",
@@ -3846,7 +3859,8 @@
       "evidence_refs": [
         "qwen38-max-model",
         "qwen38-compatible-chat",
-        "qwen38-structured-output"
+        "qwen38-structured-output",
+        "qwen-pricing-usd-20261006"
       ]
     },
     {
@@ -4827,12 +4841,13 @@
             "reasoning": {
               "encoding": "anthropic_effort",
               "efforts": [
+                "none",
                 "low",
                 "high",
                 "max"
               ]
             },
-            "thinking_control": "unknown",
+            "thinking_control": "switchable",
             "tool_choice": [
               "auto",
               "none"
@@ -4855,12 +4870,17 @@
             "tool_calling": "supported",
             "reasoning": {
               "efforts": [
+                "none",
                 "low",
                 "high",
                 "max"
               ],
               "default": "high",
               "accepted_aliases": []
+            },
+            "structured_output": {
+              "json_schema": "unsupported",
+              "json_object": "unsupported"
             }
           }
         }
@@ -4882,7 +4902,8 @@
       "evidence_refs": [
         "deepseek-pricing-20261006",
         "deepseek-models-20261006",
-        "deepseek-vision-20261006"
+        "deepseek-vision-20261006",
+        "deepseek-thinking-20261006"
       ]
     },
     {
@@ -4922,7 +4943,7 @@
               "text": "supported"
             },
             "context_tokens": 1000000,
-            "max_output_tokens": null,
+            "max_output_tokens": 131072,
             "system_messages": "supported",
             "streaming": "supported",
             "tool_calling": "supported",
@@ -4957,6 +4978,7 @@
       },
       "evidence_refs": [
         "zai-glm-5.3-flash-20261006",
+        "zai-chat-completion-20261007",
         "zai-pricing-20261006",
         "bigmodel-pricing-20261006"
       ]
@@ -5029,7 +5051,9 @@
         "minimax-messages-api-20261006",
         "minimax-cache-20261006",
         "minimax-paygo-global-20261006",
-        "minimax-paygo-cn-20261006"
+        "minimax-paygo-cn-20261006",
+        "minimax-text-generation-cn-20261007",
+        "minimax-cache-cn-20261007"
       ]
     },
     {
@@ -5078,7 +5102,7 @@
                 "medium",
                 "high"
               ],
-              "default": "medium",
+              "default": null,
               "accepted_aliases": []
             },
             "parallel_tool_calls": "unsupported"
@@ -5152,7 +5176,7 @@
                 "medium",
                 "high"
               ],
-              "default": "medium",
+              "default": null,
               "accepted_aliases": []
             },
             "parallel_tool_calls": "unsupported"
@@ -5278,7 +5302,7 @@
             "output_modalities": {
               "text": "supported"
             },
-            "context_tokens": 131072,
+            "context_tokens": null,
             "max_output_tokens": null,
             "system_messages": "supported",
             "streaming": "supported",
@@ -5505,7 +5529,8 @@
       ],
       "evidence_refs": [
         "qwen38-pricing-cny"
-      ]
+      ],
+      "effective_until": "2026-10-06T00:00:00Z"
     },
     {
       "price_card_id": "dashscope-api/qwen3.8-flash/cn-beijing-20260907",
@@ -7806,7 +7831,7 @@
       "context_tiers": [],
       "evidence_refs": [
         "minimax-paygo-cn-20261006",
-        "minimax-cache-20261006"
+        "minimax-cache-cn-20261007"
       ]
     },
     {
@@ -8037,6 +8062,29 @@
     {
       "price_card_id": "dashscope-api/qwen3.8-max/cn-hongkong-observed-20261006",
       "offering_id": "dashscope-api/qwen3.8-max",
+      "currency": "USD",
+      "effective_from": "2026-10-06T00:00:00Z",
+      "region": "cn-hongkong",
+      "rates": [
+        {
+          "meter": "input_text_token",
+          "amount": "1.65",
+          "per": "million"
+        },
+        {
+          "meter": "output_text_token",
+          "amount": "4.951",
+          "per": "million"
+        }
+      ],
+      "context_tiers": [],
+      "evidence_refs": [
+        "qwen-pricing-usd-20261006"
+      ]
+    },
+    {
+      "price_card_id": "dashscope-api/qwen3.8-max-0902/cn-hongkong-observed-20261006",
+      "offering_id": "dashscope-api/qwen3.8-max-0902",
       "currency": "USD",
       "effective_from": "2026-10-06T00:00:00Z",
       "region": "cn-hongkong",
@@ -8620,6 +8668,14 @@
       "observed_at": "2026-10-06T00:00:00Z"
     },
     {
+      "evidence_id": "deepseek-thinking-20261006",
+      "kind": "provider_docs",
+      "publisher": "DeepSeek",
+      "title": "Thinking mode: on by default at effort high, turned off with thinking disabled or effort none; reasoning_content is passed back when the request carries tools",
+      "url": "https://api-docs.deepseek.com/guides/thinking_mode",
+      "observed_at": "2026-10-06T00:00:00Z"
+    },
+    {
       "evidence_id": "kimi-pricing-global-20261006",
       "kind": "provider_docs",
       "publisher": "Moonshot AI",
@@ -8639,7 +8695,7 @@
       "evidence_id": "kimi-models-20261006",
       "kind": "provider_docs",
       "publisher": "Moonshot AI",
-      "title": "Model list: the moonshot-v1 series, including the -vision-preview variants, was discontinued on August 31, 2026",
+      "title": "Model list: the moonshot-v1 series, including the -vision-preview variants, was discontinued on August 31, 2026; use kimi-k3",
       "url": "https://platform.kimi.ai/docs/models",
       "observed_at": "2026-10-06T00:00:00Z"
     },
@@ -8663,9 +8719,17 @@
       "evidence_id": "zai-glm-5.3-flash-20261006",
       "kind": "provider_docs",
       "publisher": "Z.AI",
-      "title": "GLM-5.3-Flash: 1M context, video, image, text and file input, thinking always on, effort low/high/max, tool_choice auto",
+      "title": "GLM-5.3-Flash: 1M context, 128K output, video, image, text and file input, thinking always on",
       "url": "https://docs.z.ai/guides/vlm/glm-5.3-flash",
       "observed_at": "2026-10-06T00:00:00Z"
+    },
+    {
+      "evidence_id": "zai-chat-completion-20261007",
+      "kind": "provider_docs",
+      "publisher": "Z.AI",
+      "title": "Chat completion API: GLM-5.3 and GLM-5.3-Flash take reasoning_effort low, high or max; tool_choice supports only auto; max_tokens up to 131072",
+      "url": "https://docs.z.ai/api-reference/llm/chat-completion",
+      "observed_at": "2026-10-07T00:00:00Z"
     },
     {
       "evidence_id": "minimax-paygo-global-20261006",
@@ -8695,7 +8759,7 @@
       "evidence_id": "minimax-text-generation-20261006",
       "kind": "provider_docs",
       "publisher": "MiniMax",
-      "title": "Text generation: MiniMax-M2.7 204,800-token context; international and China base URLs",
+      "title": "Text generation: MiniMax-M2.7 204,800-token context; international base URLs",
       "url": "https://platform.minimax.io/docs/guides/text-generation",
       "observed_at": "2026-10-06T00:00:00Z"
     },
@@ -8706,6 +8770,22 @@
       "title": "Anthropic-compatible prompt caching: cache_control, 5-minute lifetime refreshed on hit",
       "url": "https://platform.minimax.io/docs/api-reference/anthropic-api-compatible-cache",
       "observed_at": "2026-10-06T00:00:00Z"
+    },
+    {
+      "evidence_id": "minimax-text-generation-cn-20261007",
+      "kind": "provider_docs",
+      "publisher": "MiniMax",
+      "title": "Text generation (China platform): base URLs api.minimax.cn/anthropic and api.minimax.cn/v1",
+      "url": "https://platform.minimax.cn/docs/guides/text-generation",
+      "observed_at": "2026-10-07T00:00:00Z"
+    },
+    {
+      "evidence_id": "minimax-cache-cn-20261007",
+      "kind": "provider_docs",
+      "publisher": "MiniMax",
+      "title": "Anthropic-compatible prompt caching (China platform): cached content lives 5 minutes",
+      "url": "https://platform.minimax.cn/docs/api-reference/anthropic-api-compatible-cache",
+      "observed_at": "2026-10-07T00:00:00Z"
     },
     {
       "evidence_id": "minimax-messages-api-20261006",
@@ -8823,7 +8903,7 @@
       "evidence_id": "qwen-pricing-usd-20261006",
       "kind": "provider_docs",
       "publisher": "Alibaba Cloud",
-      "title": "Model Studio model pricing (USD per 1M tokens): qwen3.8-max in Hong Kong (China), Global scope",
+      "title": "Model Studio model pricing (USD per 1M tokens): qwen3.8-max and qwen3.8-max-0902 in Hong Kong (China), Global scope",
       "url": "https://www.alibabacloud.com/help/en/model-studio/model-pricing",
       "observed_at": "2026-10-06T00:00:00Z"
     }
