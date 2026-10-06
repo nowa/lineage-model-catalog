@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 8,
+  "revision": 9,
   "generated_at": "2026-10-06T00:00:00Z",
   "models": [
     {
@@ -164,7 +164,9 @@
       "family": "deepseek",
       "display_name": "deepseek-v4-flash",
       "lifecycle": {
-        "stage": "stable"
+        "stage": "deprecated",
+        "effective_at": "2026-09-10T04:00:00Z",
+        "replacement_model_id": "deepseek/deepseek-flash"
       },
       "intrinsic_modalities": {
         "input": {
@@ -176,7 +178,8 @@
         }
       },
       "evidence_refs": [
-        "deepseek-api-legacy-contract"
+        "deepseek-api-legacy-contract",
+        "deepseek-updates-20261006"
       ]
     },
     {
@@ -290,7 +293,8 @@
       "family": "moonshot",
       "display_name": "moonshot-v1-128k",
       "lifecycle": {
-        "stage": "stable"
+        "stage": "sunset",
+        "effective_at": "2026-08-31T00:00:00Z"
       },
       "intrinsic_modalities": {
         "input": {
@@ -302,7 +306,8 @@
         }
       },
       "evidence_refs": [
-        "moonshot-api-legacy-contract"
+        "moonshot-api-legacy-contract",
+        "kimi-models-20261006"
       ]
     },
     {
@@ -311,7 +316,8 @@
       "family": "moonshot",
       "display_name": "moonshot-v1-128k-vision-preview",
       "lifecycle": {
-        "stage": "preview"
+        "stage": "sunset",
+        "effective_at": "2026-08-31T00:00:00Z"
       },
       "intrinsic_modalities": {
         "input": {
@@ -323,7 +329,8 @@
         }
       },
       "evidence_refs": [
-        "moonshot-api-legacy-contract"
+        "moonshot-api-legacy-contract",
+        "kimi-models-20261006"
       ]
     },
     {
@@ -332,7 +339,8 @@
       "family": "moonshot",
       "display_name": "moonshot-v1-32k",
       "lifecycle": {
-        "stage": "stable"
+        "stage": "sunset",
+        "effective_at": "2026-08-31T00:00:00Z"
       },
       "intrinsic_modalities": {
         "input": {
@@ -344,7 +352,8 @@
         }
       },
       "evidence_refs": [
-        "moonshot-api-legacy-contract"
+        "moonshot-api-legacy-contract",
+        "kimi-models-20261006"
       ]
     },
     {
@@ -353,7 +362,8 @@
       "family": "moonshot",
       "display_name": "moonshot-v1-32k-vision-preview",
       "lifecycle": {
-        "stage": "preview"
+        "stage": "sunset",
+        "effective_at": "2026-08-31T00:00:00Z"
       },
       "intrinsic_modalities": {
         "input": {
@@ -365,7 +375,8 @@
         }
       },
       "evidence_refs": [
-        "moonshot-api-legacy-contract"
+        "moonshot-api-legacy-contract",
+        "kimi-models-20261006"
       ]
     },
     {
@@ -374,7 +385,8 @@
       "family": "moonshot",
       "display_name": "moonshot-v1-8k",
       "lifecycle": {
-        "stage": "stable"
+        "stage": "sunset",
+        "effective_at": "2026-08-31T00:00:00Z"
       },
       "intrinsic_modalities": {
         "input": {
@@ -386,7 +398,8 @@
         }
       },
       "evidence_refs": [
-        "moonshot-api-legacy-contract"
+        "moonshot-api-legacy-contract",
+        "kimi-models-20261006"
       ]
     },
     {
@@ -395,7 +408,8 @@
       "family": "moonshot",
       "display_name": "moonshot-v1-8k-vision-preview",
       "lifecycle": {
-        "stage": "preview"
+        "stage": "sunset",
+        "effective_at": "2026-08-31T00:00:00Z"
       },
       "intrinsic_modalities": {
         "input": {
@@ -407,7 +421,8 @@
         }
       },
       "evidence_refs": [
-        "moonshot-api-legacy-contract"
+        "moonshot-api-legacy-contract",
+        "kimi-models-20261006"
       ]
     },
     {
@@ -857,7 +872,9 @@
       "family": "deepseek",
       "display_name": "DeepSeek V4 Flash Vision (Experimental)",
       "lifecycle": {
-        "stage": "preview"
+        "stage": "deprecated",
+        "effective_at": "2026-09-10T04:00:00Z",
+        "replacement_model_id": "deepseek/deepseek-flash"
       },
       "intrinsic_modalities": {
         "input": {
@@ -874,7 +891,8 @@
       "evidence_refs": [
         "deepseek-vision",
         "deepseek-messages",
-        "deepseek-vision-pricing"
+        "deepseek-vision-pricing",
+        "deepseek-updates-20261006"
       ]
     },
     {
@@ -1064,6 +1082,112 @@
       },
       "evidence_refs": [
         "openai-gpt-6-luna-20261006"
+      ]
+    },
+    {
+      "model_id": "deepseek/deepseek-flash",
+      "developer": "deepseek",
+      "family": "deepseek",
+      "display_name": "DeepSeek V4.1 Flash",
+      "lifecycle": {
+        "stage": "stable"
+      },
+      "intrinsic_modalities": {
+        "input": {
+          "text": "supported",
+          "image": "supported"
+        },
+        "output": {
+          "text": "supported"
+        }
+      },
+      "evidence_refs": [
+        "deepseek-pricing-20261006",
+        "deepseek-models-20261006"
+      ]
+    },
+    {
+      "model_id": "zhipu/glm-5.3-flash",
+      "developer": "zhipu",
+      "family": "glm",
+      "display_name": "GLM-5.3-Flash",
+      "lifecycle": {
+        "stage": "stable"
+      },
+      "intrinsic_modalities": {
+        "input": {
+          "text": "supported",
+          "image": "supported",
+          "video": "supported"
+        },
+        "output": {
+          "text": "supported"
+        }
+      },
+      "evidence_refs": [
+        "zai-glm-5.3-flash-20261006"
+      ]
+    },
+    {
+      "model_id": "minimax/minimax-m2.7",
+      "developer": "minimax",
+      "family": "minimax-m2",
+      "display_name": "MiniMax M2.7",
+      "lifecycle": {
+        "stage": "stable"
+      },
+      "intrinsic_modalities": {
+        "input": {
+          "text": "supported",
+          "image": "unsupported"
+        },
+        "output": {
+          "text": "supported"
+        }
+      },
+      "evidence_refs": [
+        "minimax-text-generation-20261006",
+        "minimax-anthropic-api-20261006"
+      ]
+    },
+    {
+      "model_id": "openai/gpt-oss-20b",
+      "developer": "openai",
+      "family": "gpt-oss",
+      "display_name": "GPT-OSS 20B",
+      "lifecycle": {
+        "stage": "stable"
+      },
+      "intrinsic_modalities": {
+        "input": {
+          "text": "supported"
+        },
+        "output": {
+          "text": "supported"
+        }
+      },
+      "evidence_refs": [
+        "groq-models-20261006"
+      ]
+    },
+    {
+      "model_id": "openai/gpt-oss-120b",
+      "developer": "openai",
+      "family": "gpt-oss",
+      "display_name": "GPT-OSS 120B",
+      "lifecycle": {
+        "stage": "stable"
+      },
+      "intrinsic_modalities": {
+        "input": {
+          "text": "supported"
+        },
+        "output": {
+          "text": "supported"
+        }
+      },
+      "evidence_refs": [
+        "groq-models-20261006"
       ]
     }
   ],
@@ -1649,8 +1773,22 @@
           }
         }
       ],
-      "price_card_refs": [],
-      "regions": [],
+      "price_card_refs": [
+        "dashscope-api/qwen3.8-max/cn-beijing-observed-20261006",
+        "dashscope-api/qwen3.8-max/ap-southeast-1-observed-20261006",
+        "dashscope-api/qwen3.8-max/eu-central-1-observed-20261006",
+        "dashscope-api/qwen3.8-max/us-east-1-observed-20261006",
+        "dashscope-api/qwen3.8-max/ap-northeast-1-observed-20261006",
+        "dashscope-api/qwen3.8-max/cn-hongkong-observed-20261006"
+      ],
+      "regions": [
+        "cn-beijing",
+        "ap-southeast-1",
+        "eu-central-1",
+        "us-east-1",
+        "ap-northeast-1",
+        "cn-hongkong"
+      ],
       "data_policy": {
         "training": "unknown",
         "retention": {
@@ -1661,7 +1799,9 @@
         "stage": "stable"
       },
       "evidence_refs": [
-        "dashscope-api-legacy-contract"
+        "dashscope-api-legacy-contract",
+        "qwen-pricing-cny-20261006",
+        "qwen-pricing-usd-20261006"
       ]
     },
     {
@@ -1717,7 +1857,10 @@
           }
         }
       ],
-      "price_card_refs": [],
+      "price_card_refs": [
+        "deepseek-api/deepseek-v4-flash/flash-off-peak-20260910",
+        "deepseek-api/deepseek-v4-flash/flash-peak-20260910"
+      ],
       "regions": [],
       "data_policy": {
         "training": "unknown",
@@ -1726,10 +1869,14 @@
         }
       },
       "lifecycle": {
-        "stage": "stable"
+        "stage": "deprecated",
+        "effective_at": "2026-09-10T04:00:00Z",
+        "replacement_model_id": "deepseek/deepseek-flash"
       },
       "evidence_refs": [
-        "deepseek-api-legacy-contract"
+        "deepseek-api-legacy-contract",
+        "deepseek-pricing-20261006",
+        "deepseek-updates-20261006"
       ]
     },
     {
@@ -1785,7 +1932,10 @@
           }
         }
       ],
-      "price_card_refs": [],
+      "price_card_refs": [
+        "deepseek-api/deepseek-v4-pro/off-peak-observed-20261006",
+        "deepseek-api/deepseek-v4-pro/peak-observed-20261006"
+      ],
       "regions": [],
       "data_policy": {
         "training": "unknown",
@@ -1797,7 +1947,9 @@
         "stage": "stable"
       },
       "evidence_refs": [
-        "deepseek-api-legacy-contract"
+        "deepseek-api-legacy-contract",
+        "deepseek-pricing-20261006",
+        "deepseek-updates-20261006"
       ]
     },
     {
@@ -1846,8 +1998,14 @@
           }
         }
       ],
-      "price_card_refs": [],
-      "regions": [],
+      "price_card_refs": [
+        "moonshot-api/kimi-k2.6/global-observed-20261006",
+        "moonshot-api/kimi-k2.6/cn-observed-20261006"
+      ],
+      "regions": [
+        "global",
+        "cn"
+      ],
       "data_policy": {
         "training": "unknown",
         "retention": {
@@ -1858,7 +2016,9 @@
         "stage": "stable"
       },
       "evidence_refs": [
-        "moonshot-api-legacy-contract"
+        "moonshot-api-legacy-contract",
+        "kimi-pricing-global-20261006",
+        "kimi-pricing-cn-20261006"
       ]
     },
     {
@@ -1905,8 +2065,14 @@
           }
         }
       ],
-      "price_card_refs": [],
-      "regions": [],
+      "price_card_refs": [
+        "moonshot-api/kimi-k2.7-code/global-observed-20261006",
+        "moonshot-api/kimi-k2.7-code/cn-observed-20261006"
+      ],
+      "regions": [
+        "global",
+        "cn"
+      ],
       "data_policy": {
         "training": "unknown",
         "retention": {
@@ -1917,7 +2083,9 @@
         "stage": "stable"
       },
       "evidence_refs": [
-        "moonshot-api-legacy-contract"
+        "moonshot-api-legacy-contract",
+        "kimi-pricing-global-20261006",
+        "kimi-pricing-cn-20261006"
       ]
     },
     {
@@ -1964,8 +2132,14 @@
           }
         }
       ],
-      "price_card_refs": [],
-      "regions": [],
+      "price_card_refs": [
+        "moonshot-api/kimi-k2.7-code-highspeed/global-observed-20261006",
+        "moonshot-api/kimi-k2.7-code-highspeed/cn-observed-20261006"
+      ],
+      "regions": [
+        "global",
+        "cn"
+      ],
       "data_policy": {
         "training": "unknown",
         "retention": {
@@ -1976,7 +2150,9 @@
         "stage": "stable"
       },
       "evidence_refs": [
-        "moonshot-api-legacy-contract"
+        "moonshot-api-legacy-contract",
+        "kimi-pricing-global-20261006",
+        "kimi-pricing-cn-20261006"
       ]
     },
     {
@@ -2032,8 +2208,14 @@
           }
         }
       ],
-      "price_card_refs": [],
-      "regions": [],
+      "price_card_refs": [
+        "moonshot-api/kimi-k3/global-observed-20261006",
+        "moonshot-api/kimi-k3/cn-observed-20261006"
+      ],
+      "regions": [
+        "global",
+        "cn"
+      ],
       "data_policy": {
         "training": "unknown",
         "retention": {
@@ -2044,7 +2226,9 @@
         "stage": "stable"
       },
       "evidence_refs": [
-        "moonshot-api-legacy-contract"
+        "moonshot-api-legacy-contract",
+        "kimi-pricing-global-20261006",
+        "kimi-pricing-cn-20261006"
       ]
     },
     {
@@ -2100,10 +2284,12 @@
         }
       },
       "lifecycle": {
-        "stage": "stable"
+        "stage": "sunset",
+        "effective_at": "2026-08-31T00:00:00Z"
       },
       "evidence_refs": [
-        "moonshot-api-legacy-contract"
+        "moonshot-api-legacy-contract",
+        "kimi-models-20261006"
       ]
     },
     {
@@ -2159,10 +2345,12 @@
         }
       },
       "lifecycle": {
-        "stage": "preview"
+        "stage": "sunset",
+        "effective_at": "2026-08-31T00:00:00Z"
       },
       "evidence_refs": [
-        "moonshot-api-legacy-contract"
+        "moonshot-api-legacy-contract",
+        "kimi-models-20261006"
       ]
     },
     {
@@ -2218,10 +2406,12 @@
         }
       },
       "lifecycle": {
-        "stage": "stable"
+        "stage": "sunset",
+        "effective_at": "2026-08-31T00:00:00Z"
       },
       "evidence_refs": [
-        "moonshot-api-legacy-contract"
+        "moonshot-api-legacy-contract",
+        "kimi-models-20261006"
       ]
     },
     {
@@ -2277,10 +2467,12 @@
         }
       },
       "lifecycle": {
-        "stage": "preview"
+        "stage": "sunset",
+        "effective_at": "2026-08-31T00:00:00Z"
       },
       "evidence_refs": [
-        "moonshot-api-legacy-contract"
+        "moonshot-api-legacy-contract",
+        "kimi-models-20261006"
       ]
     },
     {
@@ -2336,10 +2528,12 @@
         }
       },
       "lifecycle": {
-        "stage": "stable"
+        "stage": "sunset",
+        "effective_at": "2026-08-31T00:00:00Z"
       },
       "evidence_refs": [
-        "moonshot-api-legacy-contract"
+        "moonshot-api-legacy-contract",
+        "kimi-models-20261006"
       ]
     },
     {
@@ -2395,10 +2589,12 @@
         }
       },
       "lifecycle": {
-        "stage": "preview"
+        "stage": "sunset",
+        "effective_at": "2026-08-31T00:00:00Z"
       },
       "evidence_refs": [
-        "moonshot-api-legacy-contract"
+        "moonshot-api-legacy-contract",
+        "kimi-models-20261006"
       ]
     },
     {
@@ -3448,8 +3644,14 @@
           }
         }
       ],
-      "price_card_refs": [],
-      "regions": [],
+      "price_card_refs": [
+        "zhipu-api/glm-5.2/global-observed-20261006",
+        "zhipu-api/glm-5.2/cn-observed-20261006"
+      ],
+      "regions": [
+        "global",
+        "cn"
+      ],
       "data_policy": {
         "training": "unknown",
         "retention": {
@@ -3460,7 +3662,9 @@
         "stage": "stable"
       },
       "evidence_refs": [
-        "zhipu-api-legacy-contract"
+        "zhipu-api-legacy-contract",
+        "zai-pricing-20261006",
+        "bigmodel-pricing-20261006"
       ]
     },
     {
@@ -3516,8 +3720,14 @@
           }
         }
       ],
-      "price_card_refs": [],
-      "regions": [],
+      "price_card_refs": [
+        "zhipu-api/glm-5.3/global-observed-20261006",
+        "zhipu-api/glm-5.3/cn-observed-20261006"
+      ],
+      "regions": [
+        "global",
+        "cn"
+      ],
       "data_policy": {
         "training": "unknown",
         "retention": {
@@ -3528,7 +3738,9 @@
         "stage": "stable"
       },
       "evidence_refs": [
-        "zhipu-api-legacy-contract"
+        "zhipu-api-legacy-contract",
+        "zai-pricing-20261006",
+        "bigmodel-pricing-20261006"
       ]
     },
     {
@@ -3974,7 +4186,9 @@
       ],
       "price_card_refs": [
         "deepseek-api/deepseek-v4-flash-vision-exp/off-peak-20260910",
-        "deepseek-api/deepseek-v4-flash-vision-exp/peak-20260910"
+        "deepseek-api/deepseek-v4-flash-vision-exp/peak-20260910",
+        "deepseek-api/deepseek-v4-flash-vision-exp/flash-off-peak-20260910",
+        "deepseek-api/deepseek-v4-flash-vision-exp/flash-peak-20260910"
       ],
       "regions": [],
       "data_policy": {
@@ -3984,12 +4198,16 @@
         }
       },
       "lifecycle": {
-        "stage": "preview"
+        "stage": "deprecated",
+        "effective_at": "2026-09-10T04:00:00Z",
+        "replacement_model_id": "deepseek/deepseek-flash"
       },
       "evidence_refs": [
         "deepseek-vision",
         "deepseek-messages",
-        "deepseek-vision-pricing"
+        "deepseek-vision-pricing",
+        "deepseek-pricing-20261006",
+        "deepseek-updates-20261006"
       ]
     },
     {
@@ -4593,6 +4811,509 @@
       "evidence_refs": [
         "openai-gpt-6-luna-20261006"
       ]
+    },
+    {
+      "offering_id": "deepseek-api/deepseek-flash",
+      "model_id": "deepseek/deepseek-flash",
+      "provider_id": "deepseek-api",
+      "wire_model": "deepseek-flash",
+      "operations": [
+        {
+          "operation": "chat",
+          "adapter": "anthropic_messages",
+          "wire_contract": {
+            "max_output_field": "max_tokens",
+            "temperature": "send_clamped",
+            "reasoning": {
+              "encoding": "anthropic_effort",
+              "efforts": [
+                "low",
+                "high",
+                "max"
+              ]
+            },
+            "thinking_control": "unknown",
+            "tool_choice": [
+              "auto",
+              "none"
+            ],
+            "thinking_roundtrip": "same_model_conversation",
+            "structured_output": "none"
+          },
+          "capabilities": {
+            "input_modalities": {
+              "text": "supported",
+              "image": "supported"
+            },
+            "output_modalities": {
+              "text": "supported"
+            },
+            "context_tokens": 1048576,
+            "max_output_tokens": 393216,
+            "system_messages": "supported",
+            "streaming": "supported",
+            "tool_calling": "supported",
+            "reasoning": {
+              "efforts": [
+                "low",
+                "high",
+                "max"
+              ],
+              "default": "high",
+              "accepted_aliases": []
+            }
+          }
+        }
+      ],
+      "price_card_refs": [
+        "deepseek-api/deepseek-flash/off-peak-20260910",
+        "deepseek-api/deepseek-flash/peak-20260910"
+      ],
+      "regions": [],
+      "data_policy": {
+        "training": "unknown",
+        "retention": {
+          "kind": "unknown"
+        }
+      },
+      "lifecycle": {
+        "stage": "stable"
+      },
+      "evidence_refs": [
+        "deepseek-pricing-20261006",
+        "deepseek-models-20261006",
+        "deepseek-vision-20261006"
+      ]
+    },
+    {
+      "offering_id": "zhipu-api/glm-5.3-flash",
+      "model_id": "zhipu/glm-5.3-flash",
+      "provider_id": "zhipu-api",
+      "wire_model": "glm-5.3-flash",
+      "operations": [
+        {
+          "operation": "chat",
+          "adapter": "openai_chat_completions",
+          "wire_contract": {
+            "max_output_field": "max_tokens",
+            "temperature": "send_clamped",
+            "reasoning": {
+              "encoding": "reasoning_effort",
+              "efforts": [
+                "low",
+                "high",
+                "max"
+              ]
+            },
+            "thinking_control": "always_on",
+            "tool_choice": [
+              "auto"
+            ],
+            "thinking_roundtrip": "same_model_conversation",
+            "structured_output": "none"
+          },
+          "capabilities": {
+            "input_modalities": {
+              "text": "supported",
+              "image": "supported",
+              "video": "supported"
+            },
+            "output_modalities": {
+              "text": "supported"
+            },
+            "context_tokens": 1000000,
+            "max_output_tokens": null,
+            "system_messages": "supported",
+            "streaming": "supported",
+            "tool_calling": "supported",
+            "reasoning": {
+              "efforts": [
+                "low",
+                "high",
+                "max"
+              ],
+              "default": "max",
+              "accepted_aliases": []
+            }
+          }
+        }
+      ],
+      "price_card_refs": [
+        "zhipu-api/glm-5.3-flash/global-observed-20261006",
+        "zhipu-api/glm-5.3-flash/cn-observed-20261006"
+      ],
+      "regions": [
+        "global",
+        "cn"
+      ],
+      "data_policy": {
+        "training": "unknown",
+        "retention": {
+          "kind": "unknown"
+        }
+      },
+      "lifecycle": {
+        "stage": "stable"
+      },
+      "evidence_refs": [
+        "zai-glm-5.3-flash-20261006",
+        "zai-pricing-20261006",
+        "bigmodel-pricing-20261006"
+      ]
+    },
+    {
+      "offering_id": "minimax-api/minimax-m2.7",
+      "model_id": "minimax/minimax-m2.7",
+      "provider_id": "minimax-api",
+      "wire_model": "MiniMax-M2.7",
+      "operations": [
+        {
+          "operation": "chat",
+          "adapter": "anthropic_messages",
+          "wire_contract": {
+            "max_output_field": "max_tokens",
+            "temperature": "send_clamped",
+            "reasoning": {
+              "encoding": "none"
+            },
+            "thinking_control": "always_on",
+            "tool_choice": [
+              "auto",
+              "none"
+            ],
+            "thinking_roundtrip": "same_model_conversation",
+            "structured_output": "none"
+          },
+          "capabilities": {
+            "input_modalities": {
+              "text": "supported",
+              "image": "unsupported"
+            },
+            "output_modalities": {
+              "text": "supported"
+            },
+            "context_tokens": 204800,
+            "max_output_tokens": 204800,
+            "system_messages": "supported",
+            "streaming": "supported",
+            "tool_calling": "supported",
+            "prompt_caching": "supported",
+            "reasoning": {
+              "efforts": [],
+              "default": null,
+              "accepted_aliases": []
+            }
+          }
+        }
+      ],
+      "price_card_refs": [
+        "minimax-api/minimax-m2.7/global-observed-20261006",
+        "minimax-api/minimax-m2.7/cn-observed-20261006"
+      ],
+      "regions": [
+        "global",
+        "cn"
+      ],
+      "data_policy": {
+        "training": "unknown",
+        "retention": {
+          "kind": "unknown"
+        }
+      },
+      "lifecycle": {
+        "stage": "stable"
+      },
+      "evidence_refs": [
+        "minimax-text-generation-20261006",
+        "minimax-anthropic-api-20261006",
+        "minimax-messages-api-20261006",
+        "minimax-cache-20261006",
+        "minimax-paygo-global-20261006",
+        "minimax-paygo-cn-20261006"
+      ]
+    },
+    {
+      "offering_id": "groq-api/openai/gpt-oss-20b",
+      "model_id": "openai/gpt-oss-20b",
+      "provider_id": "groq-api",
+      "wire_model": "openai/gpt-oss-20b",
+      "operations": [
+        {
+          "operation": "chat",
+          "adapter": "openai_chat_completions",
+          "wire_contract": {
+            "max_output_field": "max_completion_tokens",
+            "temperature": "send_clamped",
+            "reasoning": {
+              "encoding": "reasoning_effort",
+              "efforts": [
+                "low",
+                "medium",
+                "high"
+              ]
+            },
+            "tool_choice": [
+              "auto",
+              "none",
+              "required"
+            ],
+            "thinking_roundtrip": "unknown",
+            "structured_output": "none"
+          },
+          "capabilities": {
+            "input_modalities": {
+              "text": "supported"
+            },
+            "output_modalities": {
+              "text": "supported"
+            },
+            "context_tokens": 131072,
+            "max_output_tokens": 65536,
+            "system_messages": "supported",
+            "streaming": "supported",
+            "tool_calling": "supported",
+            "reasoning": {
+              "efforts": [
+                "low",
+                "medium",
+                "high"
+              ],
+              "default": "medium",
+              "accepted_aliases": []
+            },
+            "parallel_tool_calls": "unsupported"
+          }
+        }
+      ],
+      "price_card_refs": [
+        "groq-api/openai/gpt-oss-20b/standard-observed-20261006"
+      ],
+      "regions": [],
+      "data_policy": {
+        "training": "unknown",
+        "retention": {
+          "kind": "unknown"
+        }
+      },
+      "lifecycle": {
+        "stage": "stable"
+      },
+      "evidence_refs": [
+        "groq-models-20261006",
+        "groq-gpt-oss-20b-20261006",
+        "groq-tool-use-20261004",
+        "groq-reasoning-20261004",
+        "groq-chat-api-20261004"
+      ]
+    },
+    {
+      "offering_id": "groq-api/openai/gpt-oss-120b",
+      "model_id": "openai/gpt-oss-120b",
+      "provider_id": "groq-api",
+      "wire_model": "openai/gpt-oss-120b",
+      "operations": [
+        {
+          "operation": "chat",
+          "adapter": "openai_chat_completions",
+          "wire_contract": {
+            "max_output_field": "max_completion_tokens",
+            "temperature": "send_clamped",
+            "reasoning": {
+              "encoding": "reasoning_effort",
+              "efforts": [
+                "low",
+                "medium",
+                "high"
+              ]
+            },
+            "tool_choice": [
+              "auto",
+              "none",
+              "required"
+            ],
+            "thinking_roundtrip": "unknown",
+            "structured_output": "none"
+          },
+          "capabilities": {
+            "input_modalities": {
+              "text": "supported"
+            },
+            "output_modalities": {
+              "text": "supported"
+            },
+            "context_tokens": 131072,
+            "max_output_tokens": 65536,
+            "system_messages": "supported",
+            "streaming": "supported",
+            "tool_calling": "supported",
+            "reasoning": {
+              "efforts": [
+                "low",
+                "medium",
+                "high"
+              ],
+              "default": "medium",
+              "accepted_aliases": []
+            },
+            "parallel_tool_calls": "unsupported"
+          }
+        }
+      ],
+      "price_card_refs": [
+        "groq-api/openai/gpt-oss-120b/standard-observed-20261006"
+      ],
+      "regions": [],
+      "data_policy": {
+        "training": "unknown",
+        "retention": {
+          "kind": "unknown"
+        }
+      },
+      "lifecycle": {
+        "stage": "stable"
+      },
+      "evidence_refs": [
+        "groq-models-20261006",
+        "groq-gpt-oss-120b-20261006",
+        "groq-tool-use-20261004",
+        "groq-reasoning-20261004",
+        "groq-chat-api-20261004"
+      ]
+    },
+    {
+      "offering_id": "fireworks-api/accounts/fireworks/models/kimi-k3",
+      "model_id": "moonshot/kimi-k3",
+      "provider_id": "fireworks-api",
+      "wire_model": "accounts/fireworks/models/kimi-k3",
+      "operations": [
+        {
+          "operation": "chat",
+          "adapter": "openai_chat_completions",
+          "wire_contract": {
+            "max_output_field": "max_tokens",
+            "temperature": "send_clamped",
+            "reasoning": {
+              "encoding": "none"
+            },
+            "tool_choice": [
+              "auto",
+              "none",
+              "required"
+            ],
+            "thinking_roundtrip": "unknown",
+            "structured_output": "none"
+          },
+          "capabilities": {
+            "input_modalities": {
+              "text": "supported",
+              "image": "supported"
+            },
+            "output_modalities": {
+              "text": "supported"
+            },
+            "context_tokens": 1048576,
+            "max_output_tokens": null,
+            "system_messages": "supported",
+            "streaming": "supported",
+            "tool_calling": "supported",
+            "reasoning": {
+              "efforts": [],
+              "default": null,
+              "accepted_aliases": []
+            }
+          }
+        }
+      ],
+      "price_card_refs": [
+        "fireworks-api/accounts/fireworks/models/kimi-k3/standard-observed-20261006"
+      ],
+      "regions": [],
+      "data_policy": {
+        "training": "unknown",
+        "retention": {
+          "kind": "unknown"
+        }
+      },
+      "lifecycle": {
+        "stage": "stable"
+      },
+      "evidence_refs": [
+        "fireworks-kimi-k3-20261006",
+        "fireworks-chat-api-20261004",
+        "fireworks-pricing-20261006"
+      ]
+    },
+    {
+      "offering_id": "fireworks-api/accounts/fireworks/models/gpt-oss-120b",
+      "model_id": "openai/gpt-oss-120b",
+      "provider_id": "fireworks-api",
+      "wire_model": "accounts/fireworks/models/gpt-oss-120b",
+      "operations": [
+        {
+          "operation": "chat",
+          "adapter": "openai_chat_completions",
+          "wire_contract": {
+            "max_output_field": "max_tokens",
+            "temperature": "send_clamped",
+            "reasoning": {
+              "encoding": "reasoning_effort",
+              "efforts": [
+                "low",
+                "medium",
+                "high"
+              ]
+            },
+            "tool_choice": [
+              "auto",
+              "none",
+              "required"
+            ],
+            "thinking_roundtrip": "unknown",
+            "structured_output": "none"
+          },
+          "capabilities": {
+            "input_modalities": {
+              "text": "supported"
+            },
+            "output_modalities": {
+              "text": "supported"
+            },
+            "context_tokens": 131072,
+            "max_output_tokens": null,
+            "system_messages": "supported",
+            "streaming": "supported",
+            "tool_calling": "supported",
+            "reasoning": {
+              "efforts": [
+                "low",
+                "medium",
+                "high"
+              ],
+              "default": "medium",
+              "accepted_aliases": []
+            }
+          }
+        }
+      ],
+      "price_card_refs": [
+        "fireworks-api/accounts/fireworks/models/gpt-oss-120b/standard-observed-20261006"
+      ],
+      "regions": [],
+      "data_policy": {
+        "training": "unknown",
+        "retention": {
+          "kind": "unknown"
+        }
+      },
+      "lifecycle": {
+        "stage": "stable"
+      },
+      "evidence_refs": [
+        "fireworks-gpt-oss-120b-20261006",
+        "fireworks-reasoning-20261006",
+        "fireworks-chat-api-20261004",
+        "fireworks-pricing-20261006"
+      ]
     }
   ],
   "price_cards": [
@@ -5060,8 +5781,10 @@
         }
       ],
       "evidence_refs": [
-        "deepseek-vision-pricing"
-      ]
+        "deepseek-vision-pricing",
+        "deepseek-v41-release-20261006"
+      ],
+      "effective_until": "2026-09-10T04:00:00Z"
     },
     {
       "price_card_id": "deepseek-api/deepseek-v4-flash-vision-exp/peak-20260910",
@@ -5086,7 +5809,8 @@
         }
       ],
       "evidence_refs": [
-        "deepseek-vision-pricing"
+        "deepseek-vision-pricing",
+        "deepseek-v41-release-20261006"
       ],
       "daily_utc_windows": [
         {
@@ -5107,7 +5831,8 @@
           "thu",
           "fri"
         ]
-      }
+      },
+      "effective_until": "2026-09-10T04:00:00Z"
     },
     {
       "price_card_id": "openai-api/gpt-5/standard-observed-20260912",
@@ -6295,6 +7020,1042 @@
         "openai-pricing-20261006",
         "openai-gpt-5.4-pro-20261006"
       ]
+    },
+    {
+      "price_card_id": "deepseek-api/deepseek-flash/off-peak-20260910",
+      "offering_id": "deepseek-api/deepseek-flash",
+      "currency": "USD",
+      "effective_from": "2026-09-10T04:00:00Z",
+      "rates": [
+        {
+          "meter": "input_text_token",
+          "amount": "0.15",
+          "per": "million"
+        },
+        {
+          "meter": "output_text_token",
+          "amount": "0.6",
+          "per": "million"
+        },
+        {
+          "meter": "cache_read_text_token",
+          "amount": "0.003",
+          "per": "million"
+        }
+      ],
+      "context_tiers": [],
+      "evidence_refs": [
+        "deepseek-pricing-20261006",
+        "deepseek-v41-release-20261006"
+      ]
+    },
+    {
+      "price_card_id": "deepseek-api/deepseek-flash/peak-20260910",
+      "offering_id": "deepseek-api/deepseek-flash",
+      "currency": "USD",
+      "effective_from": "2026-09-10T04:00:00Z",
+      "calendar": {
+        "active_weekdays": [
+          "mon",
+          "tue",
+          "wed",
+          "thu",
+          "fri"
+        ],
+        "utc_offset_minutes": 0
+      },
+      "daily_utc_windows": [
+        {
+          "start_inclusive": "01:00:00",
+          "end_exclusive": "04:00:00"
+        },
+        {
+          "start_inclusive": "06:00:00",
+          "end_exclusive": "10:00:00"
+        }
+      ],
+      "rates": [
+        {
+          "meter": "input_text_token",
+          "amount": "0.3",
+          "per": "million"
+        },
+        {
+          "meter": "output_text_token",
+          "amount": "1.2",
+          "per": "million"
+        },
+        {
+          "meter": "cache_read_text_token",
+          "amount": "0.006",
+          "per": "million"
+        }
+      ],
+      "context_tiers": [],
+      "evidence_refs": [
+        "deepseek-pricing-20261006",
+        "deepseek-v41-release-20261006"
+      ]
+    },
+    {
+      "price_card_id": "deepseek-api/deepseek-v4-flash/flash-off-peak-20260910",
+      "offering_id": "deepseek-api/deepseek-v4-flash",
+      "currency": "USD",
+      "effective_from": "2026-09-10T04:00:00Z",
+      "rates": [
+        {
+          "meter": "input_text_token",
+          "amount": "0.15",
+          "per": "million"
+        },
+        {
+          "meter": "output_text_token",
+          "amount": "0.6",
+          "per": "million"
+        },
+        {
+          "meter": "cache_read_text_token",
+          "amount": "0.003",
+          "per": "million"
+        }
+      ],
+      "context_tiers": [],
+      "evidence_refs": [
+        "deepseek-pricing-20261006",
+        "deepseek-v41-release-20261006"
+      ]
+    },
+    {
+      "price_card_id": "deepseek-api/deepseek-v4-flash/flash-peak-20260910",
+      "offering_id": "deepseek-api/deepseek-v4-flash",
+      "currency": "USD",
+      "effective_from": "2026-09-10T04:00:00Z",
+      "calendar": {
+        "active_weekdays": [
+          "mon",
+          "tue",
+          "wed",
+          "thu",
+          "fri"
+        ],
+        "utc_offset_minutes": 0
+      },
+      "daily_utc_windows": [
+        {
+          "start_inclusive": "01:00:00",
+          "end_exclusive": "04:00:00"
+        },
+        {
+          "start_inclusive": "06:00:00",
+          "end_exclusive": "10:00:00"
+        }
+      ],
+      "rates": [
+        {
+          "meter": "input_text_token",
+          "amount": "0.3",
+          "per": "million"
+        },
+        {
+          "meter": "output_text_token",
+          "amount": "1.2",
+          "per": "million"
+        },
+        {
+          "meter": "cache_read_text_token",
+          "amount": "0.006",
+          "per": "million"
+        }
+      ],
+      "context_tiers": [],
+      "evidence_refs": [
+        "deepseek-pricing-20261006",
+        "deepseek-v41-release-20261006"
+      ]
+    },
+    {
+      "price_card_id": "deepseek-api/deepseek-v4-flash-vision-exp/flash-off-peak-20260910",
+      "offering_id": "deepseek-api/deepseek-v4-flash-vision-exp",
+      "currency": "USD",
+      "effective_from": "2026-09-10T04:00:00Z",
+      "rates": [
+        {
+          "meter": "input_text_token",
+          "amount": "0.15",
+          "per": "million"
+        },
+        {
+          "meter": "output_text_token",
+          "amount": "0.6",
+          "per": "million"
+        },
+        {
+          "meter": "cache_read_text_token",
+          "amount": "0.003",
+          "per": "million"
+        }
+      ],
+      "context_tiers": [],
+      "evidence_refs": [
+        "deepseek-pricing-20261006",
+        "deepseek-v41-release-20261006"
+      ]
+    },
+    {
+      "price_card_id": "deepseek-api/deepseek-v4-flash-vision-exp/flash-peak-20260910",
+      "offering_id": "deepseek-api/deepseek-v4-flash-vision-exp",
+      "currency": "USD",
+      "effective_from": "2026-09-10T04:00:00Z",
+      "calendar": {
+        "active_weekdays": [
+          "mon",
+          "tue",
+          "wed",
+          "thu",
+          "fri"
+        ],
+        "utc_offset_minutes": 0
+      },
+      "daily_utc_windows": [
+        {
+          "start_inclusive": "01:00:00",
+          "end_exclusive": "04:00:00"
+        },
+        {
+          "start_inclusive": "06:00:00",
+          "end_exclusive": "10:00:00"
+        }
+      ],
+      "rates": [
+        {
+          "meter": "input_text_token",
+          "amount": "0.3",
+          "per": "million"
+        },
+        {
+          "meter": "output_text_token",
+          "amount": "1.2",
+          "per": "million"
+        },
+        {
+          "meter": "cache_read_text_token",
+          "amount": "0.006",
+          "per": "million"
+        }
+      ],
+      "context_tiers": [],
+      "evidence_refs": [
+        "deepseek-pricing-20261006",
+        "deepseek-v41-release-20261006"
+      ]
+    },
+    {
+      "price_card_id": "deepseek-api/deepseek-v4-pro/off-peak-observed-20261006",
+      "offering_id": "deepseek-api/deepseek-v4-pro",
+      "currency": "USD",
+      "effective_from": "2026-10-06T00:00:00Z",
+      "rates": [
+        {
+          "meter": "input_text_token",
+          "amount": "0.66",
+          "per": "million"
+        },
+        {
+          "meter": "output_text_token",
+          "amount": "1.98",
+          "per": "million"
+        },
+        {
+          "meter": "cache_read_text_token",
+          "amount": "0.022",
+          "per": "million"
+        }
+      ],
+      "context_tiers": [],
+      "evidence_refs": [
+        "deepseek-pricing-20261006"
+      ]
+    },
+    {
+      "price_card_id": "deepseek-api/deepseek-v4-pro/peak-observed-20261006",
+      "offering_id": "deepseek-api/deepseek-v4-pro",
+      "currency": "USD",
+      "effective_from": "2026-10-06T00:00:00Z",
+      "calendar": {
+        "active_weekdays": [
+          "mon",
+          "tue",
+          "wed",
+          "thu",
+          "fri"
+        ],
+        "utc_offset_minutes": 0
+      },
+      "daily_utc_windows": [
+        {
+          "start_inclusive": "01:00:00",
+          "end_exclusive": "04:00:00"
+        },
+        {
+          "start_inclusive": "06:00:00",
+          "end_exclusive": "10:00:00"
+        }
+      ],
+      "rates": [
+        {
+          "meter": "input_text_token",
+          "amount": "1.32",
+          "per": "million"
+        },
+        {
+          "meter": "output_text_token",
+          "amount": "3.96",
+          "per": "million"
+        },
+        {
+          "meter": "cache_read_text_token",
+          "amount": "0.044",
+          "per": "million"
+        }
+      ],
+      "context_tiers": [],
+      "evidence_refs": [
+        "deepseek-pricing-20261006"
+      ]
+    },
+    {
+      "price_card_id": "moonshot-api/kimi-k3/global-observed-20261006",
+      "offering_id": "moonshot-api/kimi-k3",
+      "currency": "USD",
+      "effective_from": "2026-10-06T00:00:00Z",
+      "region": "global",
+      "rates": [
+        {
+          "meter": "input_text_token",
+          "amount": "3.00",
+          "per": "million"
+        },
+        {
+          "meter": "output_text_token",
+          "amount": "15.00",
+          "per": "million"
+        },
+        {
+          "meter": "cache_read_text_token",
+          "amount": "0.30",
+          "per": "million"
+        },
+        {
+          "meter": "cache_write_text_token",
+          "amount": "3.00",
+          "per": "million",
+          "cache_ttl_seconds": 300
+        },
+        {
+          "meter": "cache_write_text_token",
+          "amount": "6.00",
+          "per": "million",
+          "cache_ttl_seconds": 3600
+        }
+      ],
+      "context_tiers": [],
+      "evidence_refs": [
+        "kimi-pricing-global-20261006"
+      ]
+    },
+    {
+      "price_card_id": "moonshot-api/kimi-k3/cn-observed-20261006",
+      "offering_id": "moonshot-api/kimi-k3",
+      "currency": "CNY",
+      "effective_from": "2026-10-06T00:00:00Z",
+      "region": "cn",
+      "rates": [
+        {
+          "meter": "input_text_token",
+          "amount": "20.00",
+          "per": "million"
+        },
+        {
+          "meter": "output_text_token",
+          "amount": "100.00",
+          "per": "million"
+        },
+        {
+          "meter": "cache_read_text_token",
+          "amount": "2.00",
+          "per": "million"
+        },
+        {
+          "meter": "cache_write_text_token",
+          "amount": "20.00",
+          "per": "million",
+          "cache_ttl_seconds": 300
+        },
+        {
+          "meter": "cache_write_text_token",
+          "amount": "40.00",
+          "per": "million",
+          "cache_ttl_seconds": 3600
+        }
+      ],
+      "context_tiers": [],
+      "evidence_refs": [
+        "kimi-pricing-cn-20261006"
+      ]
+    },
+    {
+      "price_card_id": "moonshot-api/kimi-k2.7-code/global-observed-20261006",
+      "offering_id": "moonshot-api/kimi-k2.7-code",
+      "currency": "USD",
+      "effective_from": "2026-10-06T00:00:00Z",
+      "region": "global",
+      "rates": [
+        {
+          "meter": "input_text_token",
+          "amount": "0.95",
+          "per": "million"
+        },
+        {
+          "meter": "output_text_token",
+          "amount": "4.00",
+          "per": "million"
+        },
+        {
+          "meter": "cache_read_text_token",
+          "amount": "0.19",
+          "per": "million"
+        }
+      ],
+      "context_tiers": [],
+      "evidence_refs": [
+        "kimi-pricing-global-20261006"
+      ]
+    },
+    {
+      "price_card_id": "moonshot-api/kimi-k2.7-code/cn-observed-20261006",
+      "offering_id": "moonshot-api/kimi-k2.7-code",
+      "currency": "CNY",
+      "effective_from": "2026-10-06T00:00:00Z",
+      "region": "cn",
+      "rates": [
+        {
+          "meter": "input_text_token",
+          "amount": "6.50",
+          "per": "million"
+        },
+        {
+          "meter": "output_text_token",
+          "amount": "27.00",
+          "per": "million"
+        },
+        {
+          "meter": "cache_read_text_token",
+          "amount": "1.30",
+          "per": "million"
+        }
+      ],
+      "context_tiers": [],
+      "evidence_refs": [
+        "kimi-pricing-cn-20261006"
+      ]
+    },
+    {
+      "price_card_id": "moonshot-api/kimi-k2.7-code-highspeed/global-observed-20261006",
+      "offering_id": "moonshot-api/kimi-k2.7-code-highspeed",
+      "currency": "USD",
+      "effective_from": "2026-10-06T00:00:00Z",
+      "region": "global",
+      "rates": [
+        {
+          "meter": "input_text_token",
+          "amount": "1.90",
+          "per": "million"
+        },
+        {
+          "meter": "output_text_token",
+          "amount": "8.00",
+          "per": "million"
+        },
+        {
+          "meter": "cache_read_text_token",
+          "amount": "0.38",
+          "per": "million"
+        }
+      ],
+      "context_tiers": [],
+      "evidence_refs": [
+        "kimi-pricing-global-20261006"
+      ]
+    },
+    {
+      "price_card_id": "moonshot-api/kimi-k2.7-code-highspeed/cn-observed-20261006",
+      "offering_id": "moonshot-api/kimi-k2.7-code-highspeed",
+      "currency": "CNY",
+      "effective_from": "2026-10-06T00:00:00Z",
+      "region": "cn",
+      "rates": [
+        {
+          "meter": "input_text_token",
+          "amount": "13.00",
+          "per": "million"
+        },
+        {
+          "meter": "output_text_token",
+          "amount": "54.00",
+          "per": "million"
+        },
+        {
+          "meter": "cache_read_text_token",
+          "amount": "2.60",
+          "per": "million"
+        }
+      ],
+      "context_tiers": [],
+      "evidence_refs": [
+        "kimi-pricing-cn-20261006"
+      ]
+    },
+    {
+      "price_card_id": "moonshot-api/kimi-k2.6/global-observed-20261006",
+      "offering_id": "moonshot-api/kimi-k2.6",
+      "currency": "USD",
+      "effective_from": "2026-10-06T00:00:00Z",
+      "region": "global",
+      "rates": [
+        {
+          "meter": "input_text_token",
+          "amount": "0.95",
+          "per": "million"
+        },
+        {
+          "meter": "output_text_token",
+          "amount": "4.00",
+          "per": "million"
+        },
+        {
+          "meter": "cache_read_text_token",
+          "amount": "0.16",
+          "per": "million"
+        }
+      ],
+      "context_tiers": [],
+      "evidence_refs": [
+        "kimi-pricing-global-20261006"
+      ]
+    },
+    {
+      "price_card_id": "moonshot-api/kimi-k2.6/cn-observed-20261006",
+      "offering_id": "moonshot-api/kimi-k2.6",
+      "currency": "CNY",
+      "effective_from": "2026-10-06T00:00:00Z",
+      "region": "cn",
+      "rates": [
+        {
+          "meter": "input_text_token",
+          "amount": "6.50",
+          "per": "million"
+        },
+        {
+          "meter": "output_text_token",
+          "amount": "27.00",
+          "per": "million"
+        },
+        {
+          "meter": "cache_read_text_token",
+          "amount": "1.10",
+          "per": "million"
+        }
+      ],
+      "context_tiers": [],
+      "evidence_refs": [
+        "kimi-pricing-cn-20261006"
+      ]
+    },
+    {
+      "price_card_id": "zhipu-api/glm-5.3/global-observed-20261006",
+      "offering_id": "zhipu-api/glm-5.3",
+      "currency": "USD",
+      "effective_from": "2026-10-06T00:00:00Z",
+      "region": "global",
+      "rates": [
+        {
+          "meter": "input_text_token",
+          "amount": "1.4",
+          "per": "million"
+        },
+        {
+          "meter": "output_text_token",
+          "amount": "4.4",
+          "per": "million"
+        },
+        {
+          "meter": "cache_read_text_token",
+          "amount": "0.26",
+          "per": "million"
+        }
+      ],
+      "context_tiers": [],
+      "evidence_refs": [
+        "zai-pricing-20261006"
+      ]
+    },
+    {
+      "price_card_id": "zhipu-api/glm-5.3/cn-observed-20261006",
+      "offering_id": "zhipu-api/glm-5.3",
+      "currency": "CNY",
+      "effective_from": "2026-10-06T00:00:00Z",
+      "region": "cn",
+      "rates": [
+        {
+          "meter": "input_text_token",
+          "amount": "8",
+          "per": "million"
+        },
+        {
+          "meter": "output_text_token",
+          "amount": "28",
+          "per": "million"
+        },
+        {
+          "meter": "cache_read_text_token",
+          "amount": "2",
+          "per": "million"
+        }
+      ],
+      "context_tiers": [],
+      "evidence_refs": [
+        "bigmodel-pricing-20261006"
+      ]
+    },
+    {
+      "price_card_id": "zhipu-api/glm-5.2/global-observed-20261006",
+      "offering_id": "zhipu-api/glm-5.2",
+      "currency": "USD",
+      "effective_from": "2026-10-06T00:00:00Z",
+      "region": "global",
+      "rates": [
+        {
+          "meter": "input_text_token",
+          "amount": "1.4",
+          "per": "million"
+        },
+        {
+          "meter": "output_text_token",
+          "amount": "4.4",
+          "per": "million"
+        },
+        {
+          "meter": "cache_read_text_token",
+          "amount": "0.26",
+          "per": "million"
+        }
+      ],
+      "context_tiers": [],
+      "evidence_refs": [
+        "zai-pricing-20261006"
+      ]
+    },
+    {
+      "price_card_id": "zhipu-api/glm-5.2/cn-observed-20261006",
+      "offering_id": "zhipu-api/glm-5.2",
+      "currency": "CNY",
+      "effective_from": "2026-10-06T00:00:00Z",
+      "region": "cn",
+      "rates": [
+        {
+          "meter": "input_text_token",
+          "amount": "8",
+          "per": "million"
+        },
+        {
+          "meter": "output_text_token",
+          "amount": "28",
+          "per": "million"
+        },
+        {
+          "meter": "cache_read_text_token",
+          "amount": "2",
+          "per": "million"
+        }
+      ],
+      "context_tiers": [],
+      "evidence_refs": [
+        "bigmodel-pricing-20261006"
+      ]
+    },
+    {
+      "price_card_id": "zhipu-api/glm-5.3-flash/global-observed-20261006",
+      "offering_id": "zhipu-api/glm-5.3-flash",
+      "currency": "USD",
+      "effective_from": "2026-10-06T00:00:00Z",
+      "region": "global",
+      "rates": [
+        {
+          "meter": "input_text_token",
+          "amount": "0.15",
+          "per": "million"
+        },
+        {
+          "meter": "output_text_token",
+          "amount": "0.50",
+          "per": "million"
+        },
+        {
+          "meter": "cache_read_text_token",
+          "amount": "0.03",
+          "per": "million"
+        }
+      ],
+      "context_tiers": [],
+      "evidence_refs": [
+        "zai-pricing-20261006"
+      ]
+    },
+    {
+      "price_card_id": "zhipu-api/glm-5.3-flash/cn-observed-20261006",
+      "offering_id": "zhipu-api/glm-5.3-flash",
+      "currency": "CNY",
+      "effective_from": "2026-10-06T00:00:00Z",
+      "region": "cn",
+      "rates": [
+        {
+          "meter": "input_text_token",
+          "amount": "0.8",
+          "per": "million"
+        },
+        {
+          "meter": "output_text_token",
+          "amount": "2.8",
+          "per": "million"
+        },
+        {
+          "meter": "cache_read_text_token",
+          "amount": "0.23",
+          "per": "million"
+        }
+      ],
+      "context_tiers": [],
+      "evidence_refs": [
+        "bigmodel-pricing-20261006"
+      ]
+    },
+    {
+      "price_card_id": "minimax-api/minimax-m2.7/global-observed-20261006",
+      "offering_id": "minimax-api/minimax-m2.7",
+      "currency": "USD",
+      "effective_from": "2026-10-06T00:00:00Z",
+      "region": "global",
+      "rates": [
+        {
+          "meter": "input_text_token",
+          "amount": "0.3",
+          "per": "million"
+        },
+        {
+          "meter": "output_text_token",
+          "amount": "1.2",
+          "per": "million"
+        },
+        {
+          "meter": "cache_read_text_token",
+          "amount": "0.06",
+          "per": "million"
+        },
+        {
+          "meter": "cache_write_text_token",
+          "amount": "0.375",
+          "per": "million",
+          "cache_ttl_seconds": 300
+        }
+      ],
+      "context_tiers": [],
+      "evidence_refs": [
+        "minimax-paygo-global-20261006",
+        "minimax-cache-20261006"
+      ]
+    },
+    {
+      "price_card_id": "minimax-api/minimax-m2.7/cn-observed-20261006",
+      "offering_id": "minimax-api/minimax-m2.7",
+      "currency": "CNY",
+      "effective_from": "2026-10-06T00:00:00Z",
+      "region": "cn",
+      "rates": [
+        {
+          "meter": "input_text_token",
+          "amount": "2.1",
+          "per": "million"
+        },
+        {
+          "meter": "output_text_token",
+          "amount": "8.4",
+          "per": "million"
+        },
+        {
+          "meter": "cache_read_text_token",
+          "amount": "0.42",
+          "per": "million"
+        },
+        {
+          "meter": "cache_write_text_token",
+          "amount": "2.625",
+          "per": "million",
+          "cache_ttl_seconds": 300
+        }
+      ],
+      "context_tiers": [],
+      "evidence_refs": [
+        "minimax-paygo-cn-20261006",
+        "minimax-cache-20261006"
+      ]
+    },
+    {
+      "price_card_id": "groq-api/openai/gpt-oss-20b/standard-observed-20261006",
+      "offering_id": "groq-api/openai/gpt-oss-20b",
+      "currency": "USD",
+      "effective_from": "2026-10-06T00:00:00Z",
+      "rates": [
+        {
+          "meter": "input_text_token",
+          "amount": "0.075",
+          "per": "million"
+        },
+        {
+          "meter": "output_text_token",
+          "amount": "0.30",
+          "per": "million"
+        },
+        {
+          "meter": "cache_read_text_token",
+          "amount": "0.037",
+          "per": "million"
+        }
+      ],
+      "context_tiers": [],
+      "evidence_refs": [
+        "groq-gpt-oss-20b-20261006",
+        "groq-prompt-caching-20261006"
+      ]
+    },
+    {
+      "price_card_id": "groq-api/openai/gpt-oss-120b/standard-observed-20261006",
+      "offering_id": "groq-api/openai/gpt-oss-120b",
+      "currency": "USD",
+      "effective_from": "2026-10-06T00:00:00Z",
+      "rates": [
+        {
+          "meter": "input_text_token",
+          "amount": "0.15",
+          "per": "million"
+        },
+        {
+          "meter": "output_text_token",
+          "amount": "0.60",
+          "per": "million"
+        },
+        {
+          "meter": "cache_read_text_token",
+          "amount": "0.075",
+          "per": "million"
+        }
+      ],
+      "context_tiers": [],
+      "evidence_refs": [
+        "groq-gpt-oss-120b-20261006",
+        "groq-prompt-caching-20261006"
+      ]
+    },
+    {
+      "price_card_id": "fireworks-api/accounts/fireworks/models/kimi-k3/standard-observed-20261006",
+      "offering_id": "fireworks-api/accounts/fireworks/models/kimi-k3",
+      "currency": "USD",
+      "effective_from": "2026-10-06T00:00:00Z",
+      "rates": [
+        {
+          "meter": "input_text_token",
+          "amount": "3.00",
+          "per": "million"
+        },
+        {
+          "meter": "output_text_token",
+          "amount": "15.00",
+          "per": "million"
+        },
+        {
+          "meter": "cache_read_text_token",
+          "amount": "0.30",
+          "per": "million"
+        }
+      ],
+      "context_tiers": [],
+      "evidence_refs": [
+        "fireworks-pricing-20261006"
+      ]
+    },
+    {
+      "price_card_id": "fireworks-api/accounts/fireworks/models/gpt-oss-120b/standard-observed-20261006",
+      "offering_id": "fireworks-api/accounts/fireworks/models/gpt-oss-120b",
+      "currency": "USD",
+      "effective_from": "2026-10-06T00:00:00Z",
+      "rates": [
+        {
+          "meter": "input_text_token",
+          "amount": "0.15",
+          "per": "million"
+        },
+        {
+          "meter": "output_text_token",
+          "amount": "0.60",
+          "per": "million"
+        },
+        {
+          "meter": "cache_read_text_token",
+          "amount": "0.015",
+          "per": "million"
+        }
+      ],
+      "context_tiers": [],
+      "evidence_refs": [
+        "fireworks-pricing-20261006"
+      ]
+    },
+    {
+      "price_card_id": "dashscope-api/qwen3.8-max/cn-beijing-observed-20261006",
+      "offering_id": "dashscope-api/qwen3.8-max",
+      "currency": "CNY",
+      "effective_from": "2026-10-06T00:00:00Z",
+      "region": "cn-beijing",
+      "rates": [
+        {
+          "meter": "input_text_token",
+          "amount": "12",
+          "per": "million"
+        },
+        {
+          "meter": "output_text_token",
+          "amount": "36",
+          "per": "million"
+        }
+      ],
+      "context_tiers": [],
+      "evidence_refs": [
+        "qwen-pricing-cny-20261006"
+      ]
+    },
+    {
+      "price_card_id": "dashscope-api/qwen3.8-max/ap-southeast-1-observed-20261006",
+      "offering_id": "dashscope-api/qwen3.8-max",
+      "currency": "CNY",
+      "effective_from": "2026-10-06T00:00:00Z",
+      "region": "ap-southeast-1",
+      "rates": [
+        {
+          "meter": "input_text_token",
+          "amount": "14.988",
+          "per": "million"
+        },
+        {
+          "meter": "output_text_token",
+          "amount": "44.965",
+          "per": "million"
+        }
+      ],
+      "context_tiers": [],
+      "evidence_refs": [
+        "qwen-pricing-cny-20261006"
+      ]
+    },
+    {
+      "price_card_id": "dashscope-api/qwen3.8-max/eu-central-1-observed-20261006",
+      "offering_id": "dashscope-api/qwen3.8-max",
+      "currency": "CNY",
+      "effective_from": "2026-10-06T00:00:00Z",
+      "region": "eu-central-1",
+      "rates": [
+        {
+          "meter": "input_text_token",
+          "amount": "12",
+          "per": "million"
+        },
+        {
+          "meter": "output_text_token",
+          "amount": "36",
+          "per": "million"
+        }
+      ],
+      "context_tiers": [],
+      "evidence_refs": [
+        "qwen-pricing-cny-20261006"
+      ]
+    },
+    {
+      "price_card_id": "dashscope-api/qwen3.8-max/us-east-1-observed-20261006",
+      "offering_id": "dashscope-api/qwen3.8-max",
+      "currency": "CNY",
+      "effective_from": "2026-10-06T00:00:00Z",
+      "region": "us-east-1",
+      "rates": [
+        {
+          "meter": "input_text_token",
+          "amount": "12",
+          "per": "million"
+        },
+        {
+          "meter": "output_text_token",
+          "amount": "36",
+          "per": "million"
+        }
+      ],
+      "context_tiers": [],
+      "evidence_refs": [
+        "qwen-pricing-cny-20261006"
+      ]
+    },
+    {
+      "price_card_id": "dashscope-api/qwen3.8-max/ap-northeast-1-observed-20261006",
+      "offering_id": "dashscope-api/qwen3.8-max",
+      "currency": "CNY",
+      "effective_from": "2026-10-06T00:00:00Z",
+      "region": "ap-northeast-1",
+      "rates": [
+        {
+          "meter": "input_text_token",
+          "amount": "12",
+          "per": "million"
+        },
+        {
+          "meter": "output_text_token",
+          "amount": "36",
+          "per": "million"
+        }
+      ],
+      "context_tiers": [],
+      "evidence_refs": [
+        "qwen-pricing-cny-20261006"
+      ]
+    },
+    {
+      "price_card_id": "dashscope-api/qwen3.8-max/cn-hongkong-observed-20261006",
+      "offering_id": "dashscope-api/qwen3.8-max",
+      "currency": "USD",
+      "effective_from": "2026-10-06T00:00:00Z",
+      "region": "cn-hongkong",
+      "rates": [
+        {
+          "meter": "input_text_token",
+          "amount": "1.65",
+          "per": "million"
+        },
+        {
+          "meter": "output_text_token",
+          "amount": "4.951",
+          "per": "million"
+        }
+      ],
+      "context_tiers": [],
+      "evidence_refs": [
+        "qwen-pricing-usd-20261006"
+      ]
     }
   ],
   "evidence": [
@@ -6817,6 +8578,254 @@
       "publisher": "Anthropic",
       "title": "Model deprecations: claude-sonnet-4-5-20250929 deprecated September 30, 2026, retires November 30, 2026",
       "url": "https://platform.claude.com/docs/en/about-claude/model-deprecations"
+    },
+    {
+      "evidence_id": "deepseek-pricing-20261006",
+      "kind": "provider_docs",
+      "publisher": "DeepSeek",
+      "title": "Models & Pricing: deepseek-flash and deepseek-v4-pro off-peak and peak rates; the legacy names deepseek-v4-flash and deepseek-v4-flash-vision-exp are served by DeepSeek-V4.1-Flash and billed at the Flash price",
+      "url": "https://api-docs.deepseek.com/quick_start/pricing/",
+      "observed_at": "2026-10-06T00:00:00Z"
+    },
+    {
+      "evidence_id": "deepseek-v41-release-20261006",
+      "kind": "provider_docs",
+      "publisher": "DeepSeek",
+      "title": "DeepSeek-V4.1-Flash release: new pricing takes effect at 04:00 UTC on September 10, 2026",
+      "url": "https://api-docs.deepseek.com/news/news260910",
+      "observed_at": "2026-10-06T00:00:00Z"
+    },
+    {
+      "evidence_id": "deepseek-updates-20261006",
+      "kind": "provider_docs",
+      "publisher": "DeepSeek",
+      "title": "Change log: V4 Flash and V4 Flash Vision Exp retired and their names routed to V4.1 Flash; V4 Pro continues with unchanged billing",
+      "url": "https://api-docs.deepseek.com/updates",
+      "observed_at": "2026-10-06T00:00:00Z"
+    },
+    {
+      "evidence_id": "deepseek-models-20261006",
+      "kind": "provider_docs",
+      "publisher": "DeepSeek",
+      "title": "List models: deepseek-flash 1,048,576-token context, 393,216 max output tokens, text and image input, effort low/high/max with default high",
+      "url": "https://api-docs.deepseek.com/api/list-models",
+      "observed_at": "2026-10-06T00:00:00Z"
+    },
+    {
+      "evidence_id": "deepseek-vision-20261006",
+      "kind": "provider_docs",
+      "publisher": "DeepSeek",
+      "title": "Vision: deepseek-flash accepts images in user messages",
+      "url": "https://api-docs.deepseek.com/guides/vision",
+      "observed_at": "2026-10-06T00:00:00Z"
+    },
+    {
+      "evidence_id": "kimi-pricing-global-20261006",
+      "kind": "provider_docs",
+      "publisher": "Moonshot AI",
+      "title": "Kimi API pricing (international platform, USD): K3 cache writes by TTL, cache-hit, input and output prices; K2 cache-hit, cache-miss and output prices",
+      "url": "https://platform.kimi.ai/docs/pricing/chat",
+      "observed_at": "2026-10-06T00:00:00Z"
+    },
+    {
+      "evidence_id": "kimi-pricing-cn-20261006",
+      "kind": "provider_docs",
+      "publisher": "Moonshot AI",
+      "title": "Kimi API pricing (China platform, CNY)",
+      "url": "https://platform.kimi.com/docs/pricing/chat",
+      "observed_at": "2026-10-06T00:00:00Z"
+    },
+    {
+      "evidence_id": "kimi-models-20261006",
+      "kind": "provider_docs",
+      "publisher": "Moonshot AI",
+      "title": "Model list: the moonshot-v1 series, including the -vision-preview variants, was discontinued on August 31, 2026",
+      "url": "https://platform.kimi.ai/docs/models",
+      "observed_at": "2026-10-06T00:00:00Z"
+    },
+    {
+      "evidence_id": "zai-pricing-20261006",
+      "kind": "provider_docs",
+      "publisher": "Z.AI",
+      "title": "Pricing (USD per 1M tokens): GLM-5.3, GLM-5.2 and GLM-5.3-Flash input, cached input and output",
+      "url": "https://docs.z.ai/guides/overview/pricing",
+      "observed_at": "2026-10-06T00:00:00Z"
+    },
+    {
+      "evidence_id": "bigmodel-pricing-20261006",
+      "kind": "provider_docs",
+      "publisher": "Zhipu AI",
+      "title": "BigModel pricing (CNY per 1M tokens): GLM-5.3, GLM-5.2 and GLM-5.3-Flash input, output and cache hit",
+      "url": "https://docs.bigmodel.cn/cn/guide/start/pricing",
+      "observed_at": "2026-10-06T00:00:00Z"
+    },
+    {
+      "evidence_id": "zai-glm-5.3-flash-20261006",
+      "kind": "provider_docs",
+      "publisher": "Z.AI",
+      "title": "GLM-5.3-Flash: 1M context, video, image, text and file input, thinking always on, effort low/high/max, tool_choice auto",
+      "url": "https://docs.z.ai/guides/vlm/glm-5.3-flash",
+      "observed_at": "2026-10-06T00:00:00Z"
+    },
+    {
+      "evidence_id": "minimax-paygo-global-20261006",
+      "kind": "provider_docs",
+      "publisher": "MiniMax",
+      "title": "Pay-as-you-go pricing (USD): MiniMax-M2.7 input, output, prompt caching read and write",
+      "url": "https://platform.minimax.io/docs/guides/pricing-paygo",
+      "observed_at": "2026-10-06T00:00:00Z"
+    },
+    {
+      "evidence_id": "minimax-paygo-cn-20261006",
+      "kind": "provider_docs",
+      "publisher": "MiniMax",
+      "title": "Pay-as-you-go pricing (China platform, CNY per 1M tokens): MiniMax-M2.7 input, output, cache read and write",
+      "url": "https://platform.minimax.cn/docs/guides/pricing-paygo",
+      "observed_at": "2026-10-06T00:00:00Z"
+    },
+    {
+      "evidence_id": "minimax-anthropic-api-20261006",
+      "kind": "provider_docs",
+      "publisher": "MiniMax",
+      "title": "Anthropic-compatible API: M2.x models take text and tool blocks only, thinking cannot be disabled, thinking blocks are kept unchanged in later turns",
+      "url": "https://platform.minimax.io/docs/api-reference/text-anthropic-api",
+      "observed_at": "2026-10-06T00:00:00Z"
+    },
+    {
+      "evidence_id": "minimax-text-generation-20261006",
+      "kind": "provider_docs",
+      "publisher": "MiniMax",
+      "title": "Text generation: MiniMax-M2.7 204,800-token context; international and China base URLs",
+      "url": "https://platform.minimax.io/docs/guides/text-generation",
+      "observed_at": "2026-10-06T00:00:00Z"
+    },
+    {
+      "evidence_id": "minimax-cache-20261006",
+      "kind": "provider_docs",
+      "publisher": "MiniMax",
+      "title": "Anthropic-compatible prompt caching: cache_control, 5-minute lifetime refreshed on hit",
+      "url": "https://platform.minimax.io/docs/api-reference/anthropic-api-compatible-cache",
+      "observed_at": "2026-10-06T00:00:00Z"
+    },
+    {
+      "evidence_id": "minimax-messages-api-20261006",
+      "kind": "provider_docs",
+      "publisher": "MiniMax",
+      "title": "Messages API: max_tokens up to 204800 for M2.x models",
+      "url": "https://platform.minimax.io/docs/api-reference/text-chat-anthropic",
+      "observed_at": "2026-10-06T00:00:00Z"
+    },
+    {
+      "evidence_id": "groq-models-20261006",
+      "kind": "provider_docs",
+      "publisher": "Groq",
+      "title": "Supported models: GPT-OSS 20B and 120B production models, 131,072-token context, 65,536 max completion tokens, input and output prices",
+      "url": "https://console.groq.com/docs/models",
+      "observed_at": "2026-10-06T00:00:00Z"
+    },
+    {
+      "evidence_id": "groq-gpt-oss-120b-20261006",
+      "kind": "provider_docs",
+      "publisher": "Groq",
+      "title": "GPT-OSS 120B: input $0.15, cached input $0.075, output $0.60 per 1M tokens",
+      "url": "https://console.groq.com/docs/model/openai/gpt-oss-120b",
+      "observed_at": "2026-10-06T00:00:00Z"
+    },
+    {
+      "evidence_id": "groq-gpt-oss-20b-20261006",
+      "kind": "provider_docs",
+      "publisher": "Groq",
+      "title": "GPT-OSS 20B: input $0.075, cached input $0.037, output $0.30 per 1M tokens",
+      "url": "https://console.groq.com/docs/model/openai/gpt-oss-20b",
+      "observed_at": "2026-10-06T00:00:00Z"
+    },
+    {
+      "evidence_id": "groq-prompt-caching-20261006",
+      "kind": "provider_docs",
+      "publisher": "Groq",
+      "title": "Prompt caching: automatic for GPT-OSS models, 50% discount on cached input tokens",
+      "url": "https://console.groq.com/docs/prompt-caching",
+      "observed_at": "2026-10-06T00:00:00Z"
+    },
+    {
+      "evidence_id": "groq-tool-use-20261004",
+      "kind": "provider_docs",
+      "publisher": "Groq",
+      "title": "Tool use: GPT-OSS supports tool use but not parallel tool use",
+      "url": "https://console.groq.com/docs/tool-use",
+      "observed_at": "2026-10-04T00:00:00Z"
+    },
+    {
+      "evidence_id": "groq-reasoning-20261004",
+      "kind": "provider_docs",
+      "publisher": "Groq",
+      "title": "Reasoning: GPT-OSS reasoning_effort low, medium, high",
+      "url": "https://console.groq.com/docs/reasoning",
+      "observed_at": "2026-10-04T00:00:00Z"
+    },
+    {
+      "evidence_id": "groq-chat-api-20261004",
+      "kind": "provider_docs",
+      "publisher": "Groq",
+      "title": "Chat completions API: max_completion_tokens, tool_choice none/auto/required, temperature 0-2",
+      "url": "https://console.groq.com/docs/api-reference",
+      "observed_at": "2026-10-04T00:00:00Z"
+    },
+    {
+      "evidence_id": "fireworks-pricing-20261006",
+      "kind": "provider_docs",
+      "publisher": "Fireworks AI",
+      "title": "Serverless pricing (USD per 1M tokens, input / cached input / output): Kimi K3, OpenAI GPT OSS 120B",
+      "url": "https://docs.fireworks.ai/serverless/pricing",
+      "observed_at": "2026-10-06T00:00:00Z"
+    },
+    {
+      "evidence_id": "fireworks-kimi-k3-20261006",
+      "kind": "provider_docs",
+      "publisher": "Fireworks AI",
+      "title": "Kimi K3: accounts/fireworks/models/kimi-k3, 1,048,576-token context, function calling, image input",
+      "url": "https://fireworks.ai/models/fireworks/kimi-k3",
+      "observed_at": "2026-10-06T00:00:00Z"
+    },
+    {
+      "evidence_id": "fireworks-gpt-oss-120b-20261006",
+      "kind": "provider_docs",
+      "publisher": "Fireworks AI",
+      "title": "GPT OSS 120B: accounts/fireworks/models/gpt-oss-120b, 131k context, function calling, text input",
+      "url": "https://fireworks.ai/models/fireworks/gpt-oss-120b",
+      "observed_at": "2026-10-06T00:00:00Z"
+    },
+    {
+      "evidence_id": "fireworks-reasoning-20261006",
+      "kind": "provider_docs",
+      "publisher": "Fireworks AI",
+      "title": "Chat completions API, reasoning_effort: GPT-OSS 120B and 20B accept only low, medium or high, default medium",
+      "url": "https://docs.fireworks.ai/api-reference/post-chatcompletions",
+      "observed_at": "2026-10-06T00:00:00Z"
+    },
+    {
+      "evidence_id": "fireworks-chat-api-20261004",
+      "kind": "provider_docs",
+      "publisher": "Fireworks AI",
+      "title": "Chat completions API: max_tokens, tool_choice auto/none/required, temperature 0-2, streaming, system messages",
+      "url": "https://docs.fireworks.ai/api-reference/post-chatcompletions",
+      "observed_at": "2026-10-04T00:00:00Z"
+    },
+    {
+      "evidence_id": "qwen-pricing-cny-20261006",
+      "kind": "provider_docs",
+      "publisher": "Alibaba Cloud",
+      "title": "Model Studio model pricing (CNY per 1M tokens): qwen3.8-max in Beijing, Singapore (International scope) and Frankfurt, Virginia and Tokyo (Global scope)",
+      "url": "https://help.aliyun.com/zh/model-studio/model-pricing",
+      "observed_at": "2026-10-06T00:00:00Z"
+    },
+    {
+      "evidence_id": "qwen-pricing-usd-20261006",
+      "kind": "provider_docs",
+      "publisher": "Alibaba Cloud",
+      "title": "Model Studio model pricing (USD per 1M tokens): qwen3.8-max in Hong Kong (China), Global scope",
+      "url": "https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+      "observed_at": "2026-10-06T00:00:00Z"
     }
   ]
 }
