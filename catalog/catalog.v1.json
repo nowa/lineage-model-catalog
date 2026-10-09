@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "revision": 9,
-  "generated_at": "2026-10-06T00:00:00Z",
+  "revision": 10,
+  "generated_at": "2026-10-08T00:00:00Z",
   "models": [
     {
       "model_id": "openai/gpt-6-astra",
@@ -1194,6 +1194,30 @@
       },
       "evidence_refs": [
         "groq-models-20261006"
+      ]
+    },
+    {
+      "model_id": "anthropic/claude-haiku-5-5",
+      "developer": "anthropic",
+      "family": "claude",
+      "display_name": "Claude Haiku 5.5",
+      "lifecycle": {
+        "stage": "stable"
+      },
+      "intrinsic_modalities": {
+        "input": {
+          "text": "supported",
+          "image": "supported"
+        },
+        "output": {
+          "text": "supported"
+        }
+      },
+      "evidence_refs": [
+        "anthropic-haiku-5-5-model",
+        "anthropic-haiku-5-5-migration",
+        "anthropic-effort-20261008",
+        "anthropic-structured-outputs-20261008"
       ]
     }
   ],
@@ -4370,7 +4394,8 @@
         }
       ],
       "price_card_refs": [
-        "anthropic-api/claude-sonnet-5-5/standard-observed-20261006"
+        "anthropic-api/claude-sonnet-5-5/standard-observed-20261006",
+        "anthropic-api/claude-sonnet-5-5/standard-20261007"
       ],
       "regions": [],
       "data_policy": {
@@ -5337,6 +5362,91 @@
         "fireworks-reasoning-20261006",
         "fireworks-chat-api-20261004",
         "fireworks-pricing-20261006"
+      ]
+    },
+    {
+      "offering_id": "anthropic-api/claude-haiku-5-5",
+      "model_id": "anthropic/claude-haiku-5-5",
+      "provider_id": "anthropic-api",
+      "wire_model": "claude-haiku-5-5",
+      "operations": [
+        {
+          "operation": "chat",
+          "adapter": "anthropic_messages",
+          "wire_contract": {
+            "max_output_field": "max_tokens",
+            "temperature": "omit",
+            "reasoning": {
+              "encoding": "anthropic_adaptive",
+              "efforts": [
+                "none",
+                "low",
+                "medium",
+                "high",
+                "x_high",
+                "max"
+              ]
+            },
+            "thinking_control": "switchable",
+            "tool_choice": [
+              "auto",
+              "none",
+              "required"
+            ],
+            "thinking_roundtrip": "same_model_conversation_prefix",
+            "structured_output": "native_json_schema"
+          },
+          "capabilities": {
+            "input_modalities": {
+              "text": "supported",
+              "image": "supported"
+            },
+            "output_modalities": {
+              "text": "supported"
+            },
+            "context_tokens": 1000000,
+            "max_output_tokens": 128000,
+            "system_messages": "supported",
+            "streaming": "supported",
+            "tool_calling": "supported",
+            "reasoning": {
+              "efforts": [
+                "none",
+                "low",
+                "medium",
+                "high",
+                "x_high",
+                "max"
+              ],
+              "default": "medium",
+              "accepted_aliases": []
+            },
+            "prompt_caching": "supported",
+            "structured_output": {
+              "json_schema": "supported",
+              "json_object": "unknown"
+            }
+          }
+        }
+      ],
+      "price_card_refs": [
+        "anthropic-api/claude-haiku-5-5/standard-20261007"
+      ],
+      "regions": [],
+      "data_policy": {
+        "training": "unknown",
+        "retention": {
+          "kind": "unknown"
+        }
+      },
+      "lifecycle": {
+        "stage": "stable"
+      },
+      "evidence_refs": [
+        "anthropic-haiku-5-5-model",
+        "anthropic-haiku-5-5-migration",
+        "anthropic-effort-20261008",
+        "anthropic-structured-outputs-20261008"
       ]
     }
   ],
@@ -6613,7 +6723,8 @@
       "evidence_refs": [
         "anthropic-pricing-20261006",
         "anthropic-sonnet-5-5-model"
-      ]
+      ],
+      "effective_until": "2026-10-07T00:00:00Z"
     },
     {
       "price_card_id": "anthropic-api/claude-sonnet-5/standard-observed-20261006",
@@ -8104,6 +8215,119 @@
       "evidence_refs": [
         "qwen-pricing-usd-20261006"
       ]
+    },
+    {
+      "price_card_id": "anthropic-api/claude-haiku-5-5/standard-20261007",
+      "offering_id": "anthropic-api/claude-haiku-5-5",
+      "currency": "USD",
+      "effective_from": "2026-10-07T00:00:00Z",
+      "rates": [
+        {
+          "meter": "input_text_token",
+          "amount": "0.10",
+          "per": "million"
+        },
+        {
+          "meter": "output_text_token",
+          "amount": "0.50",
+          "per": "million"
+        },
+        {
+          "meter": "cache_read_text_token",
+          "amount": "0.01",
+          "per": "million"
+        },
+        {
+          "meter": "cache_write_text_token",
+          "amount": "0.125",
+          "per": "million",
+          "cache_ttl_seconds": 300
+        },
+        {
+          "meter": "cache_write_text_token",
+          "amount": "0.20",
+          "per": "million",
+          "cache_ttl_seconds": 3600
+        }
+      ],
+      "context_tiers": [
+        {
+          "min_input_tokens": 100001,
+          "rates": [
+            {
+              "meter": "input_text_token",
+              "amount": "0.50",
+              "per": "million"
+            },
+            {
+              "meter": "output_text_token",
+              "amount": "2.50",
+              "per": "million"
+            },
+            {
+              "meter": "cache_read_text_token",
+              "amount": "0.05",
+              "per": "million"
+            },
+            {
+              "meter": "cache_write_text_token",
+              "amount": "0.625",
+              "per": "million",
+              "cache_ttl_seconds": 300
+            },
+            {
+              "meter": "cache_write_text_token",
+              "amount": "1",
+              "per": "million",
+              "cache_ttl_seconds": 3600
+            }
+          ]
+        }
+      ],
+      "evidence_refs": [
+        "anthropic-pricing-20261008",
+        "anthropic-haiku-5-5-model"
+      ]
+    },
+    {
+      "price_card_id": "anthropic-api/claude-sonnet-5-5/standard-20261007",
+      "offering_id": "anthropic-api/claude-sonnet-5-5",
+      "currency": "USD",
+      "effective_from": "2026-10-07T00:00:00Z",
+      "rates": [
+        {
+          "meter": "input_text_token",
+          "amount": "2",
+          "per": "million"
+        },
+        {
+          "meter": "output_text_token",
+          "amount": "10",
+          "per": "million"
+        },
+        {
+          "meter": "cache_read_text_token",
+          "amount": "0.10",
+          "per": "million"
+        },
+        {
+          "meter": "cache_write_text_token",
+          "amount": "2.50",
+          "per": "million",
+          "cache_ttl_seconds": 300
+        },
+        {
+          "meter": "cache_write_text_token",
+          "amount": "4",
+          "per": "million",
+          "cache_ttl_seconds": 3600
+        }
+      ],
+      "context_tiers": [],
+      "evidence_refs": [
+        "anthropic-pricing-20261008",
+        "anthropic-release-notes-20261007"
+      ]
     }
   ],
   "evidence": [
@@ -8906,6 +9130,54 @@
       "title": "Model Studio model pricing (USD per 1M tokens): qwen3.8-max and qwen3.8-max-0902 in Hong Kong (China), Global scope",
       "url": "https://www.alibabacloud.com/help/en/model-studio/model-pricing",
       "observed_at": "2026-10-06T00:00:00Z"
+    },
+    {
+      "evidence_id": "anthropic-haiku-5-5-model",
+      "kind": "provider_docs",
+      "publisher": "Anthropic",
+      "title": "Claude Haiku 5.5: claude-haiku-5-5, released October 7, 2026, 1M context, 128K max output, adaptive thinking, default effort medium, text and images in; omit temperature, top_p and top_k",
+      "url": "https://platform.claude.com/docs/en/models/haiku-5-5/overview",
+      "observed_at": "2026-10-08T00:00:00Z"
+    },
+    {
+      "evidence_id": "anthropic-haiku-5-5-migration",
+      "kind": "provider_docs",
+      "publisher": "Anthropic",
+      "title": "Claude Haiku 5.5: thinking blocks tied to the producing account and an unchanged conversation prefix; forced tool_choice accepted; non-default sampling parameters rejected",
+      "url": "https://platform.claude.com/docs/en/models/haiku-5-5/migration-guide",
+      "observed_at": "2026-10-08T00:00:00Z"
+    },
+    {
+      "evidence_id": "anthropic-effort-20261008",
+      "kind": "provider_docs",
+      "publisher": "Anthropic",
+      "title": "Effort levels: low, medium, high, xhigh and max on Claude Haiku 5.5, default medium; thinking disabled accepted at high effort or below",
+      "url": "https://platform.claude.com/docs/en/build-with-claude/effort",
+      "observed_at": "2026-10-08T00:00:00Z"
+    },
+    {
+      "evidence_id": "anthropic-structured-outputs-20261008",
+      "kind": "provider_docs",
+      "publisher": "Anthropic",
+      "title": "Structured outputs: supported models include claude-haiku-5-5",
+      "url": "https://platform.claude.com/docs/en/build-with-claude/structured-outputs",
+      "observed_at": "2026-10-08T00:00:00Z"
+    },
+    {
+      "evidence_id": "anthropic-pricing-20261008",
+      "kind": "provider_docs",
+      "publisher": "Anthropic",
+      "title": "Claude API standard token prices: Claude Haiku 5.5 priced by prompt length, up to and over 100,000 tokens; Claude Sonnet 5.5 cache hits at 0.05x base input ($0.10 per million tokens)",
+      "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "observed_at": "2026-10-08T00:00:00Z"
+    },
+    {
+      "evidence_id": "anthropic-release-notes-20261007",
+      "kind": "provider_docs",
+      "publisher": "Anthropic",
+      "title": "Release notes, October 7, 2026: Claude Haiku 5.5 launched; Claude Sonnet 5.5 prompt cache reads lowered from $0.20 to $0.10 per million tokens, all other prices unchanged",
+      "url": "https://platform.claude.com/docs/en/release-notes/overview",
+      "observed_at": "2026-10-08T00:00:00Z"
     }
   ]
 }
