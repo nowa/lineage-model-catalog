@@ -1,1 +1,1 @@
-{"algorithm": "ed25519", "key_id": "catalog-2a853962eda6cb4c2037c21e6f342a46", "signature": "kJLbHU2wcUMRYzXscCr+JZykTCVmSAiAjfSTBDryif2pT/soYa884QhPvKnNoG/4Sdc8ulHsuie1Cv6A0tK0Dg==", "signature_schema": 1}
+{"algorithm": "ed25519", "key_id": "catalog-2a853962eda6cb4c2037c21e6f342a46", "signature": "hyWy3ljkanDjSXs6oROA5xiUbATke92GmI6Nkpmj/HBSbvZ6SdyOGOTBX0My8msKZUK9KqscU5+YQKgXhCSmCg==", "signature_schema": 1}
